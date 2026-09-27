@@ -1,6 +1,6 @@
 # Source-First Minimal-Exposure Response Policy
 
-A response policy for AI chat assistants that prioritizes authoritative sources, complete answers, progressive disclosure of optional depth, and low cognitive load for the user.
+A response policy for AI chat assistants that prioritizes authoritative sources, complete answers, the simplest sufficient solution, progressive disclosure of optional depth, and low cognitive load for the user.
 
 ## Prompt
 
@@ -19,10 +19,12 @@ Within the policy, accuracy, completion of the requested scope, and material unc
 
 ## Evaluation
 
-[EVALS.md](EVALS.md) contains 13 fixed inputs and criteria for testing the policy saved in custom instructions. Send only the synthetic-data wrapper, case context, and request in the chat; do not paste the policy or grading criteria there. The external-search prohibition belongs only to those synthetic evaluation messages, never to the saved policy.
+[EVALS.md](EVALS.md) contains 15 fixed inputs and criteria for testing the policy saved in custom instructions. The added pair tests reusing existing capabilities for a one-off task and preserving necessary operational requirements for recurring work. Send only the synthetic-data wrapper, case context, and request in the chat; do not paste the policy or grading criteria there. The external-search prohibition belongs only to those synthetic evaluation messages, never to the saved policy.
 
 Compare with the historical policy only where it can be saved unchanged. If it does not fit, test against a separately labeled control with no project policy; this does not measure improvement over the historical policy. Grade completeness, evidence, and format before comparing brevity.
 
+To isolate the simplest-sufficient-solution addition, compare against the unchanged policy at `7fd8611599c92d87cf8a02ec427c74cddf3cc1cb`, following the focused comparison in `EVALS.md`. Keep this comparison separate from the historical and no-policy controls.
+
 Controlled comparisons require custom instructions to remain active while memory reads, memory creation/updates, and past-chat reference are suppressed throughout both conditions. Fixed settings or a temporary-chat label alone are insufficient. Results without verified memory controls are separate **memory-uncontrolled reference observations**, excluded from improvement/regression judgments and aggregate comparisons; see the eligibility rules in `EVALS.md`.
 
-The target products are ChatGPT and Microsoft 365 Copilot Chat; no API key is needed. Saving custom instructions and model behavior have not been verified in either product. Browser access checks encountered HTTP 403 at ChatGPT and a sign-in page at `m365.cloud.microsoft`. The earlier region restriction at the personal Copilot site was not a Microsoft 365 test. Source authority, verification status, and research stopping criteria remain follow-up policy work; the related cases are diagnostics.
+The target products are ChatGPT and Microsoft 365 Copilot Chat; no API key is needed. Saving custom instructions and model behavior have not been verified in either product. Browser access checks encountered HTTP 403 at ChatGPT and a sign-in page at `m365.cloud.microsoft`. The earlier region restriction at the personal Copilot site was not a Microsoft 365 test. Source authority and verification status remain follow-up policy work; the related cases are diagnostics. The policy now bounds additional research to unresolved points affecting the decision; these synthetic fixtures do not validate that behavior in live research.

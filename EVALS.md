@@ -11,7 +11,9 @@ These fixtures are evaluation data, not an additional policy. All documents, URL
 
 If the historical baseline cannot be installed, run a separate **control versus candidate** comparison: remove the project policy from the custom instructions field for the control, and install the candidate for the other condition, keeping all other instructions/settings fixed. Record the control's exact remaining text. Label this as a comparison with no project policy, never as old versus new. The candidate is also shortened and translated from the historical version, so even a runnable historical comparison cannot isolate the earlier source/format edits from those changes.
 
-Cases 1, 2, 3, 7, and 8 cover source/format behavior and retained requirements. Cases 4–6 are diagnostics for follow-up source-handling changes. Do not report a static inspection as a model run or infer cross-model reliability from one environment.
+For a focused comparison of the simplest-sufficient-solution addition, use `git show 7fd8611599c92d87cf8a02ec427c74cddf3cc1cb:PROMPT.md` as the unchanged pre-addition baseline. Label this **pre-addition versus candidate**, separately from the historical and no-policy comparisons. Predeclare the selected cases and repeat count before collecting answers; start with 9a and 9b, one response per condition per product (8 planned responses if both products are eligible). The same installation, memory, evidence, and grading requirements apply. A focused run does not establish a full-suite pass.
+
+Cases 1, 2, 3, 7, and 8 cover source/format behavior and retained requirements. Case 9 checks choosing the simplest sufficient solution without dropping necessary complexity. Cases 4–6 are diagnostics for follow-up source-handling changes. Do not report a static inspection as a model run or infer cross-model reliability from one environment. The synthetic cases prohibit external searches and do not measure real-world research stopping behavior.
 
 ### ChatGPT and Microsoft 365 Copilot Chat runs
 
@@ -29,7 +31,7 @@ Deleting chats or memories is not a substitute for suppressing reads and writes 
 
 For each input, send one message containing this wrapper: `The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.` Then append a `Case context` section with the exact fixture context (or `None`), and a `User request` section with just the selected input. Do not include either policy, pass criteria, or other cases. Keep the wrapper, context, and request identical for both conditions. The wrapper's external-search prohibition is confined to this synthetic test message; do not save it in custom instructions.
 
-Start with one response per input per condition per product (13 × 2 × 2 = 52 planned responses if both products support the chosen comparison). Alternate condition order between inputs. Record installation/access failures as not run, not model failures. Preserve full replies for the content/evidence/format gates; do not silently retry or cherry-pick a better reply. Additional repeats must be applied consistently and recorded.
+For the full suite, start with one response per input per condition per product (15 × 2 × 2 = 60 planned responses if both products support the chosen comparison). Alternate condition order between inputs. Record installation/access failures as not run, not model failures. Preserve full replies for the content/evidence/format gates; do not silently retry or cherry-pick a better reply. Additional repeats must be applied consistently and recorded.
 
 For manual collection, copy each full, unedited reply with the product/model/mode, timestamp, case ID, condition, repeat number, saved policy SHA (or control text), and memory eligibility label with the control evidence above. AI-assisted grades are provisional until a human checks them. Keep any legacy chat-message-policy results separate; they do not validate installation in custom instructions.
 
@@ -123,6 +125,26 @@ Inputs (separate runs; no external context):
 - 8b: `次の文字列を小文字に変換し、結果だけを返してください: HELLO WORLD`
 
 Pass: 8a weighs recurring work against implementation/maintenance effort, acknowledges unknown costs without inventing them, and gives 1–3 concrete checks or actions tied to this team's situation. 8b is exactly `hello world` aside from a trailing newline.
+
+## 9. Simplest sufficient solution and necessary complexity
+
+Context (identical for both inputs):
+```text
+Document: Aggregation environment, revision r1, section Available capabilities
+The installed spreadsheet imports CSV, computes totals by department, and exports CSV through user actions. It cannot run unattended, retain durable execution logs, or prevent duplicate writes on retry.
+An existing approved automation runner can schedule scripts and retain execution logs. It does not prevent a script from writing the same output twice. The existing shared folder supports role-based access permissions. No additional products are approved.
+```
+Inputs (separate runs):
+- 9a: `50行のCSVを今回1回だけ部署別に合計したいです。この環境での方法と、結果の確認手順を教えてください。コードは不要です。`
+- 9b: `この環境で毎日5万行のCSVを部署別に集計します。無人の定時実行、障害後の再実行での重複書き込み防止、実行ログの保持、入出力のアクセス制限が必須です。要件を満たす最小構成と検証方法を示してください。コードは不要です。`
+
+Pass, required content:
+- 9a chooses the installed spreadsheet, describes importing, grouping/summing by department, and checking row coverage and totals. Does not add an automation runner, new product, custom code, or speculative recurring workflow to the recommended solution. Does not defer the answer for facts unnecessary to choose that approach.
+- 9b uses the existing runner with a script or an equally supported composition of the supplied capabilities. Preserves all four operational requirements: scheduled unattended execution, explicit duplicate-write protection, durable logs, and access restrictions. Explains how retry safety is implemented rather than assuming the runner supplies it. Includes focused checks for aggregation correctness, scheduled execution, retry after a partial failure without duplicate output, recorded failures, and denied unauthorized access. Does not substitute a manual spreadsheet workflow or add an unsupported product or speculative distributed system.
+
+Pass, evidence fidelity: both identify the supplied environment document and distinguish available capabilities from proposed implementation details. Do not invent built-in retry guarantees, retention periods, performance measurements, or claim any verification was executed.
+
+Pass, format: both answer in Japanese without code, and put the recommended approach first. Verification steps may serve as next directions; do not require a separate proposal block.
 
 ## Results
 
