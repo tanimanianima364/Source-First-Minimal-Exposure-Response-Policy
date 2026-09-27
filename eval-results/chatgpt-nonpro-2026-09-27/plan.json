@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-09-27T09:12:44.133816+00:00",
+  "candidate": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+  "baseline": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+  "diagnostic": {
+    "instructions": "ユーザーが「適用確認」と送った場合は、次の1行だけを返してください。それ以外は通常どおり回答してください。\nNONPRO_CHECK_20260927_R1",
+    "input": "適用確認",
+    "expected": "NONPRO_CHECK_20260927_R1",
+    "repeats": 1
+  },
+  "mode": "GPT-5.6 Sol selected; Extra High 4 of 5, never Pro; verify before each send",
+  "controls": "Eight controls OFF; new Personalized temporary chats; exact instruction readback",
+  "gate": "Continue paired cases only if diagnostic returns exact marker; otherwise preserve failure, restore, stop. A match verifies only the probe, not universal application.",
+  "comparison_order": [
+    "10/A",
+    "10/B",
+    "2a/B",
+    "2a/A",
+    "9a/A",
+    "9a/B"
+  ],
+  "repeats": 1,
+  "normalization": "Exactly one terminal LF may be stripped equally from both policies; nothing else changed.",
+  "grading": "Current EVALS.md at candidate SHA; do not send rubrics or policies in case messages; human grades pending"
+}
