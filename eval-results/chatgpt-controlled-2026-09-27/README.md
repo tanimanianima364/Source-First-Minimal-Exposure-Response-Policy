@@ -96,3 +96,7 @@ SHA-256 of the exact copied reply files:
 - `9b-A.md`: `3e4080eb1d256c8d96ce7a2c55702607ae2ca488a1f0710adbe2f59d2edee645`
 
 Record checks passed: private Copy captures and committed artifacts are byte-identical; exact fixture inputs, saved-policy normalization, eight pre/post control values, policy/rubric preservation, local links, and annotation whitespace were checked. Raw CRLF and Markdown hard-break spaces were intentionally preserved. One Tier 1 read-only review independently checked the four grades and record consistency with no actionable findings; it is not human confirmation or an independent browser rerun.
+
+## Subsequent human feedback
+
+After opening the four replies and grading record, the user said “Bの方が全体的にいいと思います” and authorized proceeding with a source-identification fix. This is a qualitative preference for B over A, not confirmation of every rubric grade, a claim that B passed, or merge approval. Raw replies and provisional grades above remain unchanged.
