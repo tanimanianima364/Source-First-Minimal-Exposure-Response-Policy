@@ -1,0 +1,13 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Document: Product Q v2 manual, section Export limits
+URL: https://example.invalid/q/v2#export-limits
+Text: CSV input up to 10 MB is supported. Jobs run asynchronously.
+Document: Product Q v3 manual, section Export limits
+URL: https://example.invalid/q/v3#export-limits
+Text: CSV input up to 25 MB is supported. Jobs run asynchronously.
+Both excerpts are supplied in full for this case. No other capabilities or test results are available.
+
+User request
+20 MBのCSVを分割せずに出力処理したいです。Product Q v2とv3のどちらが仕様上対応していますか？採用前に確認することも短く示してください。

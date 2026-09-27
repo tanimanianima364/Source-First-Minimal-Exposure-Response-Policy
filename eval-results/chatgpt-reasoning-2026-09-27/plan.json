@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-09-27T11:15:13.960977+00:00",
+  "baseline": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+  "candidate": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+  "order": [
+    "optimization-A",
+    "optimization-B",
+    "concurrency-B",
+    "concurrency-A"
+  ],
+  "repeats": 1,
+  "comparison": "Same Japanese conditional-attribution baseline/candidate; not an English comparison, not isolated simplest-solution change",
+  "model": "GPT-5.6 Sol; 5.6 Extra High 4/5 confirmed before every send; no Pro",
+  "controls": "All eight controls OFF; fresh Personalized temporary chat; reload/readback before every case",
+  "policy_installation": "Custom instructions only; exactly one terminal LF removed from each canonical policy; every other character identical",
+  "inputs": {
+    "optimization": "7e27957e8458608c072f51b5750f7fb9741ddd83afe736e081b03a4c0e67d5d9",
+    "concurrency": "cf0e9012026e45c03c7064a88462c056136d2ec7960037e6143ce7cdbe26912e"
+  },
+  "grading": "Frozen rubric.md, oracle-output.json and independently runnable verify_oracles.py. Mathematical correctness/proof, not sources or unrelated completeness.",
+  "scope": "Two new closed-world reasoning questions separate from 16-input suite. No external retrieval, no answer/oracle/policy/rubric in chats; no retry/regeneration; exact matching prepared messages.",
+  "restore": "Original instructions/eight settings; retain non-Pro Power; close owned five windows"
+}

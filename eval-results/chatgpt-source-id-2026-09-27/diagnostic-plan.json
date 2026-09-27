@@ -1,0 +1,12 @@
+{
+  "kind": "custom-instruction delivery diagnostic; not case9 or policy effectiveness evidence",
+  "when": "after all six preregistered responses",
+  "repeats": 1,
+  "saved_instructions": "ユーザーが「適用確認」と送った場合は、次の1行だけを返してください。それ以外は通常どおり回答してください。\nSOURCE_POLICY_ACTIVE_20260927\n",
+  "user_input": "適用確認",
+  "expected_exact_response": "SOURCE_POLICY_ACTIVE_20260927",
+  "controls": "same eight OFF flags, new Personalized temporary chat, GPT-5.6 Sol / displayed5.6 Pro / Power rightmost",
+  "normalization": "one terminal LF stripped by settings field",
+  "interpretation": "matching response supports application of this diagnostic instruction only; mismatch does not identify the cause or prove custom instructions universally disabled",
+  "restore": "restore original instructions and all original controls afterwards"
+}

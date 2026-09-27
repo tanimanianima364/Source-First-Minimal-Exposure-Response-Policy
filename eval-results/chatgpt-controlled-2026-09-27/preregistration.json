@@ -1,0 +1,27 @@
+{
+  "protocol_commit": "50cfa6aff32f6ea1b4ed948c25c9a84d2212e6b6",
+  "baseline_commit": "7fd8611599c92d87cf8a02ec427c74cddf3cc1cb",
+  "candidate_commit": "50cfa6aff32f6ea1b4ed948c25c9a84d2212e6b6",
+  "product": "ChatGPT web / Pro / Windows Chrome",
+  "model_selection": "GPT-5.6 Sol",
+  "displayed_mode": "5.6 Pro",
+  "power": "rightmost slider position; no numeric effort inferred",
+  "cases": [
+    "9a/A",
+    "9a/B",
+    "9b/B",
+    "9b/A"
+  ],
+  "repeats": 1,
+  "normalization": "settings removal of exactly one terminal LF identically in A/B; all other characters must match",
+  "memory": "global memory OFF + Personalized temporary chats + all eight recorded context/fast-answer/search switches OFF; verify persisted state before each send",
+  "human_grading": "pending; user explicitly reports not reviewed",
+  "canonical_sha256": {
+    "baseline": "d29df33f3ed087b613f11e8e6f8805f9b2836c4708c98e7647cad21ca5d5b8fd",
+    "candidate": "7ca67a34e23b3715440eb87045d90380da2a3efddafaaa724f5b974920fdaa7a"
+  },
+  "inputs_sha256": {
+    "9a": "addcf8ef0606d1ddfa97db8f81f2257e3443d793ed52054ea27fb9ce1cebe77b",
+    "9b": "e5ea1bec419df6124c8288d5b763e934bdab4b36ec648a28ae804fd3c7a2f8cb"
+  }
+}

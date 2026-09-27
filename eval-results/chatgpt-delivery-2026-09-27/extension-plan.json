@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-09-27T08:55:20.397806+00:00",
+  "reason": "Both memory-OFF probes returned no marker; isolate global memory switch without changing diagnostic wording.",
+  "condition": "Fresh Personalized temporary chat; Enable ChatGPT memory ON; other seven controls OFF; same selected model and rightmost Power",
+  "repeats": 1,
+  "input_and_instructions": "Same as plan.json; diagnostic only, not a policy effectiveness score.",
+  "limitation": "Existing memories may be read; no causal or controlled policy claim. Prior normal probe remains in history.",
+  "stop": "After this third probe, restore original settings and report; no additional wording attempts."
+}

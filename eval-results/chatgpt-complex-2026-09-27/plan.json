@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-09-27T10:51:16.707385+00:00",
+  "baseline": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+  "candidate": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+  "comparison": "Conditional attribution policies, both Japanese; not isolated simplest-solution or English-language comparison",
+  "order": [
+    "rollout-A",
+    "rollout-B",
+    "incident-B",
+    "incident-A"
+  ],
+  "repeats": 1,
+  "model": "GPT-5.6 Sol / 5.6 Extra High 4 of 5; never Pro",
+  "controls": "All eight controls OFF; new Personalized temporary chat; reload/readback before every response; no memory reads/updates or history reference",
+  "policy_installation": "Settings only; exactly one terminal LF removal permitted equally; all other bytes must match",
+  "inputs": {
+    "rollout": {
+      "path": "rollout.txt",
+      "sha256": "9161e1cd8b4d599f60d46ff1321157aca1899e1ce4f240826669b96d7951fcd6"
+    },
+    "incident": {
+      "path": "incident.txt",
+      "sha256": "7187f1c7876f355252c7330a2edc6ed96ef7b743f09dd6559b61a1d470cc8240"
+    }
+  },
+  "grading": "rubric.md frozen before submissions; all mandatory content/evidence/format gates; provisional until human checked",
+  "scope": "Two complex synthetic follow-ups, separate from existing 16-input suite; no external search or URLs fetched; no retry/regeneration or result-driven rubric changes",
+  "restore": "Original custom instructions and eight switches, retain non-Pro Power; close owned windows only",
+  "input_preflight": "Before first submission, composer removed terminal LF; both fixed input files were saved without it. All remaining characters must match exactly."
+}

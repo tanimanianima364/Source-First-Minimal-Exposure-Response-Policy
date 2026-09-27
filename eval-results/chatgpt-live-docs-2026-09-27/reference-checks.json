@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://docs.python.org/3/",
+    "checked_at": "2026-09-27T10:17:24.353335+00:00",
+    "method": "Independent urllib HTTP check; web tool also read these pages",
+    "resolved_url": "https://docs.python.org/3/",
+    "status": 200,
+    "title": "3.14.7 Documentation",
+    "sha256": "676d65b240cf39dd4bfa7ab8ebc8270f856c01bba542a905ca57a78500fa667c"
+  },
+  {
+    "url": "https://docs.python.org/3/reference/datamodel.html#dictionaries",
+    "checked_at": "2026-09-27T10:17:24.439994+00:00",
+    "method": "Independent urllib HTTP check; web tool also read these pages",
+    "resolved_url": "https://docs.python.org/3/reference/datamodel.html#dictionaries",
+    "status": 200,
+    "title": "3. Data model — Python 3.14.7 documentation",
+    "sha256": "dcaafe124ee265b74f451e3974696dd5af015327ff3fb9c4c9b3b3fec2e69899"
+  },
+  {
+    "url": "https://requests.readthedocs.io/en/stable/",
+    "checked_at": "2026-09-27T10:17:24.658167+00:00",
+    "method": "Independent urllib HTTP check; web tool also read these pages",
+    "http_check_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://requests.readthedocs.io/en/stable/user/advanced/#timeouts",
+    "checked_at": "2026-09-27T10:17:24.778539+00:00",
+    "method": "Independent urllib HTTP check; web tool also read these pages",
+    "http_check_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://docs.python.org/dev/",
+    "checked_at": "2026-09-27T10:17:24.868641+00:00",
+    "method": "Independent urllib HTTP check; web tool also read these pages",
+    "resolved_url": "https://docs.python.org/dev/",
+    "status": 200,
+    "title": "3.16.0a0 Documentation",
+    "sha256": "b7d42084ce870125a199ddbb978d31952cb5a930b660e9c29173afa19d170524"
+  }
+]

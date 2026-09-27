@@ -1,0 +1,32 @@
+{
+  "baseline_commit": "94f0699a6fc61efdb99d8d13b34b4f1cb5e9b155",
+  "candidate_commit": "aea337465acd19295d14fa17da50084b273037b1",
+  "product": "ChatGPT web / Pro / Windows Chrome",
+  "model_selection": "GPT-5.6 Sol",
+  "displayed_mode": "5.6 Pro",
+  "power": "rightmost slider position; no numeric effort inferred",
+  "comparison_order": [
+    "9a-B0",
+    "9a-B1",
+    "9b-B1",
+    "9b-B0"
+  ],
+  "candidate_only_format_checks": [
+    "3a-B1",
+    "3b-B1"
+  ],
+  "repeats": 1,
+  "normalization": "removal of exactly one terminal LF, identical rule for both policies; all other characters identical",
+  "memory": "all eight prior recorded controls OFF, saved and reloaded; Personalized temporary chats; verify before/after each response",
+  "human_grading": "pending; prior qualitative preference for B is not rubric confirmation",
+  "canonical_sha256": {
+    "B0": "7ca67a34e23b3715440eb87045d90380da2a3efddafaaa724f5b974920fdaa7a",
+    "B1": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543"
+  },
+  "inputs_sha256": {
+    "9a": "addcf8ef0606d1ddfa97db8f81f2257e3443d793ed52054ea27fb9ce1cebe77b",
+    "9b": "e5ea1bec419df6124c8288d5b763e934bdab4b36ec648a28ae804fd3c7a2f8cb",
+    "3a": "e488e10cf0201f2e324b58271286dc3aeac91fe483662d3afb0e1a28ecf8f884",
+    "3b": "f06d0528bf14d53f36f0a145ba9cdc0801f38c22aee2735a7a7ec369c06b1854"
+  }
+}

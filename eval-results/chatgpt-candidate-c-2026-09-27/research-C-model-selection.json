@@ -1,0 +1,17 @@
+{
+    "Options":  [
+                    {
+                        "Selected":  false,
+                        "Name":  "Latest"
+                    },
+                    {
+                        "Selected":  true,
+                        "Name":  "GPT-5.6 Sol"
+                    },
+                    {
+                        "Selected":  false,
+                        "Name":  "GPT-5.5 Leaving on October 14"
+                    }
+                ],
+    "Checked":  "2026-09-27T23:06:49.7974301+09:00"
+}

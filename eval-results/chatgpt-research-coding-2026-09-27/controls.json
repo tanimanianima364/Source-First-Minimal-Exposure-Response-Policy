@@ -1,0 +1,579 @@
+{
+  "replies": [
+    {
+      "reply": "research-A",
+      "policy": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+      "canonical_sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+      "saved_sha256": "1e3d01b413badfe10e33ae92acf81560da9fb752e5568f757fb75a6256cde500",
+      "saved_characters": 1344,
+      "raw_sha256": "227502b0bbdc4e9106d16495397a756eca426154fc07e32e78eb4fb77d977772",
+      "characters_lf": 13308,
+      "submitted": "2026-09-27T21:16:18.0507249+09:00",
+      "copied": "2026-09-27T21:30:31.9196792+09:00",
+      "controls": {
+        "persisted": {
+          "Checked": "2026-09-27T21:10:36.1630050+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "On",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "before": {
+          "Checked": "2026-09-27T21:16:12.4441912+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "On",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "after": {
+          "Checked": "2026-09-27T21:30:32.1279929+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "On",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "reply": "research-B",
+      "policy": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+      "canonical_sha256": "5f7e8775bd84c97db1003de141024faaa5734266a796b11c2ac9f34d13f9c64e",
+      "saved_sha256": "ed29ff9fc6f59c6f2a74622dafeb3b3548b5d1f46375a0388f22be551987fda5",
+      "saved_characters": 1402,
+      "raw_sha256": "a96b66e15c9e3ae8a85bc728b528bd8b1b0ab3b44509dc9df7bab6299d171080",
+      "characters_lf": 14885,
+      "submitted": "2026-09-27T21:32:05.3386498+09:00",
+      "copied": "2026-09-27T21:46:31.2345826+09:00",
+      "controls": {
+        "persisted": {
+          "Checked": "2026-09-27T21:31:06.8137309+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "On",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "before": {
+          "Checked": "2026-09-27T21:31:54.9190555+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "On",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "after": {
+          "Checked": "2026-09-27T21:46:31.4063290+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "On",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "reply": "coding-B",
+      "policy": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+      "canonical_sha256": "5f7e8775bd84c97db1003de141024faaa5734266a796b11c2ac9f34d13f9c64e",
+      "saved_sha256": "ed29ff9fc6f59c6f2a74622dafeb3b3548b5d1f46375a0388f22be551987fda5",
+      "saved_characters": 1402,
+      "raw_sha256": "b9dd4049c013c9155956912fd3a259c201390a96aabb25031a69ca6579e72338",
+      "characters_lf": 38730,
+      "submitted": "2026-09-27T21:49:37.7614349+09:00",
+      "copied": "2026-09-27T21:59:52.3141492+09:00",
+      "controls": {
+        "persisted": {
+          "Checked": "2026-09-27T21:48:01.2817704+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "Off",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "before": {
+          "Checked": "2026-09-27T21:49:30.1374570+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "Off",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "after": {
+          "Checked": "2026-09-27T21:59:52.8680584+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "Off",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "reply": "coding-A",
+      "policy": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+      "canonical_sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+      "saved_sha256": "1e3d01b413badfe10e33ae92acf81560da9fb752e5568f757fb75a6256cde500",
+      "saved_characters": 1344,
+      "raw_sha256": "b3ca1aa2b0761e1c80d46b4ba0caea782134c48de618d81ed17c4ab0a0a7c6ef",
+      "characters_lf": 36743,
+      "submitted": "2026-09-27T22:06:08.2334330+09:00",
+      "copied": "2026-09-27T22:13:20.8665206+09:00",
+      "controls": {
+        "persisted": {
+          "Checked": "2026-09-27T22:00:56.7974386+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "Off",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "before": {
+          "Checked": "2026-09-27T22:05:52.1576576+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "Off",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        },
+        "after": {
+          "Checked": "2026-09-27T22:13:21.0534988+09:00",
+          "Flags": [
+            {
+              "State": "Off",
+              "Name": "Enable ChatGPT memory"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference my writing style"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable fast answers"
+            },
+            {
+              "State": "Off",
+              "Name": "Enable suggested prompts"
+            },
+            {
+              "State": "Off",
+              "Name": "Reference record history"
+            },
+            {
+              "State": "Off",
+              "Name": "Web search"
+            },
+            {
+              "State": "Off",
+              "Name": "Library search"
+            },
+            {
+              "State": "Off",
+              "Name": "Connector search"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "original_controls": [
+    {
+      "State": "On",
+      "Name": "Enable ChatGPT memory"
+    },
+    {
+      "State": "Off",
+      "Name": "Reference my writing style"
+    },
+    {
+      "State": "On",
+      "Name": "Enable fast answers"
+    },
+    {
+      "State": "On",
+      "Name": "Enable suggested prompts"
+    },
+    {
+      "State": "On",
+      "Name": "Reference record history"
+    },
+    {
+      "State": "On",
+      "Name": "Web search"
+    },
+    {
+      "State": "On",
+      "Name": "Library search"
+    },
+    {
+      "State": "On",
+      "Name": "Connector search"
+    }
+  ],
+  "restored_controls": {
+    "Checked": "2026-09-27T22:18:26.4192630+09:00",
+    "Flags": [
+      {
+        "State": "On",
+        "Name": "Enable ChatGPT memory"
+      },
+      {
+        "State": "Off",
+        "Name": "Reference my writing style"
+      },
+      {
+        "State": "On",
+        "Name": "Enable fast answers"
+      },
+      {
+        "State": "On",
+        "Name": "Enable suggested prompts"
+      },
+      {
+        "State": "On",
+        "Name": "Reference record history"
+      },
+      {
+        "State": "On",
+        "Name": "Web search"
+      },
+      {
+        "State": "On",
+        "Name": "Library search"
+      },
+      {
+        "State": "On",
+        "Name": "Connector search"
+      }
+    ]
+  },
+  "instructions_restored_at": "2026-09-27T22:18:33.1601817+09:00",
+  "original_instructions_empty": true,
+  "windows": {
+    "Checked": "2026-09-27T22:18:54.2000969+09:00",
+    "Remaining": 0,
+    "Closed": 5
+  },
+  "power_restoration": "Left non-Pro Extra High per user instruction"
+}

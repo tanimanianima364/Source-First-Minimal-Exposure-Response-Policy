@@ -1,0 +1,337 @@
+{
+  "budget10": {
+    "rows": {
+      "AB": {
+        "state_maxima": [
+          19,
+          17,
+          11
+        ],
+        "upper_bound": 11
+      },
+      "AC": {
+        "state_maxima": [
+          11,
+          11,
+          13
+        ],
+        "upper_bound": 11
+      },
+      "AD": {
+        "state_maxima": [
+          15,
+          14,
+          10
+        ],
+        "upper_bound": 10
+      },
+      "AE": {
+        "state_maxima": [
+          15,
+          11,
+          13
+        ],
+        "upper_bound": 11
+      },
+      "AF": {
+        "state_maxima": [
+          13,
+          15,
+          11
+        ],
+        "upper_bound": 11
+      },
+      "AH": {
+        "state_maxima": [
+          12,
+          17,
+          9
+        ],
+        "upper_bound": 9
+      },
+      "BC": {
+        "state_maxima": [
+          12,
+          13,
+          13
+        ],
+        "upper_bound": 12
+      },
+      "BE": {
+        "state_maxima": [
+          15,
+          16,
+          13
+        ],
+        "upper_bound": 13
+      },
+      "BF": {
+        "state_maxima": [
+          14,
+          17,
+          11
+        ],
+        "upper_bound": 11
+      },
+      "BG": {
+        "state_maxima": [
+          19,
+          17,
+          13
+        ],
+        "upper_bound": 13
+      },
+      "CE": {
+        "state_maxima": [
+          11,
+          10,
+          13
+        ],
+        "upper_bound": 10
+      },
+      "DE": {
+        "state_maxima": [
+          15,
+          16,
+          10
+        ],
+        "upper_bound": 10
+      },
+      "EF": {
+        "state_maxima": [
+          13,
+          14,
+          11
+        ],
+        "upper_bound": 11
+      }
+    },
+    "adaptive_optimum": 13,
+    "optimal_first_pairs": [
+      "BE",
+      "BG"
+    ],
+    "witnesses": [
+      [
+        13,
+        "BE",
+        [
+          "A",
+          "D",
+          "C"
+        ],
+        [
+          14,
+          16,
+          13
+        ]
+      ],
+      [
+        13,
+        "BG",
+        [
+          "A",
+          "A",
+          "C"
+        ],
+        [
+          19,
+          13,
+          13
+        ]
+      ]
+    ],
+    "fixed_optimum": 12,
+    "fixed_witness": [
+      12,
+      "BC",
+      "G",
+      [
+        12,
+        13,
+        13
+      ]
+    ]
+  },
+  "budget11": {
+    "rows": {
+      "AB": {
+        "state_maxima": [
+          19,
+          17,
+          11
+        ],
+        "upper_bound": 11
+      },
+      "AC": {
+        "state_maxima": [
+          12,
+          12,
+          15
+        ],
+        "upper_bound": 12
+      },
+      "AD": {
+        "state_maxima": [
+          15,
+          14,
+          12
+        ],
+        "upper_bound": 12
+      },
+      "AE": {
+        "state_maxima": [
+          15,
+          11,
+          13
+        ],
+        "upper_bound": 11
+      },
+      "AF": {
+        "state_maxima": [
+          14,
+          16,
+          13
+        ],
+        "upper_bound": 13
+      },
+      "AH": {
+        "state_maxima": [
+          12,
+          17,
+          15
+        ],
+        "upper_bound": 12
+      },
+      "BC": {
+        "state_maxima": [
+          12,
+          13,
+          13
+        ],
+        "upper_bound": 12
+      },
+      "BE": {
+        "state_maxima": [
+          15,
+          16,
+          13
+        ],
+        "upper_bound": 13
+      },
+      "BF": {
+        "state_maxima": [
+          14,
+          17,
+          11
+        ],
+        "upper_bound": 11
+      },
+      "BG": {
+        "state_maxima": [
+          19,
+          19,
+          13
+        ],
+        "upper_bound": 13
+      },
+      "CE": {
+        "state_maxima": [
+          11,
+          11,
+          17
+        ],
+        "upper_bound": 11
+      },
+      "DE": {
+        "state_maxima": [
+          15,
+          16,
+          17
+        ],
+        "upper_bound": 15
+      },
+      "EF": {
+        "state_maxima": [
+          13,
+          15,
+          15
+        ],
+        "upper_bound": 13
+      }
+    },
+    "adaptive_optimum": 15,
+    "optimal_first_pairs": [
+      "DE"
+    ],
+    "witnesses": [
+      [
+        15,
+        "DE",
+        [
+          "A",
+          "B",
+          "C"
+        ],
+        [
+          15,
+          16,
+          17
+        ]
+      ]
+    ],
+    "fixed_optimum": 12,
+    "fixed_witness": [
+      12,
+      "BC",
+      "G",
+      [
+        12,
+        13,
+        13
+      ]
+    ]
+  },
+  "serialized_mod4": {
+    "schedules": 495,
+    "mixed_return_schedules": 22,
+    "minimum_completed_writers": 2,
+    "witness": [
+      "R1=0",
+      "W1.1: seq,x,y=[1, 0, 0]",
+      "W1.2: seq,x,y=[1, 1, 0]",
+      "W1.3: seq,x,y=[1, 1, 1]",
+      "W1.4: seq,x,y=[2, 1, 1]",
+      "W2.1: seq,x,y=[3, 1, 1]",
+      "W2.2: seq,x,y=[3, 2, 1]",
+      "R2=2",
+      "R3=1",
+      "W2.3: seq,x,y=[3, 2, 2]",
+      "W2.4: seq,x,y=[0, 2, 2]",
+      "R4=0"
+    ]
+  },
+  "parallel_unbounded": {
+    "schedules": 34650,
+    "mixed_return_schedules": 1482,
+    "minimum_completed_writers": 0,
+    "witness": [
+      "W1.1: seq,x,y=[1, 0, 0]",
+      "W1.2: seq,x,y=[1, 1, 0]",
+      "W1.3: seq,x,y=[1, 1, 1]",
+      "W2.1: seq,x,y=[2, 1, 1]",
+      "W2.2: seq,x,y=[2, 2, 1]",
+      "R1=2",
+      "R2=2",
+      "R3=1",
+      "W2.3: seq,x,y=[2, 2, 2]",
+      "R4=2"
+    ]
+  },
+  "serialized_unbounded": {
+    "schedules": 495,
+    "mixed_return_schedules": 0,
+    "minimum_completed_writers": null,
+    "witness": null
+  }
+}

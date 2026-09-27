@@ -1,0 +1,9 @@
+{
+  "status": "incomplete",
+  "submitted": "2026-09-27T23:07:11.5622452+09:00",
+  "failure_observed": "2026-09-27T23:43:18.9777367+09:00",
+  "error": "ChatGPT stream recovery polling timed out",
+  "final_answer_obtained": false,
+  "retry_or_regeneration": false,
+  "grading": "R1-R6 unverified; partial progress is not a final answer. Research pair cannot establish a quality comparison."
+}
