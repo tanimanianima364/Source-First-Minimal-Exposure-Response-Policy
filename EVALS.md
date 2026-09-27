@@ -2,6 +2,8 @@
 
 These fixtures are evaluation data, not an additional policy. All documents, URLs, and tool outcomes below are synthetic. Supply them verbatim as case context; do not fetch the fixture URLs. Run each lettered variant in a fresh conversation.
 
+The user provisionally adopted A (`29ad511`) and authorized merging on 2026-09-28. The canonical prompt matches that version exactly. This decision does not complete outstanding runs or human grading, or change any fixture, criterion or historical result. Conditional-attribution and C comparisons below describe experimental alternatives; record explicit policy commits rather than assuming the current HEAD is B or C.
+
 ## Comparison protocol
 
 1. Record the candidate's full commit SHA and the exact text saved in custom instructions. For a historical comparison, use `git show 682f08ad68a1ec03a57ecec4e0ed8ee5b2893472:PROMPT.md` as the baseline and save each policy unchanged in the same settings field. The baseline has 3,947 characters and may not fit: if rejected, mark the historical comparison not run. Do not truncate, summarize, translate, split across fields, or move either policy into the chat to make it fit.

@@ -1,5 +1,7 @@
 # Candidate C: attribution and conclusion scope — 2026-09-27
 
+**Subsequent decision (2026-09-28):** The user adopted A (`29ad511`) and authorized merging. References below to the canonical C and merge hold describe the state of this run, before that decision. C was not adopted; its tested text remains at `78d451f`. Results and limitations below are unchanged.
+
 Collection ended; grading is provisional. Initial case10 pair is excluded after model-verification failure; the eligible replacement pair provisionally fails source attribution in both conditions. Research C timed out without a final answer; B completed with R2/R6 partial. C adds two sentences to Japanese B (`01cd1de`): check the mapping between decision-critical claims and sources before answering, and retain conditions/uncertainty/counterevidence in the conclusion. The canonical [PROMPT.md](../../PROMPT.md) is 1,487 characters including newlines (also 1,487 UTF-16 units). It keeps conditional omission of redundant citations and explicit-format priority. C is an unvalidated candidate, not an adopted improvement over A or B.
 
 [Plan and input hashes](plan.json) freeze one fresh response per task/condition, in order case10-B → case10-C → research-C → research-B. B is `01cd1decb47768bb5248bb70439f46f737a13ddb`. C is `78d451f9da79197aaaf3c7da8c7e6ee6563084e2`, recorded before sending and matched to the plan’s canonical SHA-256. A (`29ad511`) is not run again. Both B and C are Japanese; this does not test prompt language or isolate either of the two added sentences.
