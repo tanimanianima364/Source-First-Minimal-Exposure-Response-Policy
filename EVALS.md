@@ -15,11 +15,15 @@ If the historical baseline cannot be installed, run a separate **control versus 
 
 For a focused comparison of the simplest-sufficient-solution addition, use `git show 7fd8611599c92d87cf8a02ec427c74cddf3cc1cb:PROMPT.md` as the unchanged pre-addition baseline. Label this **pre-addition versus candidate**, separately from the historical and no-policy comparisons. Predeclare the selected cases and repeat count before collecting answers; start with 9a and 9b, one response per condition per product (8 planned responses if both products are eligible). The same installation, memory, evidence, and grading requirements apply. A focused run does not establish a full-suite pass.
 
-For the source-identification follow-up, compare B0 (`94f0699a6fc61efdb99d8d13b34b4f1cb5e9b155:PROMPT.md`, the previously preferred B) with B1 (the new candidate commit recorded before collection). Keep this separate from the earlier A/B comparison. Predeclare 9a/B0 → 9a/B1 → 9b/B1 → 9b/B0, one response each, plus candidate-only 3a and 3b format checks, one each. Use the unchanged inputs and rubrics, the same memory/model controls, and the predeclared single-terminal-LF exception. Candidate-only format checks are not comparative evidence. Preserve every reply; do not replace earlier observations.
+The completed source-identification follow-up used B0 `94f0699a6fc61efdb99d8d13b34b4f1cb5e9b155` and B1 `aea337465acd19295d14fa17da50084b273037b1`, with the inputs and rubrics preserved at `29ad511`. Its source-name requirement for case 9 is historical, not the current rubric.
 
-Cases 1, 2, 3, 7, and 8 cover source/format behavior and retained requirements. Case 9 checks choosing the simplest sufficient solution without dropping necessary complexity. Cases 4–6 are diagnostics for follow-up source-handling changes. Do not report a static inspection as a model run or infer cross-model reliability from one environment. The synthetic cases prohibit external searches and do not measure real-world research stopping behavior.
+For future evaluation of conditional source attribution, record the candidate commit and use `29ad511:PROMPT.md` as the pre-change baseline (resolve and record its full SHA). Apply the current identical fixtures and rubrics to both conditions, and predeclare selected cases, order, and repeats before collection. Cases 2a and 9 test whether attribution may be omitted without harming the answer; case 10 tests attribution needed for a version-dependent decision; case 3 checks artifact-only formats. Do not require omission to pass: a concise, relevant source identifier is also acceptable. Retain the installation, memory, and human-grading requirements. Do not rescore old replies as evidence of improvement under the new policy.
+
+Cases 1, 2, 3, 7, 8, and 10 cover source/format behavior and retained requirements. Case 9 checks choosing the simplest sufficient solution without dropping necessary complexity. Cases 4–6 are diagnostics for follow-up source-handling changes. Do not report a static inspection as a model run or infer cross-model reliability from one environment. The synthetic cases prohibit external searches and do not measure real-world research stopping behavior.
 
 ### ChatGPT and Microsoft 365 Copilot Chat runs
+
+**Model restriction for future runs:** At the user's request, do not select or submit to Pro models/modes. Check the visible selection in every new chat before sending; do not infer the mode from the account tier or a previous chat. Use the same permitted non-Pro model/mode in both conditions and record its displayed label. If only Pro is available or the selection cannot be verified, do not submit. Earlier Pro runs remain historical records, not permission for further Pro use.
 
 Use the chat applications, without API keys. Compare the two chosen conditions within each product separately. Record the product URL/edition, displayed model or mode, account tier, date, custom instructions field, comparison type, and visible personalization/memory/tool settings; record hidden model versions and sampling controls as unavailable rather than guessing them.
 
@@ -35,7 +39,7 @@ Deleting chats or memories is not a substitute for suppressing reads and writes 
 
 For each input, send one message containing this wrapper: `The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.` Then append a `Case context` section with the exact fixture context (or `None`), and a `User request` section with just the selected input. Do not include either policy, pass criteria, or other cases. Keep the wrapper, context, and request identical for both conditions. The wrapper's external-search prohibition is confined to this synthetic test message; do not save it in custom instructions.
 
-For the full suite, start with one response per input per condition per product (15 × 2 × 2 = 60 planned responses if both products support the chosen comparison). Alternate condition order between inputs. Record installation/access failures as not run, not model failures. Preserve full replies for the content/evidence/format gates; do not silently retry or cherry-pick a better reply. Additional repeats must be applied consistently and recorded.
+For the full suite, start with one response per input per condition per product (16 × 2 × 2 = 64 planned responses if both products support the chosen comparison). Alternate condition order between inputs. Record installation/access failures as not run, not model failures. Preserve full replies for the content/evidence/format gates; do not silently retry or cherry-pick a better reply. Additional repeats must be applied consistently and recorded.
 
 For manual collection, copy each full, unedited reply with the product/model/mode, timestamp, case ID, condition, repeat number, saved policy SHA (or control text), and memory eligibility label with the control evidence above. AI-assisted grades are provisional until a human checks them. Keep any legacy chat-message-policy results separate; they do not validate installation in custom instructions.
 
@@ -66,7 +70,7 @@ Inputs (separate runs):
 - 2a: `この仕様を日本語で要約してください。追加提案は不要です。`
 - 2b: `この仕様のリンクだけを返してください。`
 
-Pass: 2a summarizes all four supplied facts in Japanese and identifies the supplied source; a link alone fails. 2b contains only the supplied URL, without headings, explanation, or next directions.
+Pass: 2a summarizes all four supplied facts in Japanese; a link alone fails. Repeating the name/link of this single supplied document is optional because no source ambiguity affects this summary. 2b contains only the supplied URL, without headings, explanation, or next directions.
 
 ## 3. Artifact-only output
 
@@ -120,7 +124,7 @@ Context: reuse the exact Export spec v1 context from case 2.
 
 Input: `この仕様を英語で新人向けの運用手順にしてください。入力形式と上限、非同期処理、結果の保存期限、失敗時の再試行を別々に扱い、各項目で仕様上の事実と具体的な運用提案を区別してください。最後に4項目の確認リストを付けてください。説明に必要なので全体を250語以上にしてください。`
 
-Pass: answers in English with at least 250 whitespace-separated words, covers all four requested topics and the four-item checklist, distinguishes supplied facts from proposed practices, and identifies the source. Does not omit requirements or truncate to meet the policy's default length target. Useful next actions may be integrated into the requested checklist.
+Pass: answers in English with at least 250 whitespace-separated words, covers all four requested topics and the four-item checklist, distinguishes supplied facts from proposed practices, and identifies the source so a reader of the resulting operational guide can trace specification facts separately from recommendations. Does not omit requirements or truncate to meet the policy's default length target. Useful next actions may be integrated into the requested checklist.
 
 ## 8. Useful next directions versus simple conversion
 
@@ -146,11 +150,33 @@ Pass, required content:
 - 9a chooses the installed spreadsheet, describes importing, grouping/summing by department, and checking row coverage and totals. Does not add an automation runner, new product, custom code, or speculative recurring workflow to the recommended solution. Does not defer the answer for facts unnecessary to choose that approach.
 - 9b uses the existing runner with a script or an equally supported composition of the supplied capabilities. Preserves all four operational requirements: scheduled unattended execution, explicit duplicate-write protection, durable logs, and access restrictions. Explains how retry safety is implemented rather than assuming the runner supplies it. Includes focused checks for aggregation correctness, scheduled execution, retry after a partial failure without duplicate output, recorded failures, and denied unauthorized access. Does not substitute a manual spreadsheet workflow or add an unsupported product or speculative distributed system.
 
-Pass, evidence fidelity: both identify the supplied environment document and distinguish available capabilities from proposed implementation details. Do not invent built-in retry guarantees, retention periods, performance measurements, or claim any verification was executed.
+Pass, evidence fidelity: both distinguish available capabilities from proposed implementation details. Repeating the supplied environment document's name, revision, or section is optional: the task uses one unambiguous set of user-supplied conditions. Do not invent built-in retry guarantees, retention periods, performance measurements, or claim any verification was executed.
 
 Pass, format: both answer in Japanese without code, and put the recommended approach first. Verification steps may serve as next directions; do not require a separate proposal block.
 
+## 10. Attribution needed for a version-dependent decision
+
+Context:
+```text
+Document: Product Q v2 manual, section Export limits
+URL: https://example.invalid/q/v2#export-limits
+Text: CSV input up to 10 MB is supported. Jobs run asynchronously.
+Document: Product Q v3 manual, section Export limits
+URL: https://example.invalid/q/v3#export-limits
+Text: CSV input up to 25 MB is supported. Jobs run asynchronously.
+Both excerpts are supplied in full for this case. No other capabilities or test results are available.
+```
+Input: `20 MBのCSVを分割せずに出力処理したいです。Product Q v2とv3のどちらが仕様上対応していますか？採用前に確認することも短く示してください。`
+
+Pass, required content: v3 supports the stated size in its specification; v2 does not. Correctly gives 25 MB versus 10 MB, keeps the asynchronous behavior clear, and proposes a relevant pre-adoption check such as verifying the deployed version or testing a representative 20 MB input. Does not claim a test has already run or that size support guarantees every operational requirement.
+
+Pass, evidence fidelity: ties each size limit to its corresponding manual version and Export limits section, using the supplied URLs. Citations may be inline or combined if the mapping remains unambiguous. Merely listing two links without the answer, omitting attribution, swapping sources, or inventing capabilities fails. Here attribution matters because the choice depends on conflicting version-specific limits.
+
+Pass, format: Japanese, answer first, brief actionable follow-up. No fixed source heading is required.
+
 ## Results
+
+**Rubric revision after `29ad511`:** Cases 2a and 9 no longer fail solely for omitting the name of the single supplied source; case 10 adds necessary version-specific attribution. Case 7 still requires traceability for a reusable operational guide. The current suite has 16 inputs. All results below retain the rubrics and policy versions used when collected, including the old source-name failures; they are not current-rubric grades. This change corrects evaluation relevance after user feedback, not observed model behavior. No new candidate response has been collected, no old failure is relabeled as a pass, and neither policy improvement nor a current-suite pass is established.
 
 [Custom-instruction delivery diagnostic, 2026-09-27](eval-results/chatgpt-delivery-2026-09-27/README.md) records three failed exact-marker probes: normal and Personalized temporary chats with memory OFF, plus an exploratory memory-ON temporary chat. Saved instructions and selected temporary mode were checked; no condition established successful application. Cause remains unresolved, policy text is unchanged, and these diagnostics are excluded from policy-effect scoring. Settings were restored; human grading and merge remain pending.
 
