@@ -53,4 +53,16 @@ Input validation rejects invalid types before set membership and validates SKUs 
 | A-ja | 9/9 | 10/10 | Fail: lone-surrogate SKU initialization |
 | A-en | 9/9 | 13/13 | Pass |
 
-The frozen harness found no difference in ordinary contract traces. The narrow exploratory boundary does not establish a general English advantage. All research: not graded yet.
+The frozen harness found no difference in ordinary contract traces. The narrow exploratory boundary does not establish a general English advantage. Research verification follows below.
+
+## Research — A-en
+
+[Raw answer](research-A-en.md); [visible primary citation labels](research-A-en-citation-labels.json); [primary-source checks](research-checks-A-en.md). The clipboard exports citation placeholders. The ordered UI hyperlink labels map those indices to primary targets; grouped additional sources were not expanded, so the mapping is not a complete list of every grouped link. The raw answer is unchanged.
+
+R6 provisionally passes: current baseline plus A/B/C alternatives; matched tasks/model/tools; all-in accounting and hard per-item cost/time caps; blind expert review, major errors, citation fidelity and review time; repeated subset, task-level uncertainty, prospective adoption-candidate and harm-stop rules. The p95 checks do not replace the explicitly stated per-item caps. It acknowledges that 40 tasks cannot precisely estimate rare harms. Exact assignment and rare-event interval methods would need to be fixed before implementing the proposed pilot; no actual pilot or safety demonstration is claimed.
+
+R1, R3, R4 and R5 provisionally pass. R2 provisionally passes with limitations: the checked decision-critical metadata, main numerical claims and four recalculations are supported by the primary PDFs, but every UI citation target and every sentence in the long answer were not independently verified.
+
+The evaluator independently checked the original source values and recomputed the stated arithmetic: Zhu +7.27 pp / 13.04%; DeepVerifier +7.90 pp / 15.13%; Park independent +9.83 pp / 18.71%, team +8.14 pp / 15.50%; CIPHER +11.93 pp / 17.26%, raw-token ratios 91/21 = 4.33 and 86/19 = 4.53. These match the answer's numbers and denominators.
+
+PR5 research remained in `Searching the web` / `Searched 11 websites` when checked at 2026-09-28 01:45 JST and was stopped without a final answer; see [research-PR5-last-status.json](research-PR5-last-status.json). A-ja research has not been collected. Therefore the research task cannot yet support a PR5/A-ja/A-en comparison.

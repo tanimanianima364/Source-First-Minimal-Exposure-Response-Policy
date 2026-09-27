@@ -88,5 +88,20 @@
       "sha256": "d8eec6226c53f132d66d551576d59eac047ab05589b5206f20e46abaaa5d6d37",
       "characters": 3946
     }
+  },
+  {
+    "task": "research",
+    "condition": "A-en",
+    "repeat": 1,
+    "policy_commit": "117dc3d20268984848a7e996b63cf8a5f256e306",
+    "canonical_sha256": "73a81977954f95773196cbd59575b0dd60c4e74de836dee6656b4fb8fd9cf6d9",
+    ".md": {
+      "sha256": "cbe011039766637dc407d92711a9e7da22d79eaac0f9d1b621fa5056ac32505f",
+      "characters": 12370
+    },
+    "-saved.txt": {
+      "sha256": "d5b9198292ae89f4261a9281daf21c8e75445601e75f22dec85333f1bd13e26f",
+      "characters": 4148
+    }
   }
 ]
