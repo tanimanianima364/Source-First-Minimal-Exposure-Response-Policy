@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-09-27T08:49:33.504399+00:00",
+  "kind": "delivery diagnostic only; no policy effectiveness scoring",
+  "base": "c3c527e",
+  "instructions": "ユーザーが「適用確認」と送った場合は、次の1行だけを返してください。それ以外は通常どおり回答してください。\nDELIVERY_CHECK_20260927_R2",
+  "input": "適用確認",
+  "expected": "DELIVERY_CHECK_20260927_R2",
+  "order": [
+    "normal-memory-off",
+    "personalized-temporary-memory-off"
+  ],
+  "repeats": 1,
+  "controls": "Eight previously recorded controls OFF; fresh chat for each; explicitly selected GPT-5.6 Sol; displayed model and Power recorded, not inferred",
+  "normalization": "No terminal newline in diagnostic instructions; exact save/readback",
+  "interpretation": "Exact match supports instruction application in that condition; mismatch does not establish cause. No retries or policy edits. Any additional condition must be recorded before submission.",
+  "restore": "Original instructions and switches restored; regular diagnostic conversation retained in history."
+}
