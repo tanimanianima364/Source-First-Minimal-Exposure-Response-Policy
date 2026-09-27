@@ -65,4 +65,22 @@ R1, R3, R4 and R5 provisionally pass. R2 is partial for methodological completen
 
 The evaluator independently checked the original source values and recomputed the stated arithmetic: Zhu +7.27 pp / 13.04%; DeepVerifier +7.90 pp / 15.13%; Park independent +9.83 pp / 18.71%, team +8.14 pp / 15.50%; CIPHER +11.93 pp / 17.26%, raw-token ratios 91/21 = 4.33 and 86/19 = 4.53. These match the answer's numbers and denominators.
 
-PR5's first research attempt was interrupted by the evaluator side before a final answer was collected. [The prospective amendment](research-amendment.json) preserves and excludes that attempt, allowing one disclosed replacement under identical settings. This is an operational deviation, not a model failure or an unchanged preregistered cohort. A-ja is not yet submitted.
+PR5's first research attempt was interrupted by the evaluator side before a final answer was collected. [The prospective amendment](research-amendment.json) preserves and excludes that attempt, allowing one disclosed replacement under identical settings. This is an operational deviation, not a model failure or an unchanged preregistered cohort. The replacement and A-ja final replies are now recorded below.
+
+## Research — PR5 (disclosed replacement)
+
+[Answer](research-PR5.md); [primary-source checks](research-checks-PR5.md). R1/R3/R4/R5/R6 provisionally pass; R2 is partial. Major quantitative claims and recalculations match the cited sources, but multiple page locators are off (Zhu tables 3/5, Hariri figure 6/table 10, ArcticSwarm table 3), and Park's generation models are missing from the comparison table. These are traceability/completeness defects, not fabricated numerical results. The research comparison carries the evaluator-interruption deviation in [research-amendment.json](research-amendment.json).
+
+## Research — A-ja
+
+[Answer](research-A-ja.md); [primary-source checks and R6 counterexample](research-checks-A-ja.md). R1/R3/R4/R5 provisionally pass. R2 is partial for two page-location errors and incomplete verifier-model identity. R6 is partial: task bootstrap produces a degenerate zero interval when both arms observe no major errors, incorrectly satisfying the proposed +5 pp noninferiority gate; the conditional sample extension does not resolve that case.
+
+## Research summary
+
+| Condition | R1 Freshness | R2 Evidence | R3 Synthesis | R4 Arithmetic | R5 Decision | R6 Pilot |
+| --- | --- | --- | --- | --- | --- | --- |
+| PR5 (replacement) | Pass | Partial | Pass | Pass | Pass | Pass |
+| A-ja | Pass | Partial | Pass | Pass | Pass | Partial |
+| A-en | Pass | Partial | Pass | Pass | Pass | Pass |
+
+All three retain consequential omissions or locator errors; A-ja additionally has the concrete rare-error uncertainty limitation. These are one-response observations with different retrieved studies and a disclosed PR5 operator-interruption replacement. They do not establish a general language effect or an overall statistically superior policy. Human confirmation remains pending.

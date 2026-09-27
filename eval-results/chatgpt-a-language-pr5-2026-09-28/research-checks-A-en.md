@@ -4,7 +4,7 @@ Checked 2026-09-28 JST against downloaded primary PDFs in `/tmp/source-first-a-e
 
 ## Result
 
-R1, R3, R4 and R5 provisionally pass for the saved A-en reply. R2 is partial because the Li/Kim table rows omit the generation-model identities required by task requirement 2. The omission prevents an unqualified full-task pass, although the decision-critical metadata, main numerical claims and four recalculations checked below are supported by the cited primary texts, but not every citation token or every sentence in the long answer was independently verified.
+R1, R3, R4 and R5 provisionally pass for the saved A-en reply. R2 is partial because the Li/Kim table rows omit the generation-model identities required by task requirement 2. The omission prevents an unqualified full-task pass. The decision-critical metadata, main numerical claims and four recalculations checked below are supported by the cited primary texts. Not every citation token or sentence in the long answer was independently verified.
 
 | Paper | Primary source check |
 | --- | --- |
@@ -24,6 +24,6 @@ R1, R3, R4 and R5 provisionally pass for the saved A-en reply. R2 is partial bec
 
 ## Limitations
 
-The response's UI citation labels were captured separately in `research-A-en-citation-labels.json`; the Markdown placeholder tokens alone are not treated as missing citations. This check did not independently verify every UI citation target, all source excerpts, or the answer's full paper-selection search process. PR5 was subsequently subject to an evaluator-side interruption, documented in research-amendment.json; A-ja research was not yet run, so no PR5-vs-A-en or A-ja-vs-A-en research comparison is established.
+The response's UI citation labels were captured separately in `research-A-en-citation-labels.json`; the Markdown placeholder tokens alone are not treated as missing citations. This check did not independently verify every UI citation target, all source excerpts, or the answer's full paper-selection search process. At the time of this initial check, the other research replies were unavailable. Their completed checks are now separate files; PR5 carries the disclosed evaluator-interruption replacement in research-amendment.json.
 
 Parent verification additionally checked Zhu tables 1/2/3 on PDF pages 6/7/8, Kim v3 page 21 reasoning-token statement, Li section 4.3 selection caveat, and DeepVerifier tables 3/4. These support the cited locators and budget distinctions. The current source pages confirm the declared first/revision dates; peer-review statuses marked unconfirmed are not treated as proven absence of publication.

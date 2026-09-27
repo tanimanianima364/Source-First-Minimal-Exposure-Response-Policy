@@ -1,0 +1,40 @@
+{
+    "Checked":  "2026-09-28T02:25:24.0821554+09:00",
+    "Flags":  [
+                  {
+                      "State":  "On",
+                      "Name":  "Enable ChatGPT memory"
+                  },
+                  {
+                      "State":  "Off",
+                      "Name":  "Reference my writing style"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Enable fast answers"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Enable suggested prompts"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Reference record history"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Web search"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Library search"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Connector search"
+                  }
+              ],
+    "Scope":  "Settings restored; deleted memory content is not claimed restored.",
+    "InstructionsExact":  true,
+    "InstructionsCharacters":  0
+}

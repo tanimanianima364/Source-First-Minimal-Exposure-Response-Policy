@@ -5,7 +5,7 @@
   "underlying_model_version": "unavailable",
   "sampling_controls": "unavailable",
   "preflight_notes": [
-    "Global personalization changes require Save before reload. Early unsaved changes and asynchronous control transitions were corrected before any submission.",
+    "Early unsaved changes and asynchronous control transitions were corrected before submission. Exact saved policy and desired controls were read back after reload; restoration likewise required readback.",
     "New chats may reset model selection to Latest and Power to Instant. Check selected GPT-5.6 Sol radio and Extra High 4/5 in each chat; no send until both verified."
   ],
   "memory_docs_checked": "2026-09-28 Asia/Tokyo",
@@ -13,5 +13,5 @@
     "https://help.openai.com/en/articles/8914046-temporary-chat-in-chatgpt",
     "https://help.openai.com/en/articles/8590148-memory-in-chatgpt"
   ],
-  "restoration": "pending; originals privately backed up; no private profile fields published"
+  "restoration": "Completed: restoration.json verifies original empty instructions and eight original switches after reload; closed-windows.json verifies eleven owned windows closed. Memory content restoration is not claimed."
 }

@@ -1,0 +1,444 @@
+{
+  "A-en": [
+    {
+      "index": 0,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998, 1 additional source"
+    },
+    {
+      "index": 1,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998, 1 additional source"
+    },
+    {
+      "index": 2,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.21032, https://arxiv.org/pdf/2609.21032, 1 additional source"
+    },
+    {
+      "index": 3,
+      "primary_label": "arXiv: https://arxiv.org/abs/2609.21032, https://arxiv.org/abs/2609.21032"
+    },
+    {
+      "index": 4,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.21032, https://arxiv.org/pdf/2609.21032, 1 additional source"
+    },
+    {
+      "index": 5,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.21032, https://arxiv.org/pdf/2609.21032"
+    },
+    {
+      "index": 6,
+      "primary_label": "arXiv: https://arxiv.org/abs/2607.14386, https://arxiv.org/abs/2607.14386"
+    },
+    {
+      "index": 7,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2607.14386, https://arxiv.org/pdf/2607.14386"
+    },
+    {
+      "index": 8,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2607.14386, https://arxiv.org/pdf/2607.14386"
+    },
+    {
+      "index": 9,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2607.14386, https://arxiv.org/pdf/2607.14386"
+    },
+    {
+      "index": 10,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2607.14386, https://arxiv.org/pdf/2607.14386"
+    },
+    {
+      "index": 11,
+      "primary_label": "arXiv: https://arxiv.org/abs/2601.15808, https://arxiv.org/abs/2601.15808, 1 additional source"
+    },
+    {
+      "index": 12,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243.pdf, https://aclanthology.org/2026.findings-acl.1243.pdf"
+    },
+    {
+      "index": 13,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243.pdf, https://aclanthology.org/2026.findings-acl.1243.pdf"
+    },
+    {
+      "index": 14,
+      "primary_label": "arXiv: https://arxiv.org/abs/2602.18998, https://arxiv.org/abs/2602.18998"
+    },
+    {
+      "index": 15,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998"
+    },
+    {
+      "index": 16,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998"
+    },
+    {
+      "index": 17,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998"
+    },
+    {
+      "index": 18,
+      "primary_label": "arXiv: https://arxiv.org/abs/2512.08296, https://arxiv.org/abs/2512.08296"
+    },
+    {
+      "index": 19,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2512.08296, https://arxiv.org/pdf/2512.08296"
+    },
+    {
+      "index": 20,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2512.08296, https://arxiv.org/pdf/2512.08296, 1 additional source"
+    },
+    {
+      "index": 21,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2512.08296, https://arxiv.org/pdf/2512.08296"
+    },
+    {
+      "index": 22,
+      "primary_label": "arXiv: https://arxiv.org/abs/2506.12928, https://arxiv.org/abs/2506.12928"
+    },
+    {
+      "index": 23,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 24,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 25,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 26,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 27,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243.pdf, https://aclanthology.org/2026.findings-acl.1243.pdf"
+    },
+    {
+      "index": 28,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.21032, https://arxiv.org/pdf/2609.21032"
+    },
+    {
+      "index": 29,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2607.14386, https://arxiv.org/pdf/2607.14386, 1 additional source"
+    },
+    {
+      "index": 30,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 31,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998"
+    },
+    {
+      "index": 32,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243.pdf, https://aclanthology.org/2026.findings-acl.1243.pdf"
+    },
+    {
+      "index": 33,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.21032, https://arxiv.org/pdf/2609.21032, 1 additional source"
+    },
+    {
+      "index": 34,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2512.08296, https://arxiv.org/pdf/2512.08296, 1 additional source"
+    },
+    {
+      "index": 35,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928, 1 additional source"
+    },
+    {
+      "index": 36,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243.pdf, https://aclanthology.org/2026.findings-acl.1243.pdf"
+    },
+    {
+      "index": 37,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243.pdf, https://aclanthology.org/2026.findings-acl.1243.pdf"
+    },
+    {
+      "index": 38,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2602.18998, https://arxiv.org/pdf/2602.18998"
+    },
+    {
+      "index": 39,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2607.14386, https://arxiv.org/pdf/2607.14386"
+    },
+    {
+      "index": 40,
+      "primary_label": "ACL Anthology: https://aclanthology.org/2026.findings-acl.1243/, https://aclanthology.org/2026.findings-acl.1243/, 5 additional sources"
+    }
+  ],
+  "PR5": [
+    {
+      "index": 0,
+      "primary_label": "arXiv: https://arxiv.org/html/2506.12928v1, https://arxiv.org/html/2506.12928v1, 3 additional sources"
+    },
+    {
+      "index": 1,
+      "primary_label": "arXiv: https://arxiv.org/html/2608.04001v2, https://arxiv.org/html/2608.04001v2"
+    },
+    {
+      "index": 3,
+      "primary_label": "arXiv: https://arxiv.org/abs/2506.12928, https://arxiv.org/abs/2506.12928"
+    },
+    {
+      "index": 4,
+      "primary_label": "arXiv: https://arxiv.org/html/2506.12928v1, https://arxiv.org/html/2506.12928v1"
+    },
+    {
+      "index": 5,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928, 1 additional source"
+    },
+    {
+      "index": 6,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2506.12928, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 8,
+      "primary_label": "arXiv: https://arxiv.org/abs/2601.15808, https://arxiv.org/abs/2601.15808, 1 additional source"
+    },
+    {
+      "index": 9,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2601.15808, https://arxiv.org/pdf/2601.15808, 1 additional source"
+    },
+    {
+      "index": 10,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2601.15808, https://arxiv.org/pdf/2601.15808, 1 additional source"
+    },
+    {
+      "index": 12,
+      "primary_label": "arXiv: https://arxiv.org/abs/2605.01566, https://arxiv.org/abs/2605.01566, 1 additional source"
+    },
+    {
+      "index": 13,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2605.01566, https://arxiv.org/pdf/2605.01566, 1 additional source"
+    },
+    {
+      "index": 14,
+      "primary_label": "arXiv: https://arxiv.org/html/2605.01566v1, https://arxiv.org/html/2605.01566v1"
+    },
+    {
+      "index": 16,
+      "primary_label": "arXiv: https://arxiv.org/abs/2608.04001, https://arxiv.org/abs/2608.04001"
+    },
+    {
+      "index": 17,
+      "primary_label": "arXiv: https://arxiv.org/html/2608.04001v2, https://arxiv.org/html/2608.04001v2"
+    },
+    {
+      "index": 18,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2608.04001, https://arxiv.org/pdf/2608.04001, 1 additional source"
+    },
+    {
+      "index": 20,
+      "primary_label": "arXiv: https://arxiv.org/abs/2609.21032, https://arxiv.org/abs/2609.21032"
+    },
+    {
+      "index": 21,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.21032v1, https://arxiv.org/html/2609.21032v1"
+    },
+    {
+      "index": 22,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.21032, https://arxiv.org/pdf/2609.21032, 1 additional source"
+    },
+    {
+      "index": 23,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.21032v1, https://arxiv.org/html/2609.21032v1"
+    },
+    {
+      "index": 25,
+      "primary_label": "arXiv: https://arxiv.org/abs/2609.01870, https://arxiv.org/abs/2609.01870"
+    },
+    {
+      "index": 26,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.01870, https://arxiv.org/pdf/2609.01870, 1 additional source"
+    },
+    {
+      "index": 27,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.01870, https://arxiv.org/pdf/2609.01870, 2 additional sources"
+    },
+    {
+      "index": 28,
+      "primary_label": "arXiv: https://arxiv.org/html/2506.12928v1, https://arxiv.org/html/2506.12928v1, 1 additional source"
+    },
+    {
+      "index": 29,
+      "primary_label": "arXiv: https://arxiv.org/html/2601.15808v2, https://arxiv.org/html/2601.15808v2, 1 additional source"
+    },
+    {
+      "index": 30,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.21032v1, https://arxiv.org/html/2609.21032v1, 1 additional source"
+    },
+    {
+      "index": 31,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.01870v1, https://arxiv.org/html/2609.01870v1, 1 additional source"
+    },
+    {
+      "index": 32,
+      "primary_label": "arXiv: https://arxiv.org/html/2506.12928v1, https://arxiv.org/html/2506.12928v1"
+    },
+    {
+      "index": 33,
+      "primary_label": "arXiv: https://arxiv.org/html/2601.15808v2, https://arxiv.org/html/2601.15808v2"
+    },
+    {
+      "index": 34,
+      "primary_label": "arXiv: https://arxiv.org/html/2608.04001v2, https://arxiv.org/html/2608.04001v2, 1 additional source"
+    },
+    {
+      "index": 35,
+      "primary_label": "arXiv: https://arxiv.org/html/2601.15808v2, https://arxiv.org/html/2601.15808v2, 1 additional source"
+    },
+    {
+      "index": 36,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.01870v1, https://arxiv.org/html/2609.01870v1"
+    },
+    {
+      "index": 37,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.21032v1, https://arxiv.org/html/2609.21032v1, 1 additional source"
+    },
+    {
+      "index": 38,
+      "primary_label": "arXiv: https://arxiv.org/html/2608.04001v2, https://arxiv.org/html/2608.04001v2"
+    },
+    {
+      "index": 39,
+      "primary_label": "arXiv: https://arxiv.org/abs/2506.12928, https://arxiv.org/abs/2506.12928, 5 additional sources"
+    }
+  ],
+  "A-ja": [
+    {
+      "index": 0,
+      "primary_label": "arXiv: Scaling Test-time Compute for LLM Agents, https://arxiv.org/html/2506.12928v1, 2 additional sources"
+    },
+    {
+      "index": 2,
+      "primary_label": "arXiv: https://arxiv.org/abs/2506.12928, https://arxiv.org/abs/2506.12928"
+    },
+    {
+      "index": 3,
+      "primary_label": "arXiv: https://arxiv.org/html/2506.12928v1, https://arxiv.org/html/2506.12928v1"
+    },
+    {
+      "index": 4,
+      "primary_label": "arXiv: Scaling Test-time Compute for LLM Agents, https://arxiv.org/pdf/2506.12928, 1 additional source"
+    },
+    {
+      "index": 6,
+      "primary_label": "arXiv: https://arxiv.org/abs/2511.17006, https://arxiv.org/abs/2511.17006, 1 additional source"
+    },
+    {
+      "index": 7,
+      "primary_label": "arXiv: https://arxiv.org/html/2511.17006v2, https://arxiv.org/html/2511.17006v2"
+    },
+    {
+      "index": 8,
+      "primary_label": "arXiv: https://arxiv.org/html/2511.17006v2, https://arxiv.org/html/2511.17006v2"
+    },
+    {
+      "index": 9,
+      "primary_label": "arXiv: Budget-Aware Tool Use Enables Effective Agent Scaling, https://arxiv.org/pdf/2511.17006, 1 additional source"
+    },
+    {
+      "index": 10,
+      "primary_label": "arXiv: https://arxiv.org/html/2511.17006v2, https://arxiv.org/html/2511.17006v2"
+    },
+    {
+      "index": 12,
+      "primary_label": "arXiv: https://arxiv.org/abs/2601.15808, https://arxiv.org/abs/2601.15808, 1 additional source"
+    },
+    {
+      "index": 13,
+      "primary_label": "arXiv: https://arxiv.org/html/2601.15808v2, https://arxiv.org/html/2601.15808v2"
+    },
+    {
+      "index": 14,
+      "primary_label": "arXiv: Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification, https://arxiv.org/pdf/2601.15808, 1 additional source"
+    },
+    {
+      "index": 15,
+      "primary_label": "arXiv: https://arxiv.org/html/2601.15808v2, https://arxiv.org/html/2601.15808v2"
+    },
+    {
+      "index": 17,
+      "primary_label": "arXiv: https://arxiv.org/abs/2607.05391, https://arxiv.org/abs/2607.05391"
+    },
+    {
+      "index": 18,
+      "primary_label": "arXiv: https://arxiv.org/html/2607.05391v2, https://arxiv.org/html/2607.05391v2"
+    },
+    {
+      "index": 19,
+      "primary_label": "arXiv: https://arxiv.org/html/2607.05391v2, https://arxiv.org/html/2607.05391v2, 1 additional source"
+    },
+    {
+      "index": 20,
+      "primary_label": "arXiv: https://arxiv.org/html/2607.05391v2, https://arxiv.org/html/2607.05391v2, 1 additional source"
+    },
+    {
+      "index": 22,
+      "primary_label": "arXiv: https://arxiv.org/abs/2609.01870, https://arxiv.org/abs/2609.01870"
+    },
+    {
+      "index": 23,
+      "primary_label": "arXiv: https://arxiv.org/html/2609.01870v1, https://arxiv.org/html/2609.01870v1"
+    },
+    {
+      "index": 24,
+      "primary_label": "arXiv: ArcticSwarm: Deferring Early Consensus in Long-Horizon Multi-Agent Research, https://arxiv.org/pdf/2609.01870, 1 additional source"
+    },
+    {
+      "index": 25,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.01870, https://arxiv.org/pdf/2609.01870, 1 additional source"
+    },
+    {
+      "index": 26,
+      "primary_label": "arXiv: Scaling Test-time Compute for LLM Agents, https://arxiv.org/html/2506.12928v1, 1 additional source"
+    },
+    {
+      "index": 27,
+      "primary_label": "arXiv: Scaling Test-time Compute for LLM Agents, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 28,
+      "primary_label": "arXiv: https://arxiv.org/html/2601.15808v2, https://arxiv.org/html/2601.15808v2"
+    },
+    {
+      "index": 29,
+      "primary_label": "arXiv: https://arxiv.org/pdf/2609.01870, https://arxiv.org/pdf/2609.01870"
+    },
+    {
+      "index": 30,
+      "primary_label": "arXiv: ArcticSwarm: Deferring Early Consensus in Long-Horizon Multi-Agent Research, https://arxiv.org/pdf/2609.01870"
+    },
+    {
+      "index": 31,
+      "primary_label": "arXiv: ArcticSwarm: Deferring Early Consensus in Long-Horizon Multi-Agent Research, https://arxiv.org/pdf/2609.01870"
+    },
+    {
+      "index": 32,
+      "primary_label": "arXiv: Budget-Aware Tool Use Enables Effective Agent Scaling, https://arxiv.org/pdf/2511.17006"
+    },
+    {
+      "index": 33,
+      "primary_label": "arXiv: https://arxiv.org/html/2511.17006v2, https://arxiv.org/html/2511.17006v2"
+    },
+    {
+      "index": 34,
+      "primary_label": "arXiv: Scaling Test-time Compute for LLM Agents, https://arxiv.org/pdf/2506.12928"
+    },
+    {
+      "index": 35,
+      "primary_label": "arXiv: Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification, https://arxiv.org/pdf/2601.15808"
+    },
+    {
+      "index": 36,
+      "primary_label": "arXiv: https://arxiv.org/html/2607.05391v2, https://arxiv.org/html/2607.05391v2"
+    },
+    {
+      "index": 37,
+      "primary_label": "arXiv: https://arxiv.org/html/2511.17006v2, https://arxiv.org/html/2511.17006v2, 1 additional source"
+    },
+    {
+      "index": 38,
+      "primary_label": "arXiv: https://arxiv.org/html/2607.05391v2, https://arxiv.org/html/2607.05391v2"
+    }
+  ]
+}
