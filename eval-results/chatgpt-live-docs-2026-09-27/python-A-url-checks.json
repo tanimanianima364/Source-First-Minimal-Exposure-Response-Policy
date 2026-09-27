@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://docs.python.org/3.14/library/stdtypes.html?utm_source=chatgpt.com#mapping-types-dict",
+    "resolved_url": "https://docs.python.org/3.14/builtins/stdtypes.html",
+    "checked_at": "2026-09-27T10:16:16.168234+00:00",
+    "status": 200,
+    "title": "Built-in Types — Python 3.14.7 documentation",
+    "anchor_present": true,
+    "sha256": "b103b839dcea63eba8cfe3d29d4117fdffade98be443e95cd085af3e01cc7368"
+  },
+  {
+    "url": "https://docs.python.org/3.14/reference/datamodel.html?utm_source=chatgpt.com#dictionaries",
+    "resolved_url": "https://docs.python.org/3.14/reference/datamodel.html?utm_source=chatgpt.com#dictionaries",
+    "checked_at": "2026-09-27T10:16:16.498600+00:00",
+    "status": 200,
+    "title": "3. Data model — Python 3.14.7 documentation",
+    "anchor_present": true,
+    "sha256": "7a348fc2c643cbd58094e2a64c18318e6c928a7eb05f1deb189f61bfb761cdbe"
+  },
+  {
+    "url": "https://docs.python.org/3.6/whatsnew/3.6.html?utm_source=chatgpt.com#new-dict-implementation",
+    "resolved_url": "https://docs.python.org/3.6/whatsnew/3.6.html?utm_source=chatgpt.com#new-dict-implementation",
+    "checked_at": "2026-09-27T10:16:16.677558+00:00",
+    "status": 200,
+    "title": "What’s New In Python 3.6 — Python 3.6.15 documentation",
+    "anchor_present": true,
+    "sha256": "d2b355e7dfc872bba7da491548641d3b12c145780d82ada5ebfb94ee3c506314"
+  },
+  {
+    "url": "https://docs.python.org/3.14/whatsnew/3.7.html?utm_source=chatgpt.com#summary-release-highlights",
+    "resolved_url": "https://docs.python.org/3.14/whatsnew/3.7.html?utm_source=chatgpt.com#summary-release-highlights",
+    "checked_at": "2026-09-27T10:16:17.007333+00:00",
+    "status": 200,
+    "title": "What’s New In Python 3.7 — Python 3.14.7 documentation",
+    "anchor_present": true,
+    "sha256": "0b1caf9ef1c0c8d0b86e14fc200fd35c5aaf5dd74b8390680fb2402053f262d2"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-09-27T10:08:31.068148+00:00",
+  "baseline": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+  "candidate": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+  "order": [
+    "python-A",
+    "python-B",
+    "requests-B",
+    "requests-A"
+  ],
+  "repeats": 1,
+  "inputs": {
+    "python": "2026年9月27日時点の最新安定版Pythonの公式ドキュメントを確認してください。dictの反復順序は言語仕様として保証されますか？CPython 3.6との違い、既存キーへの再代入、削除してから再挿入した場合の順序も説明してください。確認したドキュメントのバージョンと該当節へのリンクを示し、日本語で簡潔に答えてください。開発版と安定版を区別し、本文を取得できなければその制約を明記してください。",
+    "requests": "2026年9月27日時点のRequestsの最新stable公式ドキュメントを確認してください。requests.get(url, timeout=(3, 10))ならダウンロード全体が必ず13秒以内に終わりますか？2つの値の意味、データが少しずつ届く場合、timeoutを省略した場合を説明してください。確認したドキュメントのバージョンと該当節へのリンクを示し、日本語で簡潔に答えてください。本文を取得できなければその制約を明記してください。"
+  },
+  "policy_installation": "Custom instructions only; exact canonical text except one terminal LF stripped equally; reload/readback before every reply",
+  "model": "GPT-5.6 Sol; 5.6 Extra High 4/5 verified before every send; never Pro",
+  "controls": "Web search ON; other seven recorded controls OFF; fresh Personalized temporary chat",
+  "scope": "Separate live-web follow-up, not the synthetic 16-input suite. No synthetic wrapper, supplied answers or URLs. Explicit request for sources tests retrieval/freshness/grounding, not spontaneous attribution. Search results may vary; no exact retrieval control or causal claim.",
+  "grading": {
+    "content_python": "Insertion order language guarantee from 3.7; CPython 3.6 implementation detail; reassignment retains position; delete/reinsert moves to end.",
+    "content_requests": "No 13-second total guarantee; tuple connect=3/read=10 seconds; read is inactivity/between-byte timeout rather than complete-body deadline; slow ongoing data may continue; omission gives no configured timeout.",
+    "evidence": "Official pages support the associated claims; latest stable documentation version identified and verified against primary pages; development docs not misrepresented as stable. Plain links count if valid and supporting; visible search activity recorded separately. Honest failed retrieval is not proof of current-document verification and does not pass the requested freshness check.",
+    "format": "Japanese, direct answer and concise explanation; no required heading or source count.",
+    "limits": "Human confirmation pending; one reply per condition only."
+  },
+  "oracle_checked_before_run": {
+    "Python": "Official /3/ and data model identify 3.14.7; /3.15/ search result identifies release candidate, not stable.",
+    "Requests": "Official /en/stable/ and Advanced Usage identify 2.34.2."
+  },
+  "restore": "Original instructions and eight control values; retain non-Pro Power; close owned windows only."
+}
