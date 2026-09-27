@@ -1,0 +1,8 @@
+{
+  "plan.json": "fa8f26d52b4faa4fe5ed7de97f57f1e34c7b6618d9e20874827cc050412dfb23",
+  "rubric.md": "888953aff7a2a151cba1d7ea60084be63ac9d5e401389bdbd39ff60ab7aa9d70",
+  "optimization.txt": "7e27957e8458608c072f51b5750f7fb9741ddd83afe736e081b03a4c0e67d5d9",
+  "concurrency.txt": "cf0e9012026e45c03c7064a88462c056136d2ec7960037e6143ce7cdbe26912e",
+  "verify_oracles.py": "0a4beef411d7fa8d53b5deb9600eb53eb6974150106e2efb99f665615a50880b",
+  "oracle-output.json": "07294e1932898c78a37b8b413e5931e0bc8f8eb0a150a9d4f2aaccf82c6520b7"
+}

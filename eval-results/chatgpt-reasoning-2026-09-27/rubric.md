@@ -1,0 +1,27 @@
+# Frozen solution criteria
+
+The two exact questions, this rubric and the oracle are finalized before any answer. Grade solution correctness first. No source-name/link requirement, word-count ceiling, or unrelated operational checklist. A rigorous concise proof or an equivalent exhaustive certificate is acceptable; no need for private reasoning narration. Do not send this file, oracle, scores, or policy text to the tested chat.
+
+## Optimization: required solution components
+
+- O1: Adaptive budget-10 optimum is **13**; all and only optimal first-stage pairs are **BE and BG**. For each, give one feasible scenario-dependent policy and correctly computed outcomes guaranteeing 13. Policies need not maximize every non-worst scenario. For example BE adds G/D/C with scores 15/16/13; BG adds A/F/C with scores 19/17/13. All stage budgets, incompatibilities and first-stage B prerequisite must hold.
+- O2: Give a valid global upper bound excluding every other first pair. A complete per-pair upper-bound table, exhaustive code/certificate covering all admissible pairs, or a shorter correct analytical elimination is acceptable. Merely asserting an optimum or listing the successful pairs is not proof. The independent oracle enumerates 13 admissible first pairs and their scenario-wise maxima.
+- O3: When the second-stage addition must also be fixed in advance, optimum is **12**, achieved by first BG then C (also first BC then G); scores 12/13/13 and total cost 10. A valid global upper bound is required. Explain the distinction between one shared choice and a scenario-dependent choice: max over first/min over scenario/max over feasible addition versus max over a fixed first+addition/min over scenario. “Use each scenario's separate global best initial pair” is invalid.
+- O4: With total budget 11 and first-stage budget still 7, optimum is **15**, with **DE as the only optimal first pair**; A/B/C additions yield 15/16/17. Prove no better pair/value. The old first pairs BE/BG remain at guarantee 13 even when their additions are reoptimized; the extra budget has value 2 only after changing the first pair. Do not claim every extra budget unit has this marginal value.
+
+All O1–O4 are required for solution pass. Record partial components independently; a correct final number with an invalid or absent optimality proof is not full success. Do not penalize alternate equally optimal contingent policies or different proof organization.
+
+## Concurrency: required solution components
+
+- C1: Serialized mod-4 writer protocol is unsafe. Show an executable event sequence with all four reader values, an accepted mixed result, and minimum **2 completed writers** before that invalid return. Example R1=0,R2=0; all W(1) operations; all W(2) operations; R3=2,R4=0. Explain why fewer cannot wrap from the same even value and permit an accepted mixed return.
+- C2: Unbounded seq with overlapping writers is unsafe. Two writers can increment seq to even 2 while both remain active; hold them and let the reader accept (1,0) with a=b=2. Show program-order-respecting read values. Minimum completed writer count is **0**; nonnegativity plus witness proves minimality. The writers may finish after reader return.
+- C3: Serializing entire writer calls AND using a nonwrapping monotonic seq suffices for successful-reader safety under the stated sequential consistency. Same first/last seq means no increment between those reads; even seq plus serialization excludes an active writer, so x/y correspond to a stable completed state throughout the successful read interval. Identify a valid linearization point and link each single-change insufficiency to C1/C2. Do not smuggle in an atomic pair-read or weaker memory model.
+- C4: This reader is not wait-free: continued writers can force every attempt to retry despite the reader taking steps. If writers eventually stop after a completed write and the reader continues, a subsequent complete attempt succeeds. Fixed k-bit widening alone is insufficient for an indefinitely paused reader: **2^(k−1)** completed serialized writes wrap seq; pause after reading old x and before new y to obtain a mixed accepted result. Handle k=1 as well as larger k.
+
+All C1–C4 are required for solution pass. A discovered counterexample alone is not a proof of repaired safety or progress.
+
+## Independent verification and limits
+
+`verify_oracles.py` uses only the standard library. Optimization is checked by both scenario-wise maxima and full enumeration of contingent policies, with a separate fixed-choice enumeration. The concurrency explorer checks all program-order-preserving interleavings of two writers and one reader attempt: it validates bounded counterexamples and absence of mixed returns for that bounded repaired model. **Bounded enumeration is not the general linearizability/progress proof**; grade the mathematical argument separately. `oracle-output.json` preserves pre-run output.
+
+Report component accuracy, proof validity and requested-answer format separately. Format is Japanese explanatory answer, with no special heading or brevity requirement. Overall success requires all solution components, valid supporting proof and requested format. One response per condition is a diagnostic, not statistical evidence of reasoning ability or a policy-caused advantage. AI-assisted grades remain provisional until human confirmation. Existing failures/merge hold are unchanged.
