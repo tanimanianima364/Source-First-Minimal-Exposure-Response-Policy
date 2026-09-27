@@ -1,0 +1,87 @@
+{
+  "installation": "Same custom instructions field; full unchanged text, except exactly one terminal LF removed in ALL conditions, verified after save/reload. If any policy does not fit, do not truncate or move it into chat; report affected comparisons not run.",
+  "controls": "EVALS.md memory requirements, Personalized temporary chat with custom instructions active. Eight recorded switches OFF; All tasks keep Web search OFF. Verify before/after every response. Restore original settings.",
+  "grading": "cases.json gates; checks.py frozen independent code checks for CSV/parser/SQL/shared repair, manual HTML/calibration/explanation/design inspection and execution of supplied examples. Grades provisional pending human review.",
+  "status": "preregistered; no replies collected",
+  "created": "2026-09-27T23:52:18.861736+00:00",
+  "conditions": {
+    "PR5": {
+      "commit": "682f08ad68a1ec03a57ecec4e0ed8ee5b2893472",
+      "file": "PROMPT.md",
+      "sha256": "b2a5953402fdb707739f8d87113a7d631c6d015d49eac8c54965d07e64b00b22",
+      "characters": 3947
+    },
+    "A-ja": {
+      "commit": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+      "file": "PROMPT.md",
+      "sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+      "characters": 1345
+    }
+  },
+  "repeats_per_task_condition": 1,
+  "planned_replies": 22,
+  "model": "GPT-5.6 Sol / Extra High 4 of 5; no Pro; verify before every submission",
+  "order": {
+    "2a": [
+      "PR5",
+      "A-ja"
+    ],
+    "3a": [
+      "A-ja",
+      "PR5"
+    ],
+    "1b": [
+      "PR5",
+      "A-ja"
+    ],
+    "native": [
+      "A-ja",
+      "PR5"
+    ],
+    "csv": [
+      "PR5",
+      "A-ja"
+    ],
+    "duration": [
+      "A-ja",
+      "PR5"
+    ],
+    "sql": [
+      "PR5",
+      "A-ja"
+    ],
+    "rootcause": [
+      "A-ja",
+      "PR5"
+    ],
+    "explain": [
+      "PR5",
+      "A-ja"
+    ],
+    "calibration": [
+      "A-ja",
+      "PR5"
+    ],
+    "distributed": [
+      "PR5",
+      "A-ja"
+    ]
+  },
+  "inputs_and_rubric": {
+    "rootcause.txt": "239a519993d1fe4df05f0b1f1176fc091e54d0834a1070d613be2817e9152628",
+    "csv.txt": "478d0d866fa95a4547092bacf7f410436cdaa23c5758799e9984f074dde2ca69",
+    "3a.txt": "e488e10cf0201f2e324b58271286dc3aeac91fe483662d3afb0e1a28ecf8f884",
+    "2a.txt": "d51868aadafed57162101cac6fae385d55a6d2b883d38c7d8c41805005d63c09",
+    "duration.txt": "1fd1db05de1bd2238075a1b94cc8b6431cfe9801dcf7c25af0614bc2e98f2a5a",
+    "distributed.txt": "db9b832ffab225f629e14d91735d9a7ee6cf93fd812dad97ae3f04a39589a70d",
+    "calibration.txt": "ccb30aab9551e0c61cf5c356d39edf76622d7087afcd5626f3a19a8c60652382",
+    "native.txt": "ea61d37e7f68eaa55c8759f769b4539e21d5dea4eb2f4c9b5b7f261d59c35cf6",
+    "1b.txt": "0f60fd98774f68c04266ea2d6c06ec2e1471fabfdd5bacfd1699c2290202e79b",
+    "explain.txt": "fd34a1d1e287d9b0b74d5f2af117cec7289d837c44395fb34d056e087b02dbc7",
+    "cases.json": "88a0516c7520565cd2080b77d1a85c14518d6012b50b15a4806d50707067e98d",
+    "sql.txt": "13a181c022b5d2de1447e27a174661bbef879e459d0a98f7c4d4ad912467b6f9",
+    "README.md": "ba93b1bd300a2cc8cd077b43fc53dcdbbc0df2128eaafe6dcd0b4e2ebdeb84b4",
+    "checks.py": "4ab5ed855ebe139b0cfed0f34d9bb2a0cfc360ac83ca213c537ca4398ff43611"
+  },
+  "interpretation": "Known, purpose-selected diagnostic tasks, one response per cell. PR5 versus A-ja changes policy and language. No causal, statistical or language superiority; not a Ponytail replication or test of agentic repository editing. Independent code checks plus content/evidence/format gates; no aggregate winner. Human grades remain pending."
+}

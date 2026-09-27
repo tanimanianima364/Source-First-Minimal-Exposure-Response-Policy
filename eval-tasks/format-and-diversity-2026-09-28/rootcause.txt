@@ -1,0 +1,19 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Pythonコード全体:
+from decimal import Decimal
+
+def parse_amount(text):
+    return Decimal(text)
+
+def invoice_total(values):
+    return sum((parse_amount(v) for v in values), Decimal(0))
+
+def refund_amount(value):
+    return -parse_amount(value)
+
+入力契約: strのみ。外側空白は許可。カンマなし、または3桁区切りの金額、小数は任意の1〜2桁、先頭の+/-は許可。非strはTypeError、それ以外の不正入力はValueError。NaN/Infinity禁止。
+
+User request
+invoice_total(["1,200.50", "-20.25"])が失敗します。refund_amountも同じ入力契約です。共有原因を修正したコード全体と、両呼び出し元の正常/不正入力テストを示してください。

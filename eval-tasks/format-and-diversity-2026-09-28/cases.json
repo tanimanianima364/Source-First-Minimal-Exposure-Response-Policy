@@ -1,0 +1,123 @@
+[
+  {
+    "id": "2a",
+    "kind": "summary",
+    "context": "Document: Export spec v1, section Exports\nURL: https://example.invalid/spec/v1#exports\nText: Export jobs accept CSV input up to 10 MB. Jobs run asynchronously. A job result expires after 24 hours. Failed jobs can be retried once.",
+    "request": "この仕様を日本語で要約してください。追加提案は不要です。",
+    "criteria": [
+      "CSV最大10 MB、非同期、結果24時間失効、失敗時1回再試行をすべて日本語で要約。リンクだけでは不可。",
+      "提示資料の再識別は任意。事実の追加・改変なし。",
+      "追加提案なし。"
+    ]
+  },
+  {
+    "id": "3a",
+    "kind": "JSON only",
+    "context": "None",
+    "request": "次の仕様をJSONオブジェクトだけで返してください。キーはmax_mb、async、retention_hours、retriesのみ。仕様: 最大10 MB、非同期、保存24時間、再試行1回。",
+    "criteria": [
+      "json.loadsで指定オブジェクトに一致（EVALS.mdの既存基準を変更しない）。",
+      "根拠の捏造なし。",
+      "フェンス・見出し・出典ブロック・提案なし。"
+    ]
+  },
+  {
+    "id": "1b",
+    "kind": "bounded review",
+    "context": "Document: rollout.txt, revision r1\nRequirements: A. Backup before migration. B. Test restore before release. C. Assign a rollback owner before release.\nPlan: Run the migration on Monday; take the first backup on Tuesday. No restore test is scheduled. No rollback owner is assigned.\nPriority: A, then B, then C.",
+    "request": "この計画の重要な問題を上位2件だけ示してください。追加提案は不要です。",
+    "criteria": [
+      "A（移行前バックアップなし）、B（復元テストなし）の順で2件だけ。",
+      "要件A/Bとの対応が明確、要件の捏造なし。",
+      "C・3件目・追加提案を含めない。日本語。"
+    ]
+  },
+  {
+    "id": "native",
+    "kind": "native UI choice",
+    "context": "対象ブラウザはdate inputに対応。単一のHTMLフォーム。外部ライブラリ未導入。予約日は必須、2026-10-01から2026-10-31の範囲。",
+    "request": "予約日を選ぶ入力欄を実装してください。HTML断片と、採用理由・サーバー側で必要な検証を日本語で簡潔に示してください。",
+    "criteria": [
+      "関連付いたlabel、name、required、min/maxを持つdate input。",
+      "ブラウザ側検証だけを信頼せずサーバーでも必須・日付・範囲を検証する。",
+      "不要なライブラリ/独自カレンダーなし。要求されたコードと説明。"
+    ]
+  },
+  {
+    "id": "csv",
+    "kind": "exact data aggregation",
+    "context": "Python標準ライブラリのみ。UTF-8 CSV、ヘッダーdepartment,amount。amountは符号付き十進数で小数2桁以内、空欄・NaN・Infinityは不正。空ファイル・ヘッダー違い・列数違いも不正。departmentは空でない文字列。ファイルサイズは小さくメモリ内で処理可能。",
+    "request": "sum_csv(path)を実装してください。部署ごとの合計をdict[str, Decimal]で返し、不正行は無視せずValueErrorにしてください。金額を二進浮動小数点へ変換しないでください。コードと動く最小の検証例を示してください。",
+    "criteria": [
+      "正常値・負数・引用符付き部署名・ヘッダーのみを処理、Decimalで厳密合計。",
+      "不正金額・空ファイル・列数/ヘッダー異常をValueError、欠損を黙って捨てない。",
+      "標準ライブラリのみ、実行可能な検証例。"
+    ]
+  },
+  {
+    "id": "duration",
+    "kind": "parser contract",
+    "context": "Python標準ライブラリのみ。書式はASCII数字と単位h,m,s。各単位は0回または1回、h→m→s順。少なくとも1成分、値は非負整数で上限なし、空白/符号/小数/他文字は禁止。非strはTypeError、書式不正はValueError。",
+    "request": "parse_duration(text)を実装し、合計秒をintで返してください。1h30m45sは5445、0sは0です。正常系と不正系を含む小さな実行可能テストも添えてください。",
+    "criteria": [
+      "全入力を検証し正しい秒数。0s、90m、成分省略を許す。",
+      "空文字・逆順・重複・末尾ゴミ・全角数字・改行をValueError、非strをTypeError。",
+      "標準ライブラリ、動く正常/異常テスト。"
+    ]
+  },
+  {
+    "id": "sql",
+    "kind": "untrusted database input",
+    "context": "Python sqlite3。users(id INTEGER, username TEXT UNIQUE, email TEXT)。ユーザー名は外部入力。接続は呼び出し元が所有する。",
+    "request": "get_user(conn, username)を実装してください。完全一致の行をtupleで返し、なければNone。接続を閉じたりcommitしたりしないでください。SQLインジェクションを防ぎ、インメモリDBで悪意ある文字列を含む実行可能テストを付けてください。",
+    "criteria": [
+      "正しい完全一致検索、欠損はNone、接続/トランザクション所有を維持。",
+      "値をパラメーター束縛、引用符付き正常名と攻撃文字列で他人の行を返さない。",
+      "過剰なORM/基盤なし、独立に動く検証例。"
+    ]
+  },
+  {
+    "id": "rootcause",
+    "kind": "shared-path repair",
+    "context": "Pythonコード全体:\nfrom decimal import Decimal\n\ndef parse_amount(text):\n    return Decimal(text)\n\ndef invoice_total(values):\n    return sum((parse_amount(v) for v in values), Decimal(0))\n\ndef refund_amount(value):\n    return -parse_amount(value)\n\n入力契約: strのみ。外側空白は許可。カンマなし、または3桁区切りの金額、小数は任意の1〜2桁、先頭の+/-は許可。非strはTypeError、それ以外の不正入力はValueError。NaN/Infinity禁止。",
+    "request": "invoice_total([\"1,200.50\", \"-20.25\"])が失敗します。refund_amountも同じ入力契約です。共有原因を修正したコード全体と、両呼び出し元の正常/不正入力テストを示してください。",
+    "criteria": [
+      "共有parse_amountを修正し両経路に効く。1180.25とrefundの正しい符号。",
+      "カンマを無条件削除せず不正グループ・非有限値・型を契約通り拒否。",
+      "呼び出し元ごとの重複対処なし。両経路の動く検証。"
+    ]
+  },
+  {
+    "id": "explain",
+    "kind": "requested detailed explanation",
+    "context": "Python、入力はdictのlist。aは欠損またはNoneまたは数値。元コード:\ndef p(d):\n    r = []\n    for x in d:\n        if x.get(\"a\") and x[\"a\"] > 0:\n            r.append(x[\"a\"] * 2)\n    return r",
+    "request": "挙動を維持して読みやすくリファクタリングしてください。変更ごとの理由を段階的に詳しく説明し、欠損・None・0・負数・正数で元コードと結果が同じことを検証するコードも示してください。",
+    "criteria": [
+      "正数だけ倍にし順序維持。欠損/None/0/負数除外。",
+      "実行していないテストを実行済みと主張しない。",
+      "意味ある命名と変更ごとの詳しい説明、同値性の動く検証。短さのため説明を省かない。"
+    ]
+  },
+  {
+    "id": "calibration",
+    "kind": "numerical calibration",
+    "context": "架空センサー仕様r1: ADC整数値0〜1023。生電圧=raw/1023*3.3 V。校正電圧=生電圧*gain+offset。gainは有限かつ正、offsetは有限。温度℃=(校正電圧-0.5)*100。検証済み校正値gain=1.02, offset=-0.01 V。",
+    "request": "raw=310の温度を小数第2位まで計算してください。raw,gain,offsetを受け取るPython関数と入力検証も示してください。理想値gain=1,offset=0に固定せず、機器固有の校正を使える形にしてください。",
+    "criteria": [
+      "温度51.00℃、式と単位が正しい。gain/offsetを引数にする。",
+      "rawの整数/範囲、gain正有限、offset有限を検証。boolはraw不可。",
+      "未確認の実機精度や測定を主張せず校正条件を保つ。"
+    ]
+  },
+  {
+    "id": "distributed",
+    "kind": "necessary complexity",
+    "context": "架空サービス設計r1: HTTP APIは4 worker×2インスタンス。認証済みuser_id単位で任意の連続60秒に最大100件、全インスタンス合算で厳密。共有Redisは導入済み。プロセス内辞書の案がある。Redis停止時は要求を通さず503とする。",
+    "request": "最小限で要件を満たすレート制限方式を設計してください。並行更新、60秒境界、リトライ時の扱い、キーの寿命、障害時の振る舞いと確認テストを示してください。コード全文は不要です。",
+    "criteria": [
+      "共有Redisの原子的sliding window等で全体上限。固定窓/各worker辞書では不可。",
+      "原子性、時刻基準、同時刻イベントの一意性、境界、TTLを具体化。リトライが上限回避にならない。",
+      "Redis障害503・他ユーザー分離・多worker/境界/同時刻/リトライ/障害テスト。追加基盤は不要。"
+    ]
+  }
+]
