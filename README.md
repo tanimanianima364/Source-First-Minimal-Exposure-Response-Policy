@@ -6,6 +6,8 @@ A response policy for AI chat assistants that prioritizes authoritative sources,
 
 - [PROMPT.md](PROMPT.md) — the single canonical policy, ready to copy as plain text into a chat application's custom instructions. The Japanese text stays under a 1,500-character repository budget, including newlines; it still directs the assistant to use the user's requested language.
 
+- [PROMPT.en.md](PROMPT.en.md) — an English translation of adopted A, derived from the Japanese canonical text. It preserves the 11-paragraph policy and user-language preference; 4,149 characters including newlines exceeds the Japanese 1,500-character budget. Verify full storage before using it; do not truncate it to fit. Behavioral equivalence is being evaluated, not assumed.
+
 ## Use
 
 Back up existing custom instructions, paste the complete contents of `PROMPT.md` into the custom instructions field, save, and verify that the full text was retained. Start a new chat and send your request normally. The policy remains subject to the application's higher-priority instructions and safety constraints.
