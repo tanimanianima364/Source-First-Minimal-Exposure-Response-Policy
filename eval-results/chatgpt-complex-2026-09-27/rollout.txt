@@ -1,0 +1,29 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Document R: rollout-requirements r4, sections Deadline / Correctness / Constraints
+URL: https://example.invalid/rollout/r4
+本番切替の希望日は2026-10-05（月）。部署別CSVを毎日02:00に無人集計し、03:00までに確定した成果物を1つ公開する。入力は通常18 MB、月末最大24 MB（MBは10進数）。重複・欠落は不可。入力のsha256と日付を実行識別に使える。失敗時の再実行、30日分の監査記録、担当者以外が入力を読めない制御が必須。追加SaaSは不可。既存の1台のWindowsサーバー、タスクスケジューラ、Python、制限済みのローカルNTFS作業フォルダと共有フォルダを使える。担当者は2人で開発可能時間は合計12時間。高可用性や多拠点構成は要求されていない。入力は前営業日分で到着後不変。入力sha256が同じなら同一内容とみなしてよい。
+
+Document V2: Export API v2 manual, sections Limits / Jobs
+URL: https://example.invalid/api/v2#limits
+本番テナントは現在v2。1ジョブの入力上限は10 MB。非同期ジョブ。結果保持24時間。POST再送で別ジョブを作り得る。冪等キー機能はない。出力は部署別合計で、入力分割後に合算することは可能。ただし当日の成果物を完全に揃える責任は呼出側にある。
+
+Document V3: Export API v3 manual, sections Limits / Idempotency
+URL: https://example.invalid/api/v3#limits
+v3の入力上限は25 MB、結果保持72時間。冪等キーは24時間有効。同じキーの再送は同じジョブを返す。v2には適用されない。
+
+Document T: tenant-readiness 2026-09-27, sections Deployment / Permissions
+URL: https://example.invalid/tenant/readiness
+本番v3有効化の確定日は2026-10-08。前倒しは未承認。v2の継続利用は可。共有フォルダの利用者権限は部署担当者だけに制限済み。入力作業フォルダも実行アカウントと担当者だけに制限済み。共有への「既存成果物の置換が他プロセスから一括で見えるか」と、電源断後の永続性は未検証。ローカルNTFSでの置換結果を共有フォルダにも一般化してはいけない。現行バックアップの最終復元試験は未実施。
+
+Document M: options-and-measurements r2, sections Existing tools / Measurements
+URL: https://example.invalid/options/r2
+部署別合計だけなら承認済みPython標準ライブラリcsv・decimalでローカル処理でき、Export API利用は業務要件ではない。手動表計算は担当者のログイン操作が必要で、無人実行できない。過去の24 MB相当サンプルをPythonで処理した測定は42秒、タスク開始から共有へコピー完了までは110秒だった。1サンプルのみで、月末実データ・同時読者・停止/再実行試験は未実施。API v2経路は開発見積り20時間、ローカルPython経路は8時間（どちらも復元試験・障害試験の工数を含まない）。v3経路の見積りはない。
+
+Document P: proposed-plan r1, section Steps
+URL: https://example.invalid/plan/r1
+「10月5日にv3の25 MB仕様を前提に切り替える。POSTがタイムアウトしたら同じ内容を再送すれば重複しない。成功ログを書いてから共有の成果物を上書きする。日付が成功ログにあれば再実行を飛ばす。試験は正常な1件だけ。ロールバック担当は切替後に決める。」
+
+User request
+この計画の採否を決めるための決裁メモを日本語で作ってください。重大な問題は今回まとめて示し、実行可能性が最も高い最小構成を1つ推奨してください。資料の適用版・日程・容量と工数を突き合わせ、停止と再実行でも重複・欠落を防ぐ方法、リリース前の合否条件、切戻し責任と手順まで具体化してください。確認済みの事実と、まだ成立を保証できない条件を区別してください。長さより判断に必要な事項を優先し、コード全文は不要です。

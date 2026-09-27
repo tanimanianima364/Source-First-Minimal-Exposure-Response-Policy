@@ -1,0 +1,29 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Document S: settlement-service v2.4 contract, section POST /settlements
+URL: https://example.invalid/settlements/v2.4#post
+稼働版はv2.4。POSTには冪等キー機能がない。同じリクエストの再送は別の精算を作成し得る。応答がタイムアウトしてもサーバー側でコミット済みの可能性がある。GET /settlements?external_ref=...で確定レコードを照会できるが、反映には最大60秒かかる。external_refは検索キーで一意制約ではない。POSTの重複をサーバーが拒否する保証はない。
+
+Document N: settlement-service v2.5 release notes, section Idempotency
+URL: https://example.invalid/settlements/v2.5#idempotency
+v2.5では冪等キーを48時間保持する。本番有効化予定は翌週。現時点のv2.4には適用されない。
+
+Document L: incident-log 2026-09-27, section Timeline
+URL: https://example.invalid/incidents/20260927#timeline
+全時刻JST。09:00:00にext-731 / 12,000円をPOSTし、09:00:05にクライアントがタイムアウト。09:00:06のGETは0件。同じPOSTを09:00:07に再送し、09:00:12にもタイムアウト。09:00:20に自動再試行を停止した。09:01:20のGETはID s101とs102の2件を返し、どちらもext-731 / 12,000円 / committed。これ以降の送信はない。直近バッチはext-731を含む100件、予定総額1,000,000円。バッチ全体の確定ID一覧と他99件の実績はまだ取得していない。
+
+Document O: operations-runbook r7, sections Recovery / Authority
+URL: https://example.invalid/ops/r7#recovery
+復旧前にバッチ全体の入力・確定ID・総額を照合する。取消はfinance-ownerだけが承認でき、s101/s102のどちらを取消すかは承認時に決める。現場担当者に削除・返金・取消を実行する権限はない。09:10までに状態と再開条件を報告する。照会は読み取り専用で実行可能。取消API仕様はこの資料群に含まれない。
+
+Document Q: proposed-hotfix r1, section Changes
+URL: https://example.invalid/hotfix/r1
+「新しいv2.5の資料では冪等なので、v2.4のままIdempotency-Keyヘッダーを追加する。GETが0件なら直ちにPOSTを再送する。成功ログを送信前に書いて二重送信を避ける。ログ件数が100なら全件成功として再開する。」
+
+Document E: runtime-envelope r3, section Constraints
+URL: https://example.invalid/runtime/r3
+既存の単一ワーカーとローカル永続台帳を変更できる。別プロセスが同時に送信しないよう排他する仕組みは利用可能。台帳更新と外部POSTを同一トランザクションにはできない。追加製品の導入は禁止。通信断や送信中のプロセス停止は起こり得る。exactly-onceのサーバー保証はない。照会と人による保留解除を運用に組み込める。
+
+User request
+障害対応の判断をJSONオブジェクトだけで返してください。キーはdecision、confirmed、unknowns、immediate_actions、minimal_fix、resume_checks、sourcesのみです。各値の型はdecisionが文字列、他は文字列の配列にしてください。修正案の採否、確定した重複額とまだ不明な範囲、直ちに行う対応、現行版で実現できる最小の再発防止、再開試験を含めてください。根拠を追えるようsourcesには資料名・版/改訂と該当URLを入れてください。権限外の操作を済ませたことにしたり、実現できないexactly-onceを保証したりしないでください。
