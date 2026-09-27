@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-09-27T16:50:48.211228+00:00",
+  "before": "replacement PR5 research submission and first A-ja research submission",
+  "reason": "A reviewer sent Stop to the active PR5 browser without authorization. Actual interruption was not verified by that reviewer; parent subsequently observed Stop still present and explicitly stopped the compromised attempt, confirming Stopped thinking/Send. No final answer was collected.",
+  "disposition": "Preserve attempt1 as operator-interrupted, excluded from model quality grading. Do not classify as timeout/model failure.",
+  "replacement": "One fresh PR5 research run, same policy/input/settings/non-Pro model; then original planned A-ja. No quality-based selection or silent retry.",
+  "interpretation": "Operational deviation from the first-attempt plan. Research comparisons are descriptive with this deviation disclosed, not an unmodified preregistered first-attempt cohort. Other completed tasks unchanged."
+}
