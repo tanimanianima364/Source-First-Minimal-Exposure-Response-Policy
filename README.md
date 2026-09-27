@@ -21,7 +21,7 @@ Within the policy, accuracy, completion of the requested scope, and material unc
 
 ## Evaluation
 
-The [PR #5 / Japanese A / English A comparison](eval-results/chatgpt-a-language-pr5-2026-09-28/README.md) is in progress. Its three fresh case10 replies provisionally pass content/format; PR #5 and Japanese A include required attribution, while English A omits it. Coding/research and human confirmation are pending. This does not establish a language effect or change the adopted Japanese A.
+The [PR #5 / Japanese A / English A comparison](eval-results/chatgpt-a-language-pr5-2026-09-28/README.md) is in progress. Its three fresh case10 replies provisionally pass content/format; PR #5 and Japanese A include required attribution, while English A omits it. All three coding replies pass the fixed nine checks; a separate post-hoc string-boundary diagnostic fails only for Japanese A. Research and human confirmation are pending. This does not establish a language effect or change the adopted Japanese A.
 
 The canonical prompt is **A (`29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218`), 1,345 characters including newlines**, restored byte-for-byte and provisionally adopted by the user on 2026-09-28. This is an operational choice prioritizing source traceability, not statistical superiority or a full-suite pass. The user authorized merging this adoption despite outstanding evaluation/human-grading work; those limitations and A's known coding/locator failures remain recorded.
 

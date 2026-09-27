@@ -1,0 +1,14 @@
+[
+  {
+    "file": "inventory.py",
+    "bytes": 12952,
+    "sha256": "c9e819a64109aeea7372f3c920f5c929228af6cafa32112991c725d66ed07769",
+    "raw_start": 316
+  },
+  {
+    "file": "test_inventory.py",
+    "bytes": 22617,
+    "sha256": "d493c0d6753a65ffe32fe263872467798c6a0a4a90cb0a3d7fd449933cbec132",
+    "raw_start": 13313
+  }
+]

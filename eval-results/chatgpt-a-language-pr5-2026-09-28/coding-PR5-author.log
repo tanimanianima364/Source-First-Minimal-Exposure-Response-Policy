@@ -1,0 +1,19 @@
+test_before_commit_exception_rolls_back_everything (test_inventory.InventoryTests.test_before_commit_exception_rolls_back_everything) ... ok
+test_existing_request_content_conflict_rolls_back_only_current_batch (test_inventory.InventoryTests.test_existing_request_content_conflict_rolls_back_only_current_batch) ... ok
+test_failed_results_are_replayed_verbatim (test_inventory.InventoryTests.test_failed_results_are_replayed_verbatim) ... ok
+test_invalid_replay_shape_is_not_hidden_by_saved_request (test_inventory.InventoryTests.test_invalid_replay_shape_is_not_hidden_by_saved_request) ... ok
+test_normal_ordered_state_transitions (test_inventory.InventoryTests.test_normal_ordered_state_transitions) ... ok
+test_process_cancel_and_ship_race_allows_only_one_transition (test_inventory.InventoryTests.test_process_cancel_and_ship_race_allows_only_one_transition) ... ok
+test_processes_compete_for_stock_without_overselling (test_inventory.InventoryTests.test_processes_compete_for_stock_without_overselling) ... ok
+test_processes_same_request_id_apply_once (test_inventory.InventoryTests.test_processes_same_request_id_apply_once) ... ok
+test_reopen_from_independent_process (test_inventory.InventoryTests.test_reopen_from_independent_process) ... ok
+test_replay_ignores_dict_key_order_and_batch_duplicate (test_inventory.InventoryTests.test_replay_ignores_dict_key_order_and_batch_duplicate) ... ok
+test_reservation_id_conflict_precedes_stock_check (test_inventory.InventoryTests.test_reservation_id_conflict_precedes_stock_check) ... ok
+test_same_batch_request_id_content_conflict_rolls_back (test_inventory.InventoryTests.test_same_batch_request_id_content_conflict_rolls_back) ... ok
+test_validation_errors_leave_no_changes (test_inventory.InventoryTests.test_validation_errors_leave_no_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.625s
+
+OK
+ISOLATED_RUN_EXIT=0

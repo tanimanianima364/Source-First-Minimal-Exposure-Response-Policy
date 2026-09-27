@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/checks/test_contract.py", line 11, in <module>
+    inventory.init_db(path, {sku: 1})
+  File "/candidate/inventory.py", line 191, in init_db
+    conn.executemany(
+UnicodeEncodeError: 'utf-8' codec can't encode character '\ud800' in position 0: surrogates not allowed
+ISOLATED_RUN_EXIT=1

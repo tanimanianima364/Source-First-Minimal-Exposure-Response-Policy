@@ -1,0 +1,19 @@
+test_batch_order_is_visible_to_later_commands (test_inventory.InventoryTests.test_batch_order_is_visible_to_later_commands) ... ok
+test_before_commit_exception_rolls_back_everything (test_inventory.InventoryTests.test_before_commit_exception_rolls_back_everything) ... ok
+test_duplicate_request_inside_batch_applies_once (test_inventory.InventoryTests.test_duplicate_request_inside_batch_applies_once) ... ok
+test_failed_results_are_replayed_without_reapplying (test_inventory.InventoryTests.test_failed_results_are_replayed_without_reapplying) ... ok
+test_normal_reserve_cancel_ship_and_conflict_priority (test_inventory.InventoryTests.test_normal_reserve_cancel_ship_and_conflict_priority) ... ok
+test_process_race_cancel_vs_ship_only_one_succeeds (test_inventory.InventoryTests.test_process_race_cancel_vs_ship_only_one_succeeds) ... ok
+test_process_race_cannot_oversell (test_inventory.InventoryTests.test_process_race_cannot_oversell) ... ok
+test_process_race_same_request_is_applied_once (test_inventory.InventoryTests.test_process_race_same_request_is_applied_once) ... ok
+test_reopen_persists_state (test_inventory.InventoryTests.test_reopen_persists_state) ... ok
+test_request_content_conflict_rolls_back_whole_batch (test_inventory.InventoryTests.test_request_content_conflict_rolls_back_whole_batch) ... ok
+test_same_request_different_dict_key_order_is_same_request (test_inventory.InventoryTests.test_same_request_different_dict_key_order_is_same_request) ... ok
+test_validation_and_unknown_sku (test_inventory.InventoryTests.test_validation_and_unknown_sku) ... ok
+test_validation_is_not_hidden_by_saved_request (test_inventory.InventoryTests.test_validation_is_not_hidden_by_saved_request) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.338s
+
+OK
+ISOLATED_RUN_EXIT=0

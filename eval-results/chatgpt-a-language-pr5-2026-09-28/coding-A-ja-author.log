@@ -1,0 +1,16 @@
+test_basic_reserve_cancel_ship_and_business_failures (test_inventory.InventoryTests.test_basic_reserve_cancel_ship_and_business_failures) ... ok
+test_before_commit_exception_rolls_back_and_request_can_be_retried (test_inventory.InventoryTests.test_before_commit_exception_rolls_back_and_request_can_be_retried) ... ok
+test_dict_key_order_and_identical_duplicate_within_batch (test_inventory.InventoryTests.test_dict_key_order_and_identical_duplicate_within_batch) ... ok
+test_failed_result_replay_is_sticky_even_after_state_changes (test_inventory.InventoryTests.test_failed_result_replay_is_sticky_even_after_state_changes) ... ok
+test_multiprocess_cancel_ship_race_has_only_one_success (test_inventory.InventoryTests.test_multiprocess_cancel_ship_race_has_only_one_success) ... ok
+test_multiprocess_competing_reservations_do_not_oversell (test_inventory.InventoryTests.test_multiprocess_competing_reservations_do_not_oversell) ... ok
+test_multiprocess_same_request_id_is_applied_once (test_inventory.InventoryTests.test_multiprocess_same_request_id_is_applied_once) ... ok
+test_reopen_persists_state (test_inventory.InventoryTests.test_reopen_persists_state) ... ok
+test_request_id_content_conflict_rolls_back_entire_batch (test_inventory.InventoryTests.test_request_id_content_conflict_rolls_back_entire_batch) ... ok
+test_validation_and_unknown_sku_precedes_replay_lookup (test_inventory.InventoryTests.test_validation_and_unknown_sku_precedes_replay_lookup) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.511s
+
+OK
+ISOLATED_RUN_EXIT=0

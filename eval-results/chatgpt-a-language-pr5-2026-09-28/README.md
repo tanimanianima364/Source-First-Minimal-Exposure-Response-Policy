@@ -1,6 +1,6 @@
 # PR #5, Japanese A, and English A — 2026-09-28
 
-Collection in progress. Case10 is complete with provisional grades: PR5 and A-ja pass all gates; A-en fails evidence attribution. Coding/research are pending. No overall superiority is established. [Plan](plan.json) was committed before the first send at `117dc3d20268984848a7e996b63cf8a5f256e306`; that commit fixes English A's text and all input/check hashes. Japanese A remains the canonical policy.
+Collection in progress. Case10 is complete with provisional grades: PR5 and A-ja pass all gates; A-en fails evidence attribution. Coding is complete: all three pass the fixed nine checks; a separately labeled post-hoc string-boundary diagnostic fails only for A-ja. Research is pending. No overall superiority is established. [Plan](plan.json) was committed before the first send at `117dc3d20268984848a7e996b63cf8a5f256e306`; that commit fixes English A's text and all input/check hashes. Japanese A remains the canonical policy.
 
 Three conditions use one fresh response per task: PR5 (`682f08a`, identical PROMPT blob to PR #5 head `c25a10e`), A-ja (`29ad511`), and its English translation A-en (`117dc3d:PROMPT.en.md`). The tasks are the existing case10, concurrent SQLite implementation, and live AI-literature review. Rubrics and the offline coding harness are unchanged and never sent to the tested chats. This is nine planned replies, not the full regression suite.
 

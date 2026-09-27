@@ -1,0 +1,15 @@
+test_C1_shapes_and_input_validation (__main__.Contract.test_C1_shapes_and_input_validation) ... ok
+test_C2_transitions_and_precedence (__main__.Contract.test_C2_transitions_and_precedence) ... ok
+test_C3_replay_success_failures_order_duplicates (__main__.Contract.test_C3_replay_success_failures_order_duplicates) ... ok
+test_C4_kill_before_commit_and_lost_response (__main__.Contract.test_C4_kill_before_commit_and_lost_response) ... ok
+test_C4_rollback_all_new_records_and_hook (__main__.Contract.test_C4_rollback_all_new_records_and_hook) ... ok
+test_C5_cancel_vs_ship (__main__.Contract.test_C5_cancel_vs_ship) ... ok
+test_C5_competing_reserves_and_identical_requests (__main__.Contract.test_C5_competing_reserves_and_identical_requests) ... ok
+test_C5_external_lock_releases_without_partial_state (__main__.Contract.test_C5_external_lock_releases_without_partial_state) ... ok
+test_C6_coherent_snapshot_stress (__main__.Contract.test_C6_coherent_snapshot_stress) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 6.639s
+
+OK
+ISOLATED_RUN_EXIT=0
