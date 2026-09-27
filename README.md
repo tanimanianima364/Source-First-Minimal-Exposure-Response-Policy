@@ -23,4 +23,6 @@ Within the policy, accuracy, completion of the requested scope, and material unc
 
 Compare with the historical policy only where it can be saved unchanged. If it does not fit, test against a separately labeled control with no project policy; this does not measure improvement over the historical policy. Grade completeness, evidence, and format before comparing brevity.
 
+Controlled comparisons require custom instructions to remain active while memory reads, memory creation/updates, and past-chat reference are suppressed throughout both conditions. Fixed settings or a temporary-chat label alone are insufficient. Results without verified memory controls are separate **memory-uncontrolled reference observations**, excluded from improvement/regression judgments and aggregate comparisons; see the eligibility rules in `EVALS.md`.
+
 The target products are ChatGPT and Microsoft 365 Copilot Chat; no API key is needed. Saving custom instructions and model behavior have not been verified in either product. Browser access checks encountered HTTP 403 at ChatGPT and a sign-in page at `m365.cloud.microsoft`. The earlier region restriction at the personal Copilot site was not a Microsoft 365 test. Source authority, verification status, and research stopping criteria remain follow-up policy work; the related cases are diagnostics.
