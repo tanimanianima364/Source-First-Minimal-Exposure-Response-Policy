@@ -19,6 +19,8 @@ Within the policy, accuracy, completion of the requested scope, and material unc
 
 ## Evaluation
 
+The current canonical prompt is candidate C (1,487 characters), adding a pre-answer source-mapping check and preservation of qualifications in conclusions to B. The [focused B/C plan](eval-results/chatgpt-candidate-c-2026-09-27/README.md) reruns case10 and research with unchanged criteria; C is not yet a demonstrated improvement or adoption decision. Historical A/B labels below still refer to their recorded commits.
+
 [EVALS.md](EVALS.md) contains 16 fixed inputs and criteria for testing the policy saved in custom instructions. Case 10 tests attribution for a version-dependent decision. Cases 2a and 9 permit omission of redundant source names; case 7 retains traceability for a reusable operational guide. The case 9 pair tests reusing existing capabilities for a one-off task and preserving necessary operational requirements for recurring work. Send only the synthetic-data wrapper, case context, and request in the chat; do not paste the policy or grading criteria there. The external-search prohibition belongs only to those synthetic evaluation messages, never to the saved policy.
 
 Compare with the historical policy only where it can be saved unchanged. If it does not fit, test against a separately labeled control with no project policy; this does not measure improvement over the historical policy. Grade completeness, evidence, and format before comparing brevity. Future runs must use a verified non-Pro model/mode in both conditions, per the user's usage-limit preference; do not submit if the selection is Pro or unverifiable.

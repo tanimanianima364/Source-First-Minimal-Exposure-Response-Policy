@@ -1,0 +1,29 @@
+{
+  "prepared_at": "2026-09-27T13:45:53.812104+00:00",
+  "base": "f31b4093712b89f9d966fed596889da25abdd749",
+  "baseline_B": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+  "candidate_C_sha256": "dc92abd1cb29e3c0200371ec738f1fb09d45df008d60ddc4d37888f3d5eb8885",
+  "candidate_C_characters": 1487,
+  "candidate_C_identity": "PROMPT.md in the commit containing this frozen plan; record its full SHA before collection",
+  "order": [
+    "case10-B",
+    "case10-C",
+    "research-C",
+    "research-B"
+  ],
+  "repeats": 1,
+  "model": "GPT-5.6 Sol / Extra High 4 of 5; verify before every send; never Pro; no substitution if unavailable",
+  "installation": "Settings only; verify exact canonical bytes except one terminal LF stripped; fresh Personalized temporary chats",
+  "controls": "Memory, writing style, fast answers, suggested prompts, record history, Library and connector search OFF throughout; web OFF case10, ON research; persist/reload and check before/after each reply",
+  "inputs": "Identical per task; no rubric, prior answer, failure hint, or policy in messages; research same 2026-09-27 cutoff; case10 includes synthetic wrapper",
+  "grading": "Unchanged source rubrics; research only R1-R6 from copied research-rubric.md (coding section unused); no rescoring historical replies; record all failures and partials; AI grades provisional until human checked",
+  "interpretation": "Diagnostic rerun of known failures, not held-out/generalization test. Bundled two-sentence C change; no attribution to either sentence alone. Single pairs/live search are not causal or statistical improvement. Research primary claims/locators and calculations independently checked; no claim of full retrieval trace",
+  "restoration": "Back up and restore original instructions/eight switches; leave Power non-Pro; close only owned windows",
+  "abort": "If model, memory eligibility, installation or access cannot be verified, do not send; report not run; preserve collected partial results separately",
+  "hashes": {
+    "case10.txt": "8730fcaff23b056870f2b5093ab882305e0b5882fa04117d6327890452e84caf",
+    "case10-rubric.md": "1c615dcce19c2cd0b5518b22ff17c25857d2ca4299523d24d12c2585d8848303",
+    "research.txt": "b2ec3a178c5299b9e98c3d93eebc313133ea0c592fc4f84fc15cf0236f198237",
+    "research-rubric.md": "8e7642ede08daa380f9b0c0f3d0cefc32680d01745f9f8409d78b31420945d0b"
+  }
+}
