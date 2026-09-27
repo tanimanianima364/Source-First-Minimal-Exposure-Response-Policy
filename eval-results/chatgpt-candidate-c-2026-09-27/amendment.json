@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-09-27T14:00:46.608548+00:00",
+  "reason": "M1: initial case10-B GPT-5.6 selection not established; image after selection shows6Pro and before-send image verifies only ExtraHigh. No Pro request sent. Exclude entire first case10 pair, including C, from comparison. Keep raw replies and provisional individual reference grades.",
+  "remaining_order": [
+    "case10-C-r2",
+    "case10-B-r2",
+    "research-C",
+    "research-B"
+  ],
+  "repetitions": "One fresh replacement reply per policy for case10; original pair excluded; no selective answer repair. Research unchanged one each.",
+  "stronger_model_guard": "Require selected GPT-5.6 Sol radio readback after selection and before-send screenshot/accessibility5.6 +ExtraHigh4/5; invocation success alone insufficient. Abort if unavailable.",
+  "unchanged": "Policy hashes, inputs/rubrics, memory/tool conditions and first-answer grading. Replacement plan fixed before any replacement send.",
+  "interpretation": "Replacement due setup failure, not observed output quality. Original B/C both fail case10 evidence; retain these observations without pooling."
+}

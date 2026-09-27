@@ -1,0 +1,47 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Document: Product Q v2 manual, section Export limits
+URL: 
+￼
+https://example.invalid/q/v2#export-limits
+Text: CSV input up to 10 MB is supported. Jobs run asynchronously.
+Document: Product Q v3 manual, section Export limits
+URL: 
+￼
+https://example.invalid/q/v3#export-limits
+Text: CSV input up to 25 MB is supported. Jobs run asynchronously.
+Both excerpts are supplied in full for this case. No other capabilities or test results are available.
+
+User request
+20 MBのCSVを分割せずに出力処理したいです。Product Q v2とv3のどちらが仕様上対応していますか？採用前に確認することも短く示してください。
+￼
+￼
+ChatGPT said:
+仕様上、20 MBのCSVを分割せずに処理できるのは Product Q v3 です。
+• v2：CSV入力は最大 10 MB → 20 MBは対象外
+• v3：CSV入力は最大 25 MB → 20 MBは範囲内
+• どちらもジョブは非同期実行
+採用前には、提示資料が規定しているのは「CSV入力サイズ」である点を確認してください。「出力処理」が生成されるCSVの出力サイズを指す場合、その上限は今回の資料からは判断できません。また、実運用で必要になる非同期ジョブの完了確認方法・失敗時の挙動なども、今回の資料には情報がありません。
+￼
+Read aloud
+Regenerate response
+Is this conversation helpful so far?
+Yes
+No
+Dismiss rating prompt
+￼
+Latest response
+￼
+Add files and more
+Ask ChatGPT
+5.6 Extra High
+Dictate
+￼
+ChatGPT can make mistakes. Check important info.
+￼
+￼
+￼
+￼
+￼
+Response complete
