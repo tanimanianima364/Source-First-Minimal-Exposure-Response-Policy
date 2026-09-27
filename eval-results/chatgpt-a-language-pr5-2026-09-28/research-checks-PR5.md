@@ -1,0 +1,23 @@
+# PR5 research — primary-source checks
+
+Checked 2026-09-28 JST. This is the disclosed replacement in [research-amendment.json](research-amendment.json), not the interrupted first attempt. Check the unmodified [answer](research-PR5.md) against the original task/rubric; no source or model capability is inferred merely from an accessible URL.
+
+| Primary source | Verified scope and qualifications |
+| --- | --- |
+| [Zhu v1](https://arxiv.org/pdf/2506.12928v1) | GAIA/GPT-4.1/CodeAgent, width 4, baseline 55.76, BoN 63.03, reflection 55.15, voting/scoring/listwise 56.8/59.39/63.03 and pass@4 69.14 match. Locator errors: table 3 is PDF p.8, not p.7; table 5 is p.9, not p.8. Reflection is table 2 on p.7. |
+| [Wan v2](https://arxiv.org/pdf/2601.15808v2) | First 2026-01-22, v2 2026-04-29; ACL Findings publication verified separately. Section 7.2 on p.7 describes targeted verification; tables 3–5 on p.8 support GAIA Full 52.22→60.12 at round 4→58.93 at round 10, Web 51.11→63.33 and DeepSearch 41→47→44. The answer's arXiv-v2 claim links to this version via UI citations, despite also linking the ACL landing page. |
+| [Wunderlich v1](https://arxiv.org/pdf/2605.01566v1) | First 2026-05-02; [ACL SRW publication](https://aclanthology.org/2026.acl-srw.1/) confirmed. Figure 2 p.4 / section 4.1 p.5 support CoT 64.3, SC 68.7, debate 70.0, MoA 71.4 and theoretical compute accounting up to ~20×. This is not measured web-search cost or wall time. |
+| [Hariri v2](https://arxiv.org/pdf/2608.04001v2) | First 2026-08-04, v2 2026-08-31. Qwen3.6 shared-bank pass@80 94.62, plurality 89.25 and pointwise BoN 86.56 match. Figure 6 is PDF p.19, not p.18; table 10 is p.53, not p.52. The source excludes verifier compute from these bank diagnostics, consistent with the answer's caution. |
+| [Park v1](https://arxiv.org/pdf/2609.21032v1) | First 2026-09-17. Table 1 and figures 3–4 support 8.0 vs 2.2, ~4.9× output-token comparison, low-budget coordination cost and 0.2× per-agent ablation. Methods use separate contexts but shared artifacts and evidence-based adoption. The response's table omits model identities (Sonnet/Opus 4.6, GPT-5.6 Sol), contrary to task requirement 2. |
+| [ArcticSwarm v1](https://arxiv.org/pdf/2609.01870v1) | First 2026-09-01. Qwen 3.5-27B, 830-question controlled set, 82.6 vs 78.8 match table 3 (p.7, not p.6). Table 13 p.21 supports majority 63.2 / oracle 86.1 at N=36, 24.66M tokens; table 14 p.22 supports 24.9M end-to-end tokens and median 83.3 minutes. The ~36× ratio is tokens, not independently verified all-in monetary cost. The reported median exceeds the task's 30-minute limit without needing that cost inference. |
+
+## Grades
+
+- R1 pass: six empirical studies, three first published after 2026-07-01, declared versions predate the cutoff. Metadata checked against the corresponding arXiv histories; unconfirmed peer-review status is not a claim of nonpublication.
+- R2 partial: the central numbers checked above match, but several page locators are wrong and Park's model identities are omitted. Do not call this fabricated research or a full-task pass.
+- R3 pass: concrete reflection-versus-targeted-verification and communication-versus-gated-isolation comparisons distinguish feedback, selection and resource regimes. Evidence-based sharing is a design inference across distinct protocols, not proof that the two implementations enforce identical gates.
+- R4 pass: Zhu +7.27 pp / 13.04%; Wan +7.90 pp / 15.13%; Hariri availability-minus-selection 8.06 pp / 8.52% of oracle availability. Parent recomputation matches, with baseline/denominator qualifications retained.
+- R5 pass: fixed-model independent pair plus bounded verification, separate hard all-in cost/time caps, no training, explicit adverse ArcticSwarm evidence and no deployment guarantee. Token ratios alone do not establish monetary feasibility.
+- R6 pass at proposal level: paired predefined tasks, baseline/A/B/C, repeated subset, expert blinding, separate fidelity/error/time metrics, uncertainty and prospective stop/adoption rules. Exact task-clustered error-rate intervals must be specified before implementing the proposed pilot; wide intervals explicitly defer adoption.
+
+UI citations are preserved in [citation labels](research-PR5-citation-labels.json). There are 34 placeholder citations, whose numeric indices skip the six explicit Markdown links; labels correspond to placeholder occurrences in document order, not array index = citation index. Additional grouped sources were not expanded. Checks cover central decision-bearing claims, not every sentence, every grouped URL or the model's complete retrieval history. Human grade confirmation remains pending.

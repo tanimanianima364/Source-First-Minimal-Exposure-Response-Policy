@@ -1,0 +1,77 @@
+{
+  "status": "preregistered; no responses collected",
+  "conditions": {
+    "PR5": {
+      "commit": "682f08ad68a1ec03a57ecec4e0ed8ee5b2893472",
+      "file": "PROMPT.md",
+      "sha256": "b2a5953402fdb707739f8d87113a7d631c6d015d49eac8c54965d07e64b00b22",
+      "characters": 3947
+    },
+    "A-ja": {
+      "commit": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+      "file": "PROMPT.md",
+      "sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+      "characters": 1345
+    },
+    "A-en": {
+      "commit": null,
+      "file": "PROMPT.en.md",
+      "sha256": "73a81977954f95773196cbd59575b0dd60c4e74de836dee6656b4fb8fd9cf6d9",
+      "characters": 4149
+    }
+  },
+  "inputs_and_checks": {
+    "case10": {
+      "path": "eval-results/chatgpt-candidate-c-2026-09-27/case10.txt",
+      "sha256": "8730fcaff23b056870f2b5093ab882305e0b5882fa04117d6327890452e84caf"
+    },
+    "case10-rubric": {
+      "path": "eval-results/chatgpt-candidate-c-2026-09-27/case10-rubric.md",
+      "sha256": "1c615dcce19c2cd0b5518b22ff17c25857d2ca4299523d24d12c2585d8848303"
+    },
+    "research": {
+      "path": "eval-tasks/research-and-coding-2026-09-27/research.txt",
+      "sha256": "f31d3985691bd846b8e0002b45989e8ddb1ffe15ad4278873b51a2841e256602"
+    },
+    "coding": {
+      "path": "eval-tasks/research-and-coding-2026-09-27/coding.txt",
+      "sha256": "3b9c85dc96b01af6389981535879904c84c1d909132a21bdb94fdc929920618b"
+    },
+    "research-coding-rubric": {
+      "path": "eval-tasks/research-and-coding-2026-09-27/rubric.md",
+      "sha256": "8e7642ede08daa380f9b0c0f3d0cefc32680d01745f9f8409d78b31420945d0b"
+    },
+    "independent-checks": {
+      "path": "eval-results/chatgpt-research-coding-2026-09-27/checks/test_contract.py",
+      "sha256": "7e88176c42f507dd7a811e3a8d9b68006520877b42f119cbc06599b735f8749d"
+    },
+    "isolated-runner": {
+      "path": "eval-results/chatgpt-research-coding-2026-09-27/checks/run.py",
+      "sha256": "c32ca17af8b789f2042cf3c43e418984285308a3c4794b4502acab10a043dd8a"
+    }
+  },
+  "order": {
+    "case10": [
+      "PR5",
+      "A-ja",
+      "A-en"
+    ],
+    "coding": [
+      "A-ja",
+      "A-en",
+      "PR5"
+    ],
+    "research": [
+      "A-en",
+      "PR5",
+      "A-ja"
+    ]
+  },
+  "repeats_per_task_condition": 1,
+  "planned_replies": 9,
+  "model": "GPT-5.6 Sol, Extra High 4/5, verified before every send; no Pro or substitution",
+  "installation": "Same custom instructions field; full unchanged text, except exactly one terminal LF removed in ALL conditions, verified after save/reload. If any policy does not fit, do not truncate or move it into chat; report affected comparisons not run.",
+  "controls": "EVALS.md memory requirements, Personalized temporary chat with custom instructions active. Eight recorded switches OFF; research only enables Web search. Verify before/after every response. Restore original settings.",
+  "grading": "Existing unchanged rubrics; independent offline code execution; verify decision-critical primary claims and both recalculations. Human confirmation required. Preserve first answers and errors, no silent retries.",
+  "interpretation": "A-ja versus A-en compares this translation including length/tokenization, not a universal English effect. PR5 versus A-en is an English-to-English cumulative policy comparison. PR5 versus A-ja changes policy and language. One response per cell cannot establish causal or statistical superiority; live retrieval varies. Known tasks, not held-out evidence."
+}

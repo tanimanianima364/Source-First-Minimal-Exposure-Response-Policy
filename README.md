@@ -6,6 +6,8 @@ A response policy for AI chat assistants that prioritizes authoritative sources,
 
 - [PROMPT.md](PROMPT.md) — the single canonical policy, ready to copy as plain text into a chat application's custom instructions. The Japanese text stays under a 1,500-character repository budget, including newlines; it still directs the assistant to use the user's requested language.
 
+- [PROMPT.en.md](PROMPT.en.md) — an English translation of adopted A, derived from the Japanese canonical text. It preserves the 11-paragraph policy and user-language preference; 4,149 characters including newlines exceeds the Japanese 1,500-character budget. Verify full storage before using it; do not truncate it to fit. The focused chat comparison below is complete; behavioral equivalence is not assumed.
+
 ## Use
 
 Back up existing custom instructions, paste the complete contents of `PROMPT.md` into the custom instructions field, save, and verify that the full text was retained. Start a new chat and send your request normally. The policy remains subject to the application's higher-priority instructions and safety constraints.
@@ -18,6 +20,8 @@ The 1,500-character budget is a project constraint, not a verified limit for eve
 Within the policy, accuracy, completion of the requested scope, and material uncertainty take precedence; explicit user format, language, and scope come next. The four-block layout and length targets are defaults. Artifact-only requests omit extra headings and next directions; ordinary nontrivial answers retain useful next directions. The adopted policy A briefly identifies sources used, including user-supplied materials, with known versions/sections and a stable link or specific location. Explicit artifact-only formats still take priority.
 
 ## Evaluation
+
+[The three-condition PR5/A-ja/A-en chat comparison](eval-results/chatgpt-a-language-pr5-2026-09-28/README.md) collected nine final replies with a disclosed replacement for an interrupted PR5 research attempt. Case10 source attribution passes for PR5/A-ja and fails for A-en; all three code samples pass the fixed nine checks; all three research replies have evidence omissions or locator errors, and A-ja also has a rare-error interval flaw. No general English advantage or overall winner is established; human grade confirmation remains pending.
 
 The canonical prompt is **A (`29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218`), 1,345 characters including newlines**, restored byte-for-byte and provisionally adopted by the user on 2026-09-28. This is an operational choice prioritizing source traceability, not statistical superiority or a full-suite pass. The user authorized merging this adoption despite outstanding evaluation/human-grading work; those limitations and A's known coding/locator failures remain recorded.
 

@@ -1,0 +1,146 @@
+[
+  {
+    "task": "case10",
+    "condition": "PR5",
+    "repeat": 1,
+    "policy_commit": "682f08ad68a1ec03a57ecec4e0ed8ee5b2893472",
+    "canonical_sha256": "b2a5953402fdb707739f8d87113a7d631c6d015d49eac8c54965d07e64b00b22",
+    "attempt": 1,
+    ".md": {
+      "sha256": "5f5542e226be0d947bdddd49ce1486b3ecbad01c70b624910959a10fb93cb26a",
+      "characters": 500
+    },
+    "-saved.txt": {
+      "sha256": "d8eec6226c53f132d66d551576d59eac047ab05589b5206f20e46abaaa5d6d37",
+      "characters": 3946
+    }
+  },
+  {
+    "task": "case10",
+    "condition": "A-ja",
+    "repeat": 1,
+    "policy_commit": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+    "canonical_sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+    "attempt": 1,
+    ".md": {
+      "sha256": "d6104a1167db6eb1f4b0af4be6120bd33d87680555942dcd579ba44cea92405a",
+      "characters": 673
+    },
+    "-saved.txt": {
+      "sha256": "1e3d01b413badfe10e33ae92acf81560da9fb752e5568f757fb75a6256cde500",
+      "characters": 1344
+    }
+  },
+  {
+    "task": "case10",
+    "condition": "A-en",
+    "repeat": 1,
+    "policy_commit": "117dc3d20268984848a7e996b63cf8a5f256e306",
+    "canonical_sha256": "73a81977954f95773196cbd59575b0dd60c4e74de836dee6656b4fb8fd9cf6d9",
+    "attempt": 1,
+    ".md": {
+      "sha256": "3c908e7934a2a193ff146f274133c9a5d7705c8f61f641e697089e80f439f2cf",
+      "characters": 300
+    },
+    "-saved.txt": {
+      "sha256": "d5b9198292ae89f4261a9281daf21c8e75445601e75f22dec85333f1bd13e26f",
+      "characters": 4148
+    }
+  },
+  {
+    "task": "coding",
+    "condition": "A-ja",
+    "repeat": 1,
+    "policy_commit": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+    "canonical_sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+    "attempt": 1,
+    ".md": {
+      "sha256": "2d8396e075ec0c3f9cdb67cc67c44791e40d07a3e6770711aee09d82e9d79a4d",
+      "characters": 37146
+    },
+    "-saved.txt": {
+      "sha256": "1e3d01b413badfe10e33ae92acf81560da9fb752e5568f757fb75a6256cde500",
+      "characters": 1344
+    }
+  },
+  {
+    "task": "coding",
+    "condition": "A-en",
+    "repeat": 1,
+    "policy_commit": "117dc3d20268984848a7e996b63cf8a5f256e306",
+    "canonical_sha256": "73a81977954f95773196cbd59575b0dd60c4e74de836dee6656b4fb8fd9cf6d9",
+    "attempt": 1,
+    ".md": {
+      "sha256": "9c466c1248997871c018334004f24ebb9b152f10de152446866f3410e25b3ea8",
+      "characters": 44416
+    },
+    "-saved.txt": {
+      "sha256": "d5b9198292ae89f4261a9281daf21c8e75445601e75f22dec85333f1bd13e26f",
+      "characters": 4148
+    }
+  },
+  {
+    "task": "coding",
+    "condition": "PR5",
+    "repeat": 1,
+    "policy_commit": "682f08ad68a1ec03a57ecec4e0ed8ee5b2893472",
+    "canonical_sha256": "b2a5953402fdb707739f8d87113a7d631c6d015d49eac8c54965d07e64b00b22",
+    "attempt": 1,
+    ".md": {
+      "sha256": "376003c31dbfbd3813ec483ba08a2fcdd3044f2f5c9a29358f8fdde262558b75",
+      "characters": 36385
+    },
+    "-saved.txt": {
+      "sha256": "d8eec6226c53f132d66d551576d59eac047ab05589b5206f20e46abaaa5d6d37",
+      "characters": 3946
+    }
+  },
+  {
+    "task": "research",
+    "condition": "A-en",
+    "repeat": 1,
+    "policy_commit": "117dc3d20268984848a7e996b63cf8a5f256e306",
+    "canonical_sha256": "73a81977954f95773196cbd59575b0dd60c4e74de836dee6656b4fb8fd9cf6d9",
+    "attempt": 1,
+    ".md": {
+      "sha256": "cbe011039766637dc407d92711a9e7da22d79eaac0f9d1b621fa5056ac32505f",
+      "characters": 12370
+    },
+    "-saved.txt": {
+      "sha256": "d5b9198292ae89f4261a9281daf21c8e75445601e75f22dec85333f1bd13e26f",
+      "characters": 4148
+    }
+  },
+  {
+    "task": "research",
+    "condition": "PR5",
+    "repeat": 1,
+    "policy_commit": "682f08ad68a1ec03a57ecec4e0ed8ee5b2893472",
+    "canonical_sha256": "b2a5953402fdb707739f8d87113a7d631c6d015d49eac8c54965d07e64b00b22",
+    "attempt": 2,
+    ".md": {
+      "sha256": "548bda6fd51632842271c339b1155088ff77a3abb3836261dc3737a8186727ca",
+      "characters": 12908
+    },
+    "-saved.txt": {
+      "sha256": "d8eec6226c53f132d66d551576d59eac047ab05589b5206f20e46abaaa5d6d37",
+      "characters": 3946
+    }
+  },
+  {
+    "task": "research",
+    "condition": "A-ja",
+    "repeat": 1,
+    "policy_commit": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+    "canonical_sha256": "314912776cf72a3fd4151ddaed0b7e44cb43ae5398f68df1ee925d5c6335b543",
+    "attempt": 1,
+    ".md": {
+      "sha256": "17dc33c04057da776c570c90a54fee95a7ac2b8c402b8b23c385dc59027c9caf",
+      "characters": 13317
+    },
+    "-saved.txt": {
+      "sha256": "1e3d01b413badfe10e33ae92acf81560da9fb752e5568f757fb75a6256cde500",
+      "characters": 1344
+    }
+  }
+]

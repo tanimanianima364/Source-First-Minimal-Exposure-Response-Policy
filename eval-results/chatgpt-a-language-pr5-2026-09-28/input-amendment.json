@@ -1,0 +1,17 @@
+{
+  "recorded_before": "any coding or research submission",
+  "reason": "Composer removes exactly one terminal LF; first coding send blocked by exact-input guard. No answer requested.",
+  "rule": "For coding and research, remove exactly one terminal LF before filling in every condition; preserve all other characters. Case10 unchanged.",
+  "input_hashes": {
+    "coding": {
+      "sent_sha256": "567e61cc59e4e7eb02614b441bdb5c31bc4dec3a10285fb56fb7d68e4a384402",
+      "characters": 2487,
+      "canonical_path": "eval-tasks/research-and-coding-2026-09-27/coding.txt"
+    },
+    "research": {
+      "sent_sha256": "b2ec3a178c5299b9e98c3d93eebc313133ea0c592fc4f84fc15cf0236f198237",
+      "characters": 1547,
+      "canonical_path": "eval-tasks/research-and-coding-2026-09-27/research.txt"
+    }
+  }
+}
