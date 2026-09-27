@@ -1,0 +1,52 @@
+{
+  "validated_at_utc": "2026-09-27T12:15:12.642406+00:00",
+  "runtime": "CPython 3.12.14 Linux x86_64",
+  "reference_tests": 9,
+  "isolation_probe": {
+    "user_home_hidden": true,
+    "windows_mount_hidden": true,
+    "outbound_network_denied": true,
+    "candidate_readonly": true,
+    "credential_environment_absent": true
+  },
+  "checks_sha256": {
+    "README.md": "95c01edcb94b30f5f90b040f83f63f5362c2a67580426c98a5531d3fb8e0afc4",
+    "run.py": "c32ca17af8b789f2042cf3c43e418984285308a3c4794b4502acab10a043dd8a",
+    "test_contract.py": "7e88176c42f507dd7a811e3a8d9b68006520877b42f119cbc06599b735f8749d"
+  },
+  "variants": {
+    "reference": {
+      "exit": 0,
+      "sha256": "017ce06285b57d6a5a7829ef375c5068b2136f26175cf4c71e103406f7f95216",
+      "detected_checks": []
+    },
+    "missing-failure-replay": {
+      "exit": 1,
+      "sha256": "459ba81fcdf6d0448508d5e0d0d6e9feccf80304644c8c6aac64c1a4ee3dfbbc",
+      "detected_checks": [
+        "ERROR: test_C3_replay_success_failures_order_duplicates (__main__.Contract.test_C3_replay_success_failures_order_duplicates)"
+      ]
+    },
+    "commit-on-error": {
+      "exit": 1,
+      "sha256": "17eae7d48899441be0b75d08acf8b79c8025e8a2bbf325e3f43663442c8437d7",
+      "detected_checks": [
+        "FAIL: test_C4_rollback_all_new_records_and_hook (__main__.Contract.test_C4_rollback_all_new_records_and_hook)"
+      ]
+    },
+    "ship-double-decrement": {
+      "exit": 1,
+      "sha256": "c5821e4b428e461651860f69c49b0a713a1b00befbe71984d4093e74b34be785",
+      "detected_checks": [
+        "FAIL: test_C2_transitions_and_precedence (__main__.Contract.test_C2_transitions_and_precedence)",
+        "FAIL: test_C5_cancel_vs_ship (__main__.Contract.test_C5_cancel_vs_ship)"
+      ]
+    }
+  },
+  "H1_acceptance": {
+    "forced_writer_completion": "skip SNAPSHOT_OVERLAP_UNVERIFIED, no failure",
+    "corrupt_final_state": "failure retained before skip",
+    "private_check_sha256": "034ce95cd72d09c58f486f6454c894b5ad331c9338f7ec141b7c3d19726629be",
+    "private_log_sha256": "ca34185cb2fc930e697a2df131e3d83b9190bda032fdc950ba5fbb2369605b37"
+  }
+}

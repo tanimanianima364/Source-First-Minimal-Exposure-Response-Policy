@@ -1,12 +1,12 @@
 # Research and implementation tasks — prepared 2026-09-27
 
-Two new tasks, not executed and not added to the existing 16-input regression suite. They test literature discovery/synthesis and executable concurrent programming, respectively. Policy text and historical results are unchanged.
+Two tasks for literature discovery/synthesis and executable concurrent programming, separate from the existing 16-input regression suite. The subsequent [A/B execution record](../../eval-results/chatgpt-research-coding-2026-09-27/README.md) preserves replies, independent checks and provisional grades. Policy text, these inputs, the evaluator rubric and historical results are unchanged.
 
 - Send only [research.txt](research.txt) for a live literature review of how to allocate inference compute for a research assistant. It requires recent empirical work, cross-paper reconciliation, numerical checking and a falsifiable deployment recommendation. Do not prepend the synthetic-data/no-search wrapper.
 - Send only [coding.txt](coding.txt) for a complete standard-library SQLite inventory implementation and tests. The challenge is durable replay semantics, atomic batches, process contention and recovery, not adding infrastructure.
 - Keep [rubric.md](rubric.md) and the reference notes below out of the evaluated chats. The research task asks the model to find papers itself; the reference set is deliberately not an answer key.
 
-## Future A/B execution
+## A/B execution protocol
 
 Use A `29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218` and B `01cd1decb47768bb5248bb70439f46f737a13ddb` if continuing the same comparison. Both are Japanese; this does not isolate prompt language. Before collection, freeze exact inputs, criteria, coding checks and policy bytes/hashes, trial count/order and execution capabilities. Verify non-Pro mode and existing [memory/custom-instruction eligibility](../../EVALS.md#chatgpt-and-microsoft-365-copilot-chat-runs); no Pro calls. No browser setting changes or model calls were made to prepare these tasks.
 
@@ -25,4 +25,4 @@ Primary pages checked on 2026-09-27. These are a starting set, not exhaustive co
 
 ## Readiness
 
-Inputs and review criteria are prepared; no A/B responses, execution harness, candidate test runs or scores exist for these tasks yet. A bounded design review checks ambiguity and evidence claims; it cannot establish benchmark validity or task difficulty empirically. Create and freeze independent coding checks before the first candidate is collected. Do not publish a pass/fail or a policy ranking from this preparation alone.
+The preparation commit `69d0cef` contained inputs and review criteria only. The subsequent [execution record](../../eval-results/chatgpt-research-coding-2026-09-27/README.md) adds coding checks validated and frozen before collection, raw replies, isolated execution and source-based grading. The unchanged rubric retains its pre-collection wording as a frozen artifact. A bounded design review alone does not establish benchmark validity or empirical task difficulty; a single A/B pair does not establish a policy ranking. Human grade confirmation remains required.

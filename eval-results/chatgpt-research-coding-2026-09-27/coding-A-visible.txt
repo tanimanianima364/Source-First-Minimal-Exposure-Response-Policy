@@ -1,0 +1,1015 @@
+Python 3.12以降の標準ライブラリだけで、SQLiteを使う在庫予約モジュールinventory.pyと、自動テストtest_inventory.pyを実装してください。これは同一ホストの複数プロセスから利用する小規模な永続化APIです。ネットワークサーバー、ORM、外部サービス、汎用フレームワークは不要です。DBはローカルディスク上で、SQLiteの通常のロックとトランザクションが利用できるものとします。
+
+公開API：
+init_db(path, stocks) -> None
+apply_batch(path, commands, *, before_commit=None) -> list[dict]
+snapshot(path) -> dict
+
+init_dbは新規DBに一度だけ、他の操作と並行せず呼びます。stocksはSKU文字列から初期在庫数への非空dictです。在庫は0～10^9のint（bool不可）。以後、入荷・SKU追加はありません。DBのテーブル構成は自由ですが、再起動後も正しく動作してください。
+
+commandsは非空listで、要素は次のいずれかのdictです。記載以外のキーは認めません。
+予約：{"request_id":"q1","op":"reserve","reservation_id":"r1","sku":"A","qty":3}
+取消：{"request_id":"q2","op":"cancel","reservation_id":"r1"}
+出荷：{"request_id":"q3","op":"ship","reservation_id":"r1"}
+各IDとSKUは長さ1～128のstrで、大文字小文字を区別します。qtyは1～10^9のint（bool不可）。不正な型・キー・op・範囲、未登録SKUへのreserveはValueErrorです。
+
+業務上の結果（例外ではない）：
+- reserveは予約IDが一度も使われておらず在庫が足りれば、利用可能在庫をqty減らし状態RESERVEDを作成してRESERVEDを返す。在庫不足ならOUT_OF_STOCKで、予約は作らない。既存予約IDなら、その予約が取消・出荷済みでもCONFLICT。在庫の判定より予約IDの衝突判定を優先する。
+- cancelはRESERVEDだけをCANCELLEDへ変更し、在庫を戻してCANCELLED。shipはRESERVEDだけをSHIPPEDへ変更し、利用可能在庫はさらに減らさずSHIPPED。
+- cancel/shipの予約IDが存在しなければNOT_FOUND、既にCANCELLEDまたはSHIPPEDならCONFLICT。
+- 各結果dictは{"request_id":入力ID,"status":上記文字列}の2キーだけで、入力順に返す。
+
+再送・原子性・並行性の要件：
+1. request_idはDB全体で一意。同一ID・同一内容の再送は、現在の在庫や予約状態にかかわらず、最初にコミットした結果を返し、何も再適用しない。dictのキー順だけの違いは同一内容とする。OUT_OF_STOCK/NOT_FOUND/CONFLICTも保存する。同一ID・異なる内容はValueError。同じbatch内の重複にも適用する。
+2. batch内は入力順に処理し、後の要素は先の更新を見る。業務結果が失敗でも他の要素の処理は続ける。一方、ValueErrorや内部例外では、そのbatchで新たに行った在庫・予約・request_id記録をすべてロールバックし、例外を呼出し側に返す。以前にコミットした状態は保つ。不正入力を保存済み結果で隠さないよう、構文・型と未登録SKUの検査は再送判定より先に行う。
+3. before_commitが指定された場合、正常なbatchの変更後・コミット直前に引数なしで1回呼ぶ。これはテスト用の、再入しない関数である。ここでの例外でも全体をロールバックする。成功結果をコミット前に呼出し側へ返してはいけない。
+4. 独立プロセスが同じDBを操作しても、各成功batchがどこか1時点でまとめて実行されたとみなせること。在庫の負数化、同じrequest_idの二重適用、取消と出荷の両方の成功は禁止。プロセス内のロックだけに依存しないこと。
+5. ロックが長く解放されない場合は有限時間でsqlite3.OperationalErrorを返してよい。その場合は部分更新を残さない。無限リトライは不可。プロセスがコミット前に終了した場合は未反映、コミット後に応答を受け取れず終了した場合は再送で同じ結果を得ること。電源断、ディスク故障、外部システムへの配送保証は対象外。
+6. snapshotは、複数のSELECTを使っても一貫した同一時点の状態を返す。形式は{"available":{"A":数値,...},"reservations":{"r1":{"sku":"A","qty":数値,"state":"RESERVED"},...}}。取消・出荷済みの予約も含める。呼出しごとに接続を安全に管理すること。
+
+テストでは、通常の予約・取消・出荷だけでなく、失敗結果の再送、順序の異なるdict、batch内重複、ID内容衝突による全体rollback、before_commit例外、再オープン、独立プロセス間の競合を確かめてください。競合はEvent/Barrier等で開始を制御し、sleepだけに正しさを依存させないでください。
+inventory.pyとtest_inventory.pyをそれぞれ完全なコードブロックで提示し、実行コマンドと、原子性・再送・状態遷移を保証する仕組みを短く説明してください。実行できる環境があればテストを実行し、できなければ未実行と明記してください。説明だけで実装を代用しないでください。
+Show more
+￼
+￼
+￼
+￼
+Worked for 5m 25s
+ChatGPT said:
+以下の実装で、batch 単位の原子性、request_id の永続的な冪等性、独立プロセス間の直列化、snapshot の一貫性をSQLiteトランザクションだけで保証します。
+inventory.py
+Python
+Enable word wrap
+Copy
+Run
+￼
+from __future__ import annotations                            
+"""
+                            INSERT INTO reservations(
+                                reservation_id,
+                                sku,
+                                qty,
+                                state
+                            )
+                            VALUES (?, ?, ?, 'RESERVED')
+                            """,
+                            (                                
+reservation_key,                                
+sku_key,                                
+qty,
+                            ),
+                        )
+                        status = "RESERVED"
+            else:                
+row = conn.execute(                    
+"""
+                    SELECT sku, qty, state
+                    FROM reservations
+                    WHERE reservation_id = ?
+                    """,
+                    (reservation_key,),
+                ).fetchone()
+                if row is None:                    
+status = "NOT_FOUND"
+                else:                    
+sku_key, qty, state = row
+                    if state != "RESERVED":                        
+status = "CONFLICT"
+                    elif op == "cancel":                        
+conn.execute(                            
+"""
+                            UPDATE reservations
+                            SET state = 'CANCELLED'
+                            WHERE reservation_id = ?
+                            """,
+                            (reservation_key,),
+                        )
+                        conn.execute(                            
+"""
+                            UPDATE inventory
+                            SET available = available + ?
+                            WHERE sku = ?
+                            """,
+                            (qty, sku_key),
+                        )
+                        status = "CANCELLED"
+                    else:  # ship                        
+conn.execute(                            
+"""
+                            UPDATE reservations
+                            SET state = 'SHIPPED'
+                            WHERE reservation_id = ?
+                            """,
+                            (reservation_key,),
+test_inventory.py
+Python
+Enable word wrap
+Copy
+from __future__ import annotations
+
+import multiprocessing as mp
+import tempfile
+import unittest
+from pathlib import Path
+
+import inventory
+
+
+def _apply_worker(path, barrier, queue, commands):
+    try:
+        barrier.wait(timeout=10)
+        result = inventory.apply_batch(path, commands)
+        queue.put(("ok", result))
+    except BaseException as exc:
+        queue.put(
+            (
+                "error",
+                type(exc).__name__,
+                repr(exc),
+            )
+        )
+
+
+def _snapshot_worker(path, queue):
+    try:
+        queue.put(
+            (
+                "ok",
+                inventory.snapshot(path),
+            )
+        )
+    except BaseException as exc:
+        queue.put(
+            (
+                "error",
+                type(exc).__name__,
+                repr(exc),
+            )
+        )
+
+
+class InventoryTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = str(
+            Path(self.tmp.name) / "inventory.sqlite3"
+        )
+        inventory.init_db(
+            self.db,
+            {
+                "A": 10,
+                "B": 3,
+            },
+        )
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_reserve_cancel_ship_and_snapshot(self):
+        result = inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "q1",
+                    "op": "reserve",
+                    "reservation_id": "r1",
+                    "sku": "A",
+                    "qty": 3,
+                },
+                {
+                    "request_id": "q2",
+                    "op": "ship",
+                    "reservation_id": "r1",
+                },
+                {
+                    "request_id": "q3",
+                    "op": "cancel",
+                    "reservation_id": "r1",
+                },
+                {
+                    "request_id": "q4",
+                    "op": "cancel",
+                    "reservation_id": "missing",
+                },
+                {
+                    "request_id": "q5",
+                    "op": "reserve",
+                    "reservation_id": "r2",
+                    "sku": "A",
+                    "qty": 2,
+                },
+                {
+                    "request_id": "q6",
+                    "op": "cancel",
+                    "reservation_id": "r2",
+                },
+            ],
+        )
+
+        self.assertEqual(
+            result,
+            [
+                {
+                    "request_id": "q1",
+                    "status": "RESERVED",
+                },
+                {
+                    "request_id": "q2",
+                    "status": "SHIPPED",
+                },
+                {
+                    "request_id": "q3",
+                    "status": "CONFLICT",
+                },
+                {
+                    "request_id": "q4",
+                    "status": "NOT_FOUND",
+                },
+                {
+                    "request_id": "q5",
+                    "status": "RESERVED",
+                },
+                {
+                    "request_id": "q6",
+                    "status": "CANCELLED",
+                },
+            ],
+        )
+
+        self.assertEqual(
+            inventory.snapshot(self.db),
+            {
+                "available": {
+                    "A": 7,
+                    "B": 3,
+                },
+                "reservations": {
+                    "r1": {
+                        "sku": "A",
+                        "qty": 3,
+                        "state": "SHIPPED",
+                    },
+                    "r2": {
+                        "sku": "A",
+                        "qty": 2,
+                        "state": "CANCELLED",
+                    },
+                },
+            },
+        )
+
+        # Existing reservation_id wins over stock sufficiency.
+        self.assertEqual(
+            inventory.apply_batch(
+                self.db,
+                [
+                    {
+                        "request_id": "q7",
+                        "op": "reserve",
+                        "reservation_id": "r1",
+                        "sku": "B",
+                        "qty": 999,
+                    }
+                ],
+            ),
+            [
+                {
+                    "request_id": "q7",
+                    "status": "CONFLICT",
+                }
+            ],
+        )
+
+    def test_failed_results_are_replayed_and_dict_order_is_ignored(
+        self,
+    ):
+        inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "hold",
+                    "op": "reserve",
+                    "reservation_id": "r-hold",
+                    "sku": "A",
+                    "qty": 6,
+                }
+            ],
+        )
+
+        failures = inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "oos",
+                    "op": "reserve",
+                    "reservation_id": "r-oos",
+                    "sku": "A",
+                    "qty": 5,
+                },
+                {
+                    "request_id": "conflict",
+                    "op": "reserve",
+                    "reservation_id": "r-hold",
+                    "sku": "B",
+                    "qty": 1,
+                },
+                {
+                    "request_id": "missing",
+                    "op": "cancel",
+                    "reservation_id": "r-future",
+                },
+            ],
+        )
+
+        self.assertEqual(
+            failures,
+            [
+                {
+                    "request_id": "oos",
+                    "status": "OUT_OF_STOCK",
+                },
+                {
+                    "request_id": "conflict",
+                    "status": "CONFLICT",
+                },
+                {
+                    "request_id": "missing",
+                    "status": "NOT_FOUND",
+                },
+            ],
+        )
+
+        # Make the live state different from the state at which
+        # those failed results were first produced.
+        inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "release",
+                    "op": "cancel",
+                    "reservation_id": "r-hold",
+                },
+                {
+                    "request_id": "create",
+                    "op": "reserve",
+                    "reservation_id": "r-future",
+                    "sku": "A",
+                    "qty": 1,
+                },
+            ],
+        )
+
+        replays = inventory.apply_batch(
+            self.db,
+            [
+                # Same content as "oos", different dict key order.
+                {
+                    "qty": 5,
+                    "sku": "A",
+                    "reservation_id": "r-oos",
+                    "op": "reserve",
+                    "request_id": "oos",
+                },
+                {
+                    "reservation_id": "r-hold",
+                    "request_id": "conflict",
+                    "qty": 1,
+                    "sku": "B",
+                    "op": "reserve",
+                },
+                {
+                    "reservation_id": "r-future",
+                    "op": "cancel",
+                    "request_id": "missing",
+                },
+            ],
+        )
+
+        self.assertEqual(
+            replays,
+            failures,
+        )
+
+        snap = inventory.snapshot(self.db)
+
+        self.assertNotIn(
+            "r-oos",
+            snap["reservations"],
+        )
+
+        self.assertEqual(
+            snap["reservations"]["r-future"]["state"],
+            "RESERVED",
+        )
+
+        self.assertEqual(
+            snap["available"]["A"],
+            9,
+        )
+
+    def test_duplicate_request_within_batch_is_applied_once(
+        self,
+    ):
+        one = {
+            "request_id": "q1",
+            "op": "reserve",
+            "reservation_id": "r1",
+            "sku": "A",
+            "qty": 4,
+        }
+
+        same_reordered = {
+            "qty": 4,
+            "sku": "A",
+            "reservation_id": "r1",
+            "op": "reserve",
+            "request_id": "q1",
+        }
+
+        self.assertEqual(
+            inventory.apply_batch(
+                self.db,
+                [
+                    one,
+                    same_reordered,
+                ],
+            ),
+            [
+                {
+                    "request_id": "q1",
+                    "status": "RESERVED",
+                },
+                {
+                    "request_id": "q1",
+                    "status": "RESERVED",
+                },
+            ],
+        )
+
+        snap = inventory.snapshot(self.db)
+
+        self.assertEqual(
+            snap["available"]["A"],
+            6,
+        )
+
+        self.assertEqual(
+            set(snap["reservations"]),
+            {"r1"},
+        )
+
+    def test_request_id_content_conflict_rolls_back_entire_batch(
+        self,
+    ):
+        inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "old",
+                    "op": "reserve",
+                    "reservation_id": "old-r",
+                    "sku": "A",
+                    "qty": 2,
+                }
+            ],
+        )
+
+        with self.assertRaises(ValueError):
+            inventory.apply_batch(
+                self.db,
+                [
+                    {
+                        "request_id": "new",
+                        "op": "reserve",
+                        "reservation_id": "new-r",
+                        "sku": "A",
+                        "qty": 3,
+                    },
+                    {
+                        "request_id": "old",
+                        "op": "cancel",
+                        "reservation_id": "old-r",
+                    },
+                ],
+            )
+
+        snap = inventory.snapshot(self.db)
+
+        self.assertEqual(
+            snap["available"]["A"],
+            8,
+        )
+
+        self.assertNotIn(
+            "new-r",
+            snap["reservations"],
+        )
+
+        self.assertEqual(
+            snap["reservations"]["old-r"]["state"],
+            "RESERVED",
+        )
+
+        # The request-log row for "new" must have been rolled back too.
+        self.assertEqual(
+            inventory.apply_batch(
+                self.db,
+                [
+                    {
+                        "request_id": "new",
+                        "op": "reserve",
+                        "reservation_id": "new-r",
+                        "sku": "A",
+                        "qty": 1,
+                    }
+                ],
+            ),
+            [
+                {
+                    "request_id": "new",
+                    "status": "RESERVED",
+                }
+            ],
+        )
+
+    def test_different_content_duplicate_inside_batch_rolls_back(
+        self,
+    ):
+        with self.assertRaises(ValueError):
+            inventory.apply_batch(
+                self.db,
+                [
+                    {
+                        "request_id": "q1",
+                        "op": "reserve",
+                        "reservation_id": "r1",
+                        "sku": "A",
+                        "qty": 2,
+                    },
+                    {
+                        "request_id": "q1",
+                        "op": "reserve",
+                        "reservation_id": "r2",
+                        "sku": "A",
+                        "qty": 2,
+                    },
+                ],
+            )
+
+        self.assertEqual(
+            inventory.snapshot(self.db),
+            {
+                "available": {
+                    "A": 10,
+                    "B": 3,
+                },
+                "reservations": {},
+            },
+        )
+
+    def test_before_commit_exception_rolls_back_everything(
+        self,
+    ):
+        calls = []
+
+        def fail():
+            calls.append("called")
+            raise RuntimeError("injected failure")
+
+        command = {
+            "request_id": "q1",
+            "op": "reserve",
+            "reservation_id": "r1",
+            "sku": "A",
+            "qty": 5,
+        }
+
+        with self.assertRaisesRegex(
+            RuntimeError,
+            "injected failure",
+        ):
+            inventory.apply_batch(
+                self.db,
+                [command],
+                before_commit=fail,
+            )
+
+        self.assertEqual(
+            calls,
+            ["called"],
+        )
+
+        self.assertEqual(
+            inventory.snapshot(self.db),
+            {
+                "available": {
+                    "A": 10,
+                    "B": 3,
+                },
+                "reservations": {},
+            },
+        )
+
+        # request_id was rolled back, so retry must execute normally.
+        self.assertEqual(
+            inventory.apply_batch(
+                self.db,
+                [command],
+            ),
+            [
+                {
+                    "request_id": "q1",
+                    "status": "RESERVED",
+                }
+            ],
+        )
+
+    def test_validation_and_unknown_sku_are_value_errors(
+        self,
+    ):
+        bad_commands = [
+            [],
+            [
+                {
+                    "request_id": "q",
+                    "op": "reserve",
+                    "reservation_id": "r",
+                    "sku": "A",
+                    "qty": True,
+                }
+            ],
+            [
+                {
+                    "request_id": "q",
+                    "op": "reserve",
+                    "reservation_id": "r",
+                    "sku": "A",
+                    "qty": 1,
+                    "extra": 1,
+                }
+            ],
+            [
+                {
+                    "request_id": "q",
+                    "op": "bogus",
+                    "reservation_id": "r",
+                }
+            ],
+            [
+                {
+                    "request_id": "q",
+                    "op": "reserve",
+                    "reservation_id": "r",
+                    "sku": "NOPE",
+                    "qty": 1,
+                }
+            ],
+        ]
+
+        for commands in bad_commands:
+            with self.subTest(commands=commands):
+                with self.assertRaises(ValueError):
+                    inventory.apply_batch(
+                        self.db,
+                        commands,
+                    )
+
+        inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "saved",
+                    "op": "cancel",
+                    "reservation_id": "r",
+                }
+            ],
+        )
+
+        # Invalid syntax must not be hidden by an existing request_id.
+        with self.assertRaises(ValueError):
+            inventory.apply_batch(
+                self.db,
+                [
+                    {
+                        "request_id": "saved",
+                        "op": "cancel",
+                        "reservation_id": "r",
+                        "extra": 1,
+                    }
+                ],
+            )
+
+    def test_reopen_from_fresh_process(self):
+        inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "q1",
+                    "op": "reserve",
+                    "reservation_id": "r1",
+                    "sku": "A",
+                    "qty": 2,
+                }
+            ],
+        )
+
+        ctx = mp.get_context("spawn")
+        queue = ctx.Queue()
+
+        process = ctx.Process(
+            target=_snapshot_worker,
+            args=(
+                self.db,
+                queue,
+            ),
+        )
+
+        process.start()
+        process.join(10)
+
+        self.assertFalse(
+            process.is_alive(),
+        )
+
+        self.assertEqual(
+            process.exitcode,
+            0,
+        )
+
+        kind, payload = queue.get(timeout=2)
+
+        self.assertEqual(
+            kind,
+            "ok",
+            payload,
+        )
+
+        self.assertEqual(
+            payload["available"]["A"],
+            8,
+        )
+
+        self.assertEqual(
+            payload["reservations"]["r1"]["state"],
+            "RESERVED",
+        )
+
+    def _race(
+        self,
+        command1,
+        command2,
+    ):
+        ctx = mp.get_context("spawn")
+        barrier = ctx.Barrier(3)
+        queue = ctx.Queue()
+
+        processes = [
+            ctx.Process(
+                target=_apply_worker,
+                args=(
+                    self.db,
+                    barrier,
+                    queue,
+                    command1,
+                ),
+            ),
+            ctx.Process(
+                target=_apply_worker,
+                args=(
+                    self.db,
+                    barrier,
+                    queue,
+                    command2,
+                ),
+            ),
+        ]
+
+        for process in processes:
+            process.start()
+
+        # Simultaneous release is controlled by the Barrier,
+        # not by sleep timing.
+        barrier.wait(timeout=10)
+
+        for process in processes:
+            process.join(10)
+
+            self.assertFalse(
+                process.is_alive(),
+            )
+
+            self.assertEqual(
+                process.exitcode,
+                0,
+            )
+
+        replies = [
+            queue.get(timeout=2),
+            queue.get(timeout=2),
+        ]
+
+        for reply in replies:
+            self.assertEqual(
+                reply[0],
+                "ok",
+                reply,
+            )
+
+        return [
+            reply[1]
+            for reply in replies
+        ]
+
+    def test_process_race_cannot_oversell(self):
+        replies = self._race(
+            [
+                {
+                    "request_id": "q1",
+                    "op": "reserve",
+                    "reservation_id": "r1",
+                    "sku": "A",
+                    "qty": 6,
+                }
+            ],
+            [
+                {
+                    "request_id": "q2",
+                    "op": "reserve",
+                    "reservation_id": "r2",
+                    "sku": "A",
+                    "qty": 6,
+                }
+            ],
+        )
+
+        statuses = sorted(
+            reply[0]["status"]
+            for reply in replies
+        )
+
+        self.assertEqual(
+            statuses,
+            [
+                "OUT_OF_STOCK",
+                "RESERVED",
+            ],
+        )
+
+        snap = inventory.snapshot(self.db)
+
+        self.assertEqual(
+            snap["available"]["A"],
+            4,
+        )
+
+        self.assertEqual(
+            len(snap["reservations"]),
+            1,
+        )
+
+    def test_process_race_same_request_id_applies_once(
+        self,
+    ):
+        command = [
+            {
+                "request_id": "same",
+                "op": "reserve",
+                "reservation_id": "r1",
+                "sku": "A",
+                "qty": 4,
+            }
+        ]
+
+        replies = self._race(
+            command,
+            command,
+        )
+
+        self.assertEqual(
+            [
+                reply[0]["status"]
+                for reply in replies
+            ],
+            [
+                "RESERVED",
+                "RESERVED",
+            ],
+        )
+
+        snap = inventory.snapshot(self.db)
+
+        self.assertEqual(
+            snap["available"]["A"],
+            6,
+        )
+
+        self.assertEqual(
+            set(snap["reservations"]),
+            {"r1"},
+        )
+
+    def test_process_race_cancel_vs_ship_has_only_one_success(
+        self,
+    ):
+        inventory.apply_batch(
+            self.db,
+            [
+                {
+                    "request_id": "reserve",
+                    "op": "reserve",
+                    "reservation_id": "r1",
+                    "sku": "A",
+                    "qty": 4,
+                }
+            ],
+        )
+
+        replies = self._race(
+            [
+                {
+                    "request_id": "cancel",
+                    "op": "cancel",
+                    "reservation_id": "r1",
+                }
+            ],
+            [
+                {
+                    "request_id": "ship",
+                    "op": "ship",
+                    "reservation_id": "r1",
+                }
+            ],
+        )
+
+        statuses = [
+            reply[0]["status"]
+            for reply in replies
+        ]
+
+        self.assertEqual(
+            statuses.count("CONFLICT"),
+            1,
+        )
+
+        self.assertEqual(
+            statuses.count("CANCELLED")
+            + statuses.count("SHIPPED"),
+            1,
+        )
+
+        snap = inventory.snapshot(self.db)
+        state = snap["reservations"]["r1"]["state"]
+
+        self.assertIn(
+            state,
+            {
+                "CANCELLED",
+                "SHIPPED",
+            },
+        )
+
+        self.assertEqual(
+            snap["available"]["A"],
+            10 if state == "CANCELLED" else 6,
+        )
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
+実行は2ファイルを同じディレクトリに置いて次のコマンドです。
+Bash
+Enable word wrap
+Copy
+python3 -m unittest -v
+主要な保証は次の通りです。
+• 原子性・プロセス間競合: apply_batch() 冒頭で BEGIN IMMEDIATE を取得します。SQLiteのDBロックにより独立プロセスのwriter batchが直列化されるため、在庫判定から予約状態更新、request_id 保存までが1つの直列化点を持ちます。5秒の busy_timeout 後は sqlite3.OperationalError になり得ますが、未コミット変更は残りません。
+• 再送: requests テーブルに正規化したcommandと最初のstatusを、在庫・予約更新と同じトランザクションで保存します。JSONを sort_keys=True で正規化するためdictのキー順は無関係です。OUT_OF_STOCK、NOT_FOUND、CONFLICT も保存されます。同一batch内の後続commandからも未コミットのrequest記録が見えるので、同一内容は再適用せず、異内容なら ValueError になりbatch全体がrollbackされます。
+• 状態遷移: RESERVED からだけ CANCELLED / SHIPPED へ遷移します。cancelは在庫を戻し、shipは戻しません。一度終端状態になれば以後は CONFLICT です。
+• 検証順序: 構文・型・キー検証をトランザクション開始前、未登録SKU検査をトランザクション開始後かつrequest再送判定前に実施しています。
+• before_commit: 全command処理後、まだトランザクションが開いている状態で1回だけ呼びます。例外は在庫・予約・request履歴をまとめてrollbackします。
+• snapshot: 明示的なread transaction内で両SELECTを行うので、在庫と予約は同じSQLite snapshotに対応します。
+実際に Python 3.13.5 で実行し、spawn による独立プロセス競合3ケースを含む 11テストすべて成功しました。
+Plain text
+Enable word wrap
+Copy
+Ran 11 tests in 3.395s
+
+OK
+￼
+Read aloud
+Regenerate response
+￼
+Latest response
+￼
+Add files and more
+Ask ChatGPT
+Select ChatGPT model
+Dictate
+￼
+ChatGPT can make mistakes. Check important info.
+￼
+￼
+￼
+￼
+￼
+Response complete

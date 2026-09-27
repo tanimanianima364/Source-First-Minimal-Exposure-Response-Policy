@@ -1,0 +1,17 @@
+test_before_commit_exception_rolls_back_everything (test_inventory.InventoryTests.test_before_commit_exception_rolls_back_everything) ... ok
+test_different_content_duplicate_inside_batch_rolls_back (test_inventory.InventoryTests.test_different_content_duplicate_inside_batch_rolls_back) ... ok
+test_duplicate_request_within_batch_is_applied_once (test_inventory.InventoryTests.test_duplicate_request_within_batch_is_applied_once) ... ok
+test_failed_results_are_replayed_and_dict_order_is_ignored (test_inventory.InventoryTests.test_failed_results_are_replayed_and_dict_order_is_ignored) ... ok
+test_process_race_cancel_vs_ship_has_only_one_success (test_inventory.InventoryTests.test_process_race_cancel_vs_ship_has_only_one_success) ... ok
+test_process_race_cannot_oversell (test_inventory.InventoryTests.test_process_race_cannot_oversell) ... ok
+test_process_race_same_request_id_applies_once (test_inventory.InventoryTests.test_process_race_same_request_id_applies_once) ... ok
+test_reopen_from_fresh_process (test_inventory.InventoryTests.test_reopen_from_fresh_process) ... ok
+test_request_id_content_conflict_rolls_back_entire_batch (test_inventory.InventoryTests.test_request_id_content_conflict_rolls_back_entire_batch) ... ok
+test_reserve_cancel_ship_and_snapshot (test_inventory.InventoryTests.test_reserve_cancel_ship_and_snapshot) ... ok
+test_validation_and_unknown_sku_are_value_errors (test_inventory.InventoryTests.test_validation_and_unknown_sku_are_value_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.319s
+
+OK
+ISOLATED_RUN_EXIT=0

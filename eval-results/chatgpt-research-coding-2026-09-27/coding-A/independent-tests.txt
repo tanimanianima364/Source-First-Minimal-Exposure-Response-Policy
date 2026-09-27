@@ -1,0 +1,30 @@
+test_C1_shapes_and_input_validation (__main__.Contract.test_C1_shapes_and_input_validation) ... 
+  test_C1_shapes_and_input_validation (__main__.Contract.test_C1_shapes_and_input_validation) (commands=[{'request_id': 'q', 'op': [], 'reservation_id': 'r'}]) ... ERROR
+test_C2_transitions_and_precedence (__main__.Contract.test_C2_transitions_and_precedence) ... ok
+test_C3_replay_success_failures_order_duplicates (__main__.Contract.test_C3_replay_success_failures_order_duplicates) ... ok
+test_C4_kill_before_commit_and_lost_response (__main__.Contract.test_C4_kill_before_commit_and_lost_response) ... ok
+test_C4_rollback_all_new_records_and_hook (__main__.Contract.test_C4_rollback_all_new_records_and_hook) ... ok
+test_C5_cancel_vs_ship (__main__.Contract.test_C5_cancel_vs_ship) ... ok
+test_C5_competing_reserves_and_identical_requests (__main__.Contract.test_C5_competing_reserves_and_identical_requests) ... ok
+test_C5_external_lock_releases_without_partial_state (__main__.Contract.test_C5_external_lock_releases_without_partial_state) ... ok
+test_C6_coherent_snapshot_stress (__main__.Contract.test_C6_coherent_snapshot_stress) ... ok
+
+======================================================================
+ERROR: test_C1_shapes_and_input_validation (__main__.Contract.test_C1_shapes_and_input_validation) (commands=[{'request_id': 'q', 'op': [], 'reservation_id': 'r'}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/checks/test_contract.py", line 117, in test_C1_shapes_and_input_validation
+    api.apply_batch(self.db, commands)
+  File "/candidate/inventory.py", line 237, in apply_batch
+    validated = _validate_commands(commands)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/candidate/inventory.py", line 83, in _validate_commands
+    elif op in {"cancel", "ship"}:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'list'
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.863s
+
+FAILED (errors=1)
+ISOLATED_RUN_EXIT=1

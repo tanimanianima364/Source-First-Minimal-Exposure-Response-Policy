@@ -1,0 +1,17 @@
+test_before_commit_exception_rolls_back (test_inventory.InventoryTests.test_before_commit_exception_rolls_back) ... ok
+test_dict_order_and_batch_duplicate (test_inventory.InventoryTests.test_dict_order_and_batch_duplicate) ... ok
+test_failed_results_are_replayed (test_inventory.InventoryTests.test_failed_results_are_replayed) ... ok
+test_normal_reserve_cancel_ship_and_terminal_conflicts (test_inventory.InventoryTests.test_normal_reserve_cancel_ship_and_terminal_conflicts) ... ok
+test_reopen_persists_state (test_inventory.InventoryTests.test_reopen_persists_state) ... ok
+test_request_id_content_conflict_rolls_back_whole_batch (test_inventory.InventoryTests.test_request_id_content_conflict_rolls_back_whole_batch) ... ok
+test_same_batch_conflicting_duplicate_request_rolls_back (test_inventory.InventoryTests.test_same_batch_conflicting_duplicate_request_rolls_back) ... ok
+test_two_processes_cannot_both_cancel_and_ship (test_inventory.InventoryTests.test_two_processes_cannot_both_cancel_and_ship) ... ok
+test_two_processes_cannot_overreserve (test_inventory.InventoryTests.test_two_processes_cannot_overreserve) ... ok
+test_unknown_sku_rolls_back_whole_batch (test_inventory.InventoryTests.test_unknown_sku_rolls_back_whole_batch) ... ok
+test_validation_and_unknown_sku_precede_replay (test_inventory.InventoryTests.test_validation_and_unknown_sku_precede_replay) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.647s
+
+OK
+ISOLATED_RUN_EXIT=0

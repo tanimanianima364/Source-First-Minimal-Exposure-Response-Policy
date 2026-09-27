@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-09-27T12:15:49.846319+00:00",
+  "task_base": "69d0cef6af009856e7ff1de25cd854f1584e3b8a",
+  "baseline": "29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218",
+  "candidate": "01cd1decb47768bb5248bb70439f46f737a13ddb",
+  "order": [
+    "research-A",
+    "research-B",
+    "coding-B",
+    "coding-A"
+  ],
+  "repeats": 1,
+  "model": "GPT-5.6 Sol; Extra High4/5 verified before every send, no Pro calls",
+  "policy_installation": "Settings only, reload/readback; canonical minus one terminal LF, every other character retained",
+  "inputs": "Prepared tasks minus only one terminal LF. Same bytes in both conditions. No rubric/reference/harness in chats.",
+  "research_controls": "Web search ON; other seven OFF; fresh Personalized temporary chat",
+  "coding_controls": "All eight OFF; same model/account/mode; no per-condition extra tools provided",
+  "comparison_limits": "Live search not frozen; internal backend/tools not independently observable. No general or causal winner from single pairs.",
+  "grading": "Frozen rubric and independently validated coding checks; research claims independently checked against actual cited primary versions; raw code extracted without repair; author tests separate",
+  "execution": "Offline Bubblewrap namespace, CPython3.12.14, read-only code/test/runtime/library mounts, no home/network/secrets; each run180s external cap",
+  "timeout_interpretation": "Execution timeouts are unverified or observed termination, not proof of mathematical incorrectness; lock timeout >12s separately unverified pending source review",
+  "restore": "Original instructions and eight controls; retain non-Pro Power; close five owned windows only",
+  "harness_prefreeze_fix": "H1 zero snapshot overlap is UNVERIFIED, never candidate failure; focused forced-completion acceptance passed before collection",
+  "runtime": "CPython3.12.14 / SQLite3.53.1"
+}
