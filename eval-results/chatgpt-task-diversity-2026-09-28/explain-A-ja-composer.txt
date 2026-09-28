@@ -1,0 +1,13 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Python、入力はdictのlist。aは欠損またはNoneまたは数値。元コード:
+def p(d):
+    r = []
+    for x in d:
+        if x.get("a") and x["a"] > 0:
+            r.append(x["a"] * 2)
+    return r
+
+User request
+挙動を維持して読みやすくリファクタリングしてください。変更ごとの理由を段階的に詳しく説明し、欠損・None・0・負数・正数で元コードと結果が同じことを検証するコードも示してください。

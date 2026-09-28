@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+架空サービス設計r1: HTTP APIは4 worker×2インスタンス。認証済みuser_id単位で任意の連続60秒に最大100件、全インスタンス合算で厳密。共有Redisは導入済み。プロセス内辞書の案がある。Redis停止時は要求を通さず503とする。
+
+User request
+最小限で要件を満たすレート制限方式を設計してください。並行更新、60秒境界、リトライ時の扱い、キーの寿命、障害時の振る舞いと確認テストを示してください。コード全文は不要です。

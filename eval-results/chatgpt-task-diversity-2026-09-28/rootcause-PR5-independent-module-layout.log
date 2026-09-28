@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/checks/test_contract.py", line 7, in <module>
+    import inventory as m
+  File "/candidate/inventory.py", line 40, in <module>
+    from amounts import invoice_total, refund_amount
+ModuleNotFoundError: No module named 'amounts'
+ISOLATED_RUN_EXIT=1

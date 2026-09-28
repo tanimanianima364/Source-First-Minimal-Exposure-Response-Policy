@@ -1,0 +1,5 @@
+Python 3.12.14 SQLite 3.53.1
+factory: None returned: tuple
+factory: <class 'sqlite3.Row'> returned: tuple
+SQL row-factory diagnostic passed
+ISOLATED_RUN_EXIT=0

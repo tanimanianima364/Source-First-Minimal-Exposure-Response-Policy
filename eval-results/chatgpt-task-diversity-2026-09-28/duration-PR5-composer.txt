@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Python標準ライブラリのみ。書式はASCII数字と単位h,m,s。各単位は0回または1回、h→m→s順。少なくとも1成分、値は非負整数で上限なし、空白/符号/小数/他文字は禁止。非strはTypeError、書式不正はValueError。
+
+User request
+parse_duration(text)を実装し、合計秒をintで返してください。1h30m45sは5445、0sは0です。正常系と不正系を含む小さな実行可能テストも添えてください。

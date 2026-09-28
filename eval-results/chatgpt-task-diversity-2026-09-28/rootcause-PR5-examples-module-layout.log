@@ -1,0 +1,17 @@
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting inventory.py _________________________
+ImportError while importing test module '/candidate/inventory.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/runtime/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/candidate/inventory.py:40: in <module>
+    from amounts import invoice_total, refund_amount
+E   ModuleNotFoundError: No module named 'amounts'
+=========================== short test summary info ============================
+ERROR ../candidate/inventory.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.32s
+ISOLATED_RUN_EXIT=2

@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Python標準ライブラリのみ。UTF-8 CSV、ヘッダーdepartment,amount。amountは符号付き十進数で小数2桁以内、空欄・NaN・Infinityは不正。空ファイル・ヘッダー違い・列数違いも不正。departmentは空でない文字列。ファイルサイズは小さくメモリ内で処理可能。
+
+User request
+sum_csv(path)を実装してください。部署ごとの合計をdict[str, Decimal]で返し、不正行は無視せずValueErrorにしてください。金額を二進浮動小数点へ変換しないでください。コードと動く最小の検証例を示してください。

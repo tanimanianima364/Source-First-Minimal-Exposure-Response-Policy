@@ -1,0 +1,10 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Document: rollout.txt, revision r1
+Requirements: A. Backup before migration. B. Test restore before release. C. Assign a rollback owner before release.
+Plan: Run the migration on Monday; take the first backup on Tuesday. No restore test is scheduled. No rollback owner is assigned.
+Priority: A, then B, then C.
+
+User request
+この計画の重要な問題を上位2件だけ示してください。追加提案は不要です。

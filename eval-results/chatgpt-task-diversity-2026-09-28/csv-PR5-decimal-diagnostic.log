@@ -1,0 +1,8 @@
+OK
+expected: 123456789012345678901234567890.02 actual: 1.234567890123456789012345679E+29 equal: False
+Traceback (most recent call last):
+  File "/checks/test_contract.py", line 8, in <module>
+    assert actual==expected
+           ^^^^^^^^^^^^^^^^
+AssertionError
+ISOLATED_RUN_EXIT=1

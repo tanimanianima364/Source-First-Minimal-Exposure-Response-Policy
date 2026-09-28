@@ -1,0 +1,26 @@
+{
+  "detected_during": "final timestamp verification, after collection",
+  "deviations": {
+    "calibration": {
+      "planned": [
+        "A-ja",
+        "PR5"
+      ],
+      "actual": [
+        "PR5",
+        "A-ja"
+      ]
+    },
+    "distributed": {
+      "planned": [
+        "PR5",
+        "A-ja"
+      ],
+      "actual": [
+        "A-ja",
+        "PR5"
+      ]
+    }
+  },
+  "disposition": "Preserve planned and actual orders. No reruns/replacements. Both pairs excluded from comparative brevity, improvement/regression and aggregate judgments; per-response grades retained."
+}

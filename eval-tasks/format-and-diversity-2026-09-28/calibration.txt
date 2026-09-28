@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+架空センサー仕様r1: ADC整数値0〜1023。生電圧=raw/1023*3.3 V。校正電圧=生電圧*gain+offset。gainは有限かつ正、offsetは有限。温度℃=(校正電圧-0.5)*100。検証済み校正値gain=1.02, offset=-0.01 V。
+
+User request
+raw=310の温度を小数第2位まで計算してください。raw,gain,offsetを受け取るPython関数と入力検証も示してください。理想値gain=1,offset=0に固定せず、機器固有の校正を使える形にしてください。

@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+対象ブラウザはdate inputに対応。単一のHTMLフォーム。外部ライブラリ未導入。予約日は必須、2026-10-01から2026-10-31の範囲。
+
+User request
+予約日を選ぶ入力欄を実装してください。HTML断片と、採用理由・サーバー側で必要な検証を日本語で簡潔に示してください。
