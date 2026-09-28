@@ -175,10 +175,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "共有parse_amountの修正で両経路を直し、固定独立チェックと付属pytestが通過。",
     "response": "rootcause-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both rootcause replies passing content/evidence/format after the shared-parser contract, implementation/test summary and links to both responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "rootcause",
@@ -186,10 +187,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "共有parse_amountの修正で両経路を直し、固定独立チェックと付属pytestが通過。",
     "response": "rootcause-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both rootcause replies passing content/evidence/format after the shared-parser contract, implementation/test summary and links to both responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "explain",
