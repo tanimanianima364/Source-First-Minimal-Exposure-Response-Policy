@@ -1,6 +1,8 @@
 # PR5 versus Japanese A: formats and task diversity
 
 All 22 replies collected; provisional grades, human confirmation pending.
+[Human grading worksheet and resumed cross-check](HUMAN-REVIEW.md) links each
+response, criterion summary and execution evidence; all human checks remain pending.
 Nine pairs follow the planned order; two are reference observations excluded
 from comparison because their order was reversed. The
 [preregistered plan](../../eval-tasks/format-and-diversity-2026-09-28/plan.json)
