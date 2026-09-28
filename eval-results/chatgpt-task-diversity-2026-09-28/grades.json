@@ -223,10 +223,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "51.00℃、校正係数を引数に保持、型/範囲/有限性を検証。付属例と採点条件を実行して通過（実機測定ではない）。",
     "response": "calibration-A-ja.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both calibration replies passing content/evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, result/check summary, real-device limitation and links to both responses and saved criteria logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "calibration",
@@ -234,10 +235,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "51.00℃、校正係数を引数に保持、型/範囲/有限性を検証。付属例と採点条件を実行して通過（実機測定ではない）。",
     "response": "calibration-PR5.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both calibration replies passing content/evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, result/check summary, real-device limitation and links to both responses and saved criteria logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "distributed",
