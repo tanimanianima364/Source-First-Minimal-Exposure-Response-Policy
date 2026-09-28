@@ -1,0 +1,9 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Document: Export spec v1, section Exports
+URL: https://example.invalid/spec/v1#exports
+Text: Export jobs accept CSV input up to 10 MB. Jobs run asynchronously. A job result expires after 24 hours. Failed jobs can be retried once.
+
+User request
+この仕様を日本語で要約してください。追加提案は不要です。

@@ -1,0 +1,7 @@
+欠損: original=[], refactored=[]
+None: original=[], refactored=[]
+0: original=[], refactored=[]
+負数: original=[], refactored=[]
+正数: original=[6], refactored=[6]
+すべて同じ結果です
+ISOLATED_RUN_EXIT=0

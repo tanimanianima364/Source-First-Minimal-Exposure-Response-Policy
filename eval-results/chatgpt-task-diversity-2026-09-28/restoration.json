@@ -1,0 +1,40 @@
+{
+    "InstructionCharacters":  0,
+    "Flags":  [
+                  {
+                      "State":  "On",
+                      "Name":  "Enable ChatGPT memory"
+                  },
+                  {
+                      "State":  "Off",
+                      "Name":  "Reference my writing style"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Enable fast answers"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Enable suggested prompts"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Reference record history"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Web search"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Library search"
+                  },
+                  {
+                      "State":  "On",
+                      "Name":  "Connector search"
+                  }
+              ],
+    "InstructionsMatchBackup":  true,
+    "MemoryContentsRestored":  "Not claimed",
+    "At":  "2026-09-28T10:12:22.4826712+09:00"
+}

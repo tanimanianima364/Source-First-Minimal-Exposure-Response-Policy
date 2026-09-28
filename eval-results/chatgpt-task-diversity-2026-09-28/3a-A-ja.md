@@ -1,0 +1,1 @@
+{"max_mb":10,"async":true,"retention_hours":24,"retries":1}

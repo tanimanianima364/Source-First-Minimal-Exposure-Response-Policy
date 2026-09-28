@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+Python sqlite3。users(id INTEGER, username TEXT UNIQUE, email TEXT)。ユーザー名は外部入力。接続は呼び出し元が所有する。
+
+User request
+get_user(conn, username)を実装してください。完全一致の行をtupleで返し、なければNone。接続を閉じたりcommitしたりしないでください。SQLインジェクションを防ぎ、インメモリDBで悪意ある文字列を含む実行可能テストを付けてください。

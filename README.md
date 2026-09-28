@@ -21,6 +21,8 @@ Within the policy, accuracy, completion of the requested scope, and material unc
 
 ## Evaluation
 
+[The 11-task PR5/Japanese A expansion](eval-results/chatgpt-task-diversity-2026-09-28/README.md) collected 22 non-Pro replies using eight Ponytail-inspired task categories plus three existing format cases. Both pass the format cases; both CSV implementations fail a disclosed large-number diagnostic, and both distributed-design test plans omit an equal-timestamp check. Calibration/distributed order deviations are reference-only, excluded from comparisons. No overall winner or adoption change follows; human grading remains pending.
+
 [The three-condition PR5/A-ja/A-en chat comparison](eval-results/chatgpt-a-language-pr5-2026-09-28/README.md) collected nine final replies with a disclosed replacement for an interrupted PR5 research attempt. Case10 source attribution passes for PR5/A-ja and fails for A-en; all three code samples pass the fixed nine checks; all three research replies have evidence omissions or locator errors, and A-ja also has a rare-error interval flaw. No general English advantage or overall winner is established; human grade confirmation remains pending.
 
 The canonical prompt is **A (`29ad511c447a5cb15c30cde7cb2d0a6b9aeb8218`), 1,345 characters including newlines**, restored byte-for-byte and provisionally adopted by the user on 2026-09-28. This is an operational choice prioritizing source traceability, not statistical superiority or a full-suite pass. The user authorized merging this adoption despite outstanding evaluation/human-grading work; those limitations and A's known coding/locator failures remain recorded.

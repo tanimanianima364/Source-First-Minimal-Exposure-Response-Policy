@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/checks/test_contract.py", line 7, in <module>
+    import inventory as m
+  File "/candidate/inventory.py", line 31, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+ISOLATED_RUN_EXIT=1

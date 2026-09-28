@@ -1,0 +1,70 @@
+import sqlite3
+
+
+def get_user(conn, username):
+    cursor = conn.execute(
+        "SELECT id, username, email FROM users WHERE username = ?",
+        (username,),
+    )
+    return cursor.fetchone()
+
+
+def test_get_user():
+    conn = sqlite3.connect(":memory:")
+
+    conn.execute("""
+        CREATE TABLE users (
+            id INTEGER,
+            username TEXT UNIQUE,
+            email TEXT
+        )
+    """)
+
+    conn.executemany(
+        "INSERT INTO users (id, username, email) VALUES (?, ?, ?)",
+        [
+            (1, "alice", "alice@example.com"),
+            (2, "o'reilly", "oreilly@example.com"),
+        ],
+    )
+
+    # 完全一致
+    assert get_user(conn, "alice") == (
+        1,
+        "alice",
+        "alice@example.com",
+    )
+    assert get_user(conn, "ali") is None
+
+    # クォートを含む正当なユーザー名
+    assert get_user(conn, "o'reilly") == (
+        2,
+        "o'reilly",
+        "oreilly@example.com",
+    )
+
+    # 典型的なSQLインジェクション文字列でも一致しない
+    assert get_user(conn, "' OR 1=1 --") is None
+
+    # 複数文・DROP TABLEを狙う入力も単なる文字列として扱われる
+    malicious = "alice'; DROP TABLE users; --"
+    assert get_user(conn, malicious) is None
+
+    # テーブルが破壊されていないことを確認
+    assert conn.execute(
+        "SELECT COUNT(*) FROM users"
+    ).fetchone() == (2,)
+
+    # get_user() が暗黙にcommitしていないことを確認
+    assert conn.in_transaction
+
+    # get_user() が接続を閉じていないことを確認
+    assert conn.execute("SELECT 1").fetchone() == (1,)
+
+    # テスト自身が所有する接続なので、最後にテスト側で閉じる
+    conn.close()
+
+
+if __name__ == "__main__":
+    test_get_user()
+    print("All tests passed.")

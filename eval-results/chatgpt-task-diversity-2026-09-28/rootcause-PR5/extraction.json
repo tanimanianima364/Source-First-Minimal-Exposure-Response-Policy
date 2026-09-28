@@ -1,0 +1,5 @@
+{
+  "source": "rootcause-PR5.md",
+  "method": "Verbatim blocks; first block as amounts.py (and inventory.py for independent checker), last block as test_inventory.py; middle example separately preserved",
+  "blocks": 3
+}

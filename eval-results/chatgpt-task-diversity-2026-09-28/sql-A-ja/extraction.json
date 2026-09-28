@@ -1,0 +1,5 @@
+{
+  "source": "sql-A-ja.md",
+  "method": "All Python fenced blocks concatenated verbatim; no repairs",
+  "blocks": 1
+}

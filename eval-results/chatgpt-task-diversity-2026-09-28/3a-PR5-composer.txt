@@ -1,0 +1,7 @@
+The case documents, URLs, and tool outcomes are synthetic. Answer using the supplied case context and user request; do not access fixture URLs or perform external searches.
+
+Case context
+None
+
+User request
+次の仕様をJSONオブジェクトだけで返してください。キーはmax_mb、async、retention_hours、retriesのみ。仕様: 最大10 MB、非同期、保存24時間、再試行1回。
