@@ -1,8 +1,10 @@
 # PR5 versus Japanese A: formats and task diversity
 
-All 22 replies collected; provisional grades, human confirmation pending.
-[Human grading worksheet and resumed cross-check](HUMAN-REVIEW.md) links each
-response, criterion summary and execution evidence; all human checks remain pending.
+All 22 replies collected; the user confirmed the recorded grades for both
+conditions of all 11 tasks on 2026-09-28, through separate task-level agreements.
+[Human grading worksheet and confirmation record](HUMAN-REVIEW.md) links each
+response, criterion summary and execution evidence. This records reported grading
+agreement, not independently observed source viewing or new test execution.
 Nine pairs follow the planned order; two are reference observations excluded
 from comparison because their order was reversed. The
 [preregistered plan](../../eval-tasks/format-and-diversity-2026-09-28/plan.json)
@@ -86,8 +88,8 @@ SQL/PR5 readback mismatch also resolved before submission. No retries based on a
 One reply per condition per purpose-selected, known task. Finite checks do not
 prove all-input correctness, production safety, or causal policy effects. Previous
 research/source-attribution failures retain their original records. These results
-do not establish a full-suite pass or an overall winner. Human grade confirmation
-and policy adoption remain separate decisions.
+do not establish a full-suite pass or an overall winner. Human confirmation covers only these 22 grades; earlier research/source tasks
+remain outside this confirmation. Policy adoption is a separate decision.
 
 ## Execution notes
 

@@ -27,7 +27,7 @@ original=json.loads((r/'original-controls.json').read_text());restored=json.load
 assert {x['Name']:x['State'] for x in original}=={x['Name']:x['State'] for x in restored['Flags']}
 assert restored['InstructionsMatchBackup'] and restored['InstructionCharacters']==0
 assert json.loads((r/'closed-windows.json').read_text())['Remaining']==0
-print('Order deviations, provisional grades, restoration and closure verified')
+print('Order deviations, recorded grades, restoration and closure verified')
 
 # SQL is a post-response diagnostic, not a replacement for frozen test results.
 for condition, code in [('PR5', 1), ('A-ja', 0)]:
@@ -35,3 +35,6 @@ for condition, code in [('PR5', 1), ('A-ja', 0)]:
     assert 'ISOLATED_RUN_EXIT='+str(code) in log
     assert 'returned: '+('Row' if condition=='PR5' else 'tuple') in log
 assert '| sql |' not in (r/'README.md').read_text()
+
+assert all(x['status']=='human confirmed; 2026-09-28' and x.get('human_confirmation') for x in g)
+assert '| 未確認 |' not in (r/'HUMAN-REVIEW.md').read_text()

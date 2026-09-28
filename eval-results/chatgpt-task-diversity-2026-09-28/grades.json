@@ -5,10 +5,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "CSV10MB・非同期・24時間失効・1回再試行をすべて含み、追加提案なし。",
     "response": "2a-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 2a replies pass content/evidence/format after the four specification facts, request constraints and both response texts were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "2a",
@@ -16,10 +17,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "CSV10MB・非同期・24時間失効・1回再試行をすべて含み、追加提案なし。",
     "response": "2a-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 2a replies pass content/evidence/format after the four specification facts, request constraints and both response texts were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "3a",
@@ -27,10 +29,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "回答全体をjson.loadsで読み、要求オブジェクトと一致。フェンス等なし。",
     "response": "3a-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 3a replies pass content/evidence/format after the request and identical response text were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "3a",
@@ -38,10 +41,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "回答全体をjson.loadsで読み、要求オブジェクトと一致。フェンス等なし。",
     "response": "3a-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 3a replies pass content/evidence/format after the request and identical response text were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "1b",
@@ -49,10 +53,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "要件A/Bだけを優先順に報告。C・追加提案なし。",
     "response": "1b-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 1b replies pass content/evidence/format after the A/B requirements, request constraints and both response texts were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "1b",
@@ -60,10 +65,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "要件A/Bだけを優先順に報告。C・追加提案なし。",
     "response": "1b-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 1b replies pass content/evidence/format after the A/B requirements, request constraints and both response texts were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "native",
@@ -71,10 +77,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "関連labelとdate input、必須/範囲指定、サーバー検証を保持。外部UIライブラリ不要。",
     "response": "native-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both native replies passing content/evidence/format after the requirements, shared HTML, explanation summary and links to both full responses were provided, with a request to check the originals. This records user-reported grading agreement, not an independently observed browser test or other cases."
   },
   {
     "case": "native",
@@ -82,10 +89,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "関連labelとdate input、必須/範囲指定、サーバー検証を保持。外部UIライブラリ不要。",
     "response": "native-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both native replies passing content/evidence/format after the requirements, shared HTML, explanation summary and links to both full responses were provided, with a request to check the originals. This records user-reported grading agreement, not an independently observed browser test or other cases."
   },
   {
     "case": "csv",
@@ -93,10 +101,11 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェック・付属例は通過。ただし事後診断で30桁金額の加算が丸められ、厳密合計の契約に反する（両条件同じ診断）。",
     "response": "csv-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both CSV replies failing content and passing evidence/format after the exact-sum requirement, expected/actual diagnostic values and links to both full responses and diagnostic logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "csv",
@@ -104,10 +113,11 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェック・付属例は通過。ただし事後診断で30桁金額の加算が丸められ、厳密合計の契約に反する（両条件同じ診断）。",
     "response": "csv-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both CSV replies failing content and passing evidence/format after the exact-sum requirement, expected/actual diagnostic values and links to both full responses and diagnostic logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "duration",
@@ -115,10 +125,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェックと付属の正常/異常/巨大整数の検証例が通過。ASCII・順序・型・全体一致を検証。",
     "response": "duration-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both duration replies passing content/evidence/format after the parser contract, implementation summary and links to both full responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "duration",
@@ -126,10 +137,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェックと付属の正常/異常/巨大整数の検証例が通過。ASCII・順序・型・全体一致を検証。",
     "response": "duration-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both duration replies passing content/evidence/format after the parser contract, implementation summary and links to both full responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "sql",
@@ -137,11 +149,12 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェックと付属テスト通過。パラメーター化・完全一致・悪意ある値・呼び出し元のトランザクション/接続を維持。 事後の同一row_factory診断で、sqlite3.Row設定時にtupleではなくRowを返す契約未達を再現。固定チェックの成功と原回答は保持。SQLペアを合格ペアの簡潔さ比較から除外。",
     "response": "sql-PR5.md",
     "comparison_eligibility": "eligible under recorded controls",
-    "diagnostic": "sql-PR5-row-factory-diagnostic.log"
+    "diagnostic": "sql-PR5-row-factory-diagnostic.log",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with PR5 SQL failing content and passing evidence/format, and Japanese A passing all three gates, after the contract, sqlite3.Row diagnostic distinction, custom-factory limitation and links to both responses and diagnostic logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "sql",
@@ -149,11 +162,12 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェックと付属テスト通過。パラメーター化・完全一致・悪意ある値・呼び出し元のトランザクション/接続を維持。 事後の同一row_factory診断はデフォルトとsqlite3.Rowの両設定でtuple/None契約を満たした。任意のカスタムfactoryは未検証。相手条件が内容不合格のためSQLペアを合格ペアの簡潔さ比較から除外。",
     "response": "sql-A-ja.md",
     "comparison_eligibility": "eligible under recorded controls",
-    "diagnostic": "sql-A-ja-row-factory-diagnostic.log"
+    "diagnostic": "sql-A-ja-row-factory-diagnostic.log",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with PR5 SQL failing content and passing evidence/format, and Japanese A passing all three gates, after the contract, sqlite3.Row diagnostic distinction, custom-factory limitation and links to both responses and diagnostic logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "rootcause",
@@ -161,10 +175,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "共有parse_amountの修正で両経路を直し、固定独立チェックと付属pytestが通過。",
     "response": "rootcause-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both rootcause replies passing content/evidence/format after the shared-parser contract, implementation/test summary and links to both responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "rootcause",
@@ -172,10 +187,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "共有parse_amountの修正で両経路を直し、固定独立チェックと付属pytestが通過。",
     "response": "rootcause-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both rootcause replies passing content/evidence/format after the shared-parser contract, implementation/test summary and links to both responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "explain",
@@ -183,10 +199,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "変更理由を段階的に説明。欠損/None/0/負数/正数の同値性コードを隔離実行して通過。表示された出力は例の出力として扱い、モデル自身の実行確認とは扱わない。",
     "response": "explain-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both explain replies passing content/evidence/format after the refactoring/explanation contract, equivalence-check summary, execution-evidence limitation and links to both responses and saved execution logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "explain",
@@ -194,10 +211,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "変更理由を段階的に説明。欠損/None/0/負数/正数の同値性コードを隔離実行して通過。表示された出力は例の出力として扱い、モデル自身の実行確認とは扱わない。",
     "response": "explain-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both explain replies passing content/evidence/format after the refactoring/explanation contract, equivalence-check summary, execution-evidence limitation and links to both responses and saved execution logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "calibration",
@@ -205,10 +223,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "51.00℃、校正係数を引数に保持、型/範囲/有限性を検証。付属例と採点条件を実行して通過（実機測定ではない）。",
     "response": "calibration-A-ja.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both calibration replies passing content/evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, result/check summary, real-device limitation and links to both responses and saved criteria logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "calibration",
@@ -216,10 +235,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "51.00℃、校正係数を引数に保持、型/範囲/有限性を検証。付属例と採点条件を実行して通過（実機測定ではない）。",
     "response": "calibration-PR5.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both calibration replies passing content/evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, result/check summary, real-device limitation and links to both responses and saved criteria logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "distributed",
@@ -227,10 +247,11 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "主要設計は妥当だが、同じRedis時刻（同一score）で複数要求を通すテストが明示されていない。並行投入や同時期限切れだけではこの固定条件を満たさない。",
     "response": "distributed-PR5.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both distributed replies failing content and passing evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, missing equal-insertion-time test, unexecuted Redis-test limitation and links to both full responses were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "distributed",
@@ -238,9 +259,10 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "主要設計は妥当だが、同じRedis時刻（同一score）で複数要求を通すテストが明示されていない。並行投入や同時期限切れだけではこの固定条件を満たさない。",
     "response": "distributed-A-ja.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both distributed replies failing content and passing evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, missing equal-insertion-time test, unexecuted Redis-test limitation and links to both full responses were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   }
 ]
