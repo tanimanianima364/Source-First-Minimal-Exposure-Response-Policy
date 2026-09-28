@@ -77,10 +77,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "関連labelとdate input、必須/範囲指定、サーバー検証を保持。外部UIライブラリ不要。",
     "response": "native-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both native replies passing content/evidence/format after the requirements, shared HTML, explanation summary and links to both full responses were provided, with a request to check the originals. This records user-reported grading agreement, not an independently observed browser test or other cases."
   },
   {
     "case": "native",
@@ -88,10 +89,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "関連labelとdate input、必須/範囲指定、サーバー検証を保持。外部UIライブラリ不要。",
     "response": "native-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both native replies passing content/evidence/format after the requirements, shared HTML, explanation summary and links to both full responses were provided, with a request to check the originals. This records user-reported grading agreement, not an independently observed browser test or other cases."
   },
   {
     "case": "csv",
