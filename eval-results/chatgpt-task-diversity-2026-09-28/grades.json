@@ -101,10 +101,11 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェック・付属例は通過。ただし事後診断で30桁金額の加算が丸められ、厳密合計の契約に反する（両条件同じ診断）。",
     "response": "csv-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both CSV replies failing content and passing evidence/format after the exact-sum requirement, expected/actual diagnostic values and links to both full responses and diagnostic logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "csv",
@@ -112,10 +113,11 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェック・付属例は通過。ただし事後診断で30桁金額の加算が丸められ、厳密合計の契約に反する（両条件同じ診断）。",
     "response": "csv-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both CSV replies failing content and passing evidence/format after the exact-sum requirement, expected/actual diagnostic values and links to both full responses and diagnostic logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "duration",
