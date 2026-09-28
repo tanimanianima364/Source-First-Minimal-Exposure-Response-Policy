@@ -51,10 +51,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "要件A/Bだけを優先順に報告。C・追加提案なし。",
     "response": "1b-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 1b replies pass content/evidence/format after the A/B requirements, request constraints and both response texts were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "1b",
@@ -62,10 +63,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "要件A/Bだけを優先順に報告。C・追加提案なし。",
     "response": "1b-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question confirming both 1b replies pass content/evidence/format after the A/B requirements, request constraints and both response texts were shown in chat. This confirms grading only, not browser settings or other cases."
   },
   {
     "case": "native",

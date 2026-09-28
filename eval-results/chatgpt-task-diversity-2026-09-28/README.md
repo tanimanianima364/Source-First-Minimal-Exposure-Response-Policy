@@ -1,9 +1,9 @@
 # PR5 versus Japanese A: formats and task diversity
 
-All 22 replies collected; human grading confirmed for both 3a replies (2026-09-28);
-the remaining 20 replies retain provisional grades.
+All 22 replies collected; human grading confirmed for both conditions of 3a and 1b (2026-09-28);
+the remaining 18 replies retain provisional grades.
 [Human grading worksheet and resumed cross-check](HUMAN-REVIEW.md) links each
-response, criterion summary and execution evidence; 3a is confirmed and the other human checks remain pending.
+response, criterion summary and execution evidence; 3a and 1b are confirmed and the other human checks remain pending.
 Nine pairs follow the planned order; two are reference observations excluded
 from comparison because their order was reversed. The
 [preregistered plan](../../eval-tasks/format-and-diversity-2026-09-28/plan.json)
