@@ -247,10 +247,11 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "主要設計は妥当だが、同じRedis時刻（同一score）で複数要求を通すテストが明示されていない。並行投入や同時期限切れだけではこの固定条件を満たさない。",
     "response": "distributed-PR5.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both distributed replies failing content and passing evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, missing equal-insertion-time test, unexecuted Redis-test limitation and links to both full responses were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "distributed",
@@ -258,9 +259,10 @@
     "content": "fail",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "主要設計は妥当だが、同じRedis時刻（同一score）で複数要求を通すテストが明示されていない。並行投入や同時期限切れだけではこの固定条件を満たさない。",
     "response": "distributed-A-ja.md",
-    "comparison_eligibility": "order-deviation reference observation; excluded from comparison"
+    "comparison_eligibility": "order-deviation reference observation; excluded from comparison",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both distributed replies failing content and passing evidence/format while remaining order-deviation reference observations excluded from comparison, after the requirements, missing equal-insertion-time test, unexecuted Redis-test limitation and links to both full responses were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   }
 ]
