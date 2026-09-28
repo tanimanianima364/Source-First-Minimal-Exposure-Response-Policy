@@ -1,9 +1,9 @@
 # PR5 versus Japanese A: formats and task diversity
 
-All 22 replies collected; human grading confirmed for both conditions of 3a, 1b, 2a, native, csv, duration, sql and rootcause (2026-09-28);
-the remaining 6 replies retain provisional grades.
+All 22 replies collected; human grading confirmed for both conditions of 3a, 1b, 2a, native, csv, duration, sql, rootcause and explain (2026-09-28);
+the remaining 4 replies retain provisional grades.
 [Human grading worksheet and resumed cross-check](HUMAN-REVIEW.md) links each
-response, criterion summary and execution evidence; 3a, 1b, 2a, native, csv, duration, sql and rootcause are confirmed and the other human checks remain pending.
+response, criterion summary and execution evidence; 3a, 1b, 2a, native, csv, duration, sql, rootcause and explain are confirmed and the other human checks remain pending.
 Nine pairs follow the planned order; two are reference observations excluded
 from comparison because their order was reversed. The
 [preregistered plan](../../eval-tasks/format-and-diversity-2026-09-28/plan.json)

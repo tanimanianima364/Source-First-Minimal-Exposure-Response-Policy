@@ -199,10 +199,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "変更理由を段階的に説明。欠損/None/0/負数/正数の同値性コードを隔離実行して通過。表示された出力は例の出力として扱い、モデル自身の実行確認とは扱わない。",
     "response": "explain-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both explain replies passing content/evidence/format after the refactoring/explanation contract, equivalence-check summary, execution-evidence limitation and links to both responses and saved execution logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "explain",
@@ -210,10 +211,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "変更理由を段階的に説明。欠損/None/0/負数/正数の同値性コードを隔離実行して通過。表示された出力は例の出力として扱い、モデル自身の実行確認とは扱わない。",
     "response": "explain-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both explain replies passing content/evidence/format after the refactoring/explanation contract, equivalence-check summary, execution-evidence limitation and links to both responses and saved execution logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "calibration",
