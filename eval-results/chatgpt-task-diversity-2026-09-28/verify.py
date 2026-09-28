@@ -22,9 +22,16 @@ for case,order in d['order'].items():
     for x in rows:
         if x['case']==case: assert x['planned_order_followed']==(actual==order)
 g=json.loads((r/'grades.json').read_text());assert len(g)==22
-assert all(x['content']==('fail' if x['case'] in ['csv','distributed'] else 'pass') for x in g)
+assert all(x['content']==('fail' if x['case'] in ['csv','distributed'] or (x['case'],x['condition'])==('sql','PR5') else 'pass') for x in g)
 original=json.loads((r/'original-controls.json').read_text());restored=json.loads((r/'restoration.json').read_text())
 assert {x['Name']:x['State'] for x in original}=={x['Name']:x['State'] for x in restored['Flags']}
 assert restored['InstructionsMatchBackup'] and restored['InstructionCharacters']==0
 assert json.loads((r/'closed-windows.json').read_text())['Remaining']==0
 print('Order deviations, provisional grades, restoration and closure verified')
+
+# SQL is a post-response diagnostic, not a replacement for frozen test results.
+for condition, code in [('PR5', 1), ('A-ja', 0)]:
+    log=(r/('sql-'+condition+'-row-factory-diagnostic.log')).read_text()
+    assert 'ISOLATED_RUN_EXIT='+str(code) in log
+    assert 'returned: '+('Row' if condition=='PR5' else 'tuple') in log
+assert '| sql |' not in (r/'README.md').read_text()

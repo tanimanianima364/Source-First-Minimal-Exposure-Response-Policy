@@ -134,13 +134,14 @@
   {
     "case": "sql",
     "condition": "PR5",
-    "content": "pass",
+    "content": "fail",
     "evidence": "pass",
     "format": "pass",
     "status": "provisional; human confirmation pending",
-    "rationale": "固定独立チェックと付属テスト通過。パラメーター化・完全一致・悪意ある値・呼び出し元のトランザクション/接続を維持。",
+    "rationale": "固定独立チェックと付属テスト通過。パラメーター化・完全一致・悪意ある値・呼び出し元のトランザクション/接続を維持。 事後の同一row_factory診断で、sqlite3.Row設定時にtupleではなくRowを返す契約未達を再現。固定チェックの成功と原回答は保持。SQLペアを合格ペアの簡潔さ比較から除外。",
     "response": "sql-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "diagnostic": "sql-PR5-row-factory-diagnostic.log"
   },
   {
     "case": "sql",
@@ -149,9 +150,10 @@
     "evidence": "pass",
     "format": "pass",
     "status": "provisional; human confirmation pending",
-    "rationale": "固定独立チェックと付属テスト通過。パラメーター化・完全一致・悪意ある値・呼び出し元のトランザクション/接続を維持。",
+    "rationale": "固定独立チェックと付属テスト通過。パラメーター化・完全一致・悪意ある値・呼び出し元のトランザクション/接続を維持。 事後の同一row_factory診断はデフォルトとsqlite3.Rowの両設定でtuple/None契約を満たした。任意のカスタムfactoryは未検証。相手条件が内容不合格のためSQLペアを合格ペアの簡潔さ比較から除外。",
     "response": "sql-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "diagnostic": "sql-A-ja-row-factory-diagnostic.log"
   },
   {
     "case": "rootcause",

@@ -19,7 +19,7 @@ comparison, not a language-only experiment or Ponytail replication.
 | Native date input | Pass | Pass |
 | CSV exact aggregation | Frozen checks pass; large-number diagnostic fails | Same |
 | Duration parser | Pass | Pass |
-| Safe SQL | Pass | Pass |
+| Safe SQL | Frozen checks pass; row-factory diagnostic fails | Pass, including row-factory diagnostic |
 | Shared parser repair | Pass; supplied pytest 42/42 | Pass; supplied pytest 38/38 |
 | Detailed explanation | Pass | Pass |
 | Calibration (reference only) | Per-response pass | Per-response pass |
@@ -111,6 +111,20 @@ checks. Both return `1.234567890123456789012345679E+29` where the exact result i
 context precision. This violates the existing exact-sum requirement despite the
 fixed checks passing. Originals were not repaired; no policy causation is claimed.
 
+SQL's [row-factory diagnostic](sql-row-factory-diagnostic.py) was added after
+review of `c1ad726`, applied identically to both unchanged extracted answers,
+and run using the same offline runner (Python 3.12.14, SQLite 3.53.1).
+With `conn.row_factory = sqlite3.Row`, PR5 returns `Row`, violating the existing
+`tuple` contract; Japanese A returns the required tuple. Both return tuples with
+the default factory. See [PR5 failure](sql-PR5-row-factory-diagnostic.log) and
+[A-ja success](sql-A-ja-row-factory-diagnostic.log). Arbitrary custom factories
+were not tested. Original replies, frozen checks and their successful logs are
+unchanged. PR5's content grade is corrected to fail; the SQL pair is excluded
+from passing-pair brevity comparisons. No causal policy effect is established.
+To reproduce, copy the existing offline runner and this diagnostic (named
+`test_contract.py`) into the same temporary directory, then run that `run.py`
+with `sql-PR5` or `sql-A-ja` from this results directory as the candidate path.
+
 [Calibration checks](calibration-check.py) implement the predeclared manual
 criteria after extraction; they were not a preregistered executable test file.
 Redis design grading is a paper review, not an executed load/fault test. The
@@ -136,7 +150,6 @@ order-deviation pairs are excluded.
 | 1b | 126 | 147 |
 | native | 527 | 580 |
 | duration | 1866 | 2111 |
-| sql | 1893 | 2056 |
 | rootcause | 3239 | 2783 |
 | explain | 1830 | 2268 |
 
