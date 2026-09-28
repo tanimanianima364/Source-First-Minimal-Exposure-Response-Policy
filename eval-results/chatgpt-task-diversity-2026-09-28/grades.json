@@ -125,10 +125,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェックと付属の正常/異常/巨大整数の検証例が通過。ASCII・順序・型・全体一致を検証。",
     "response": "duration-A-ja.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both duration replies passing content/evidence/format after the parser contract, implementation summary and links to both full responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "duration",
@@ -136,10 +137,11 @@
     "content": "pass",
     "evidence": "pass",
     "format": "pass",
-    "status": "provisional; human confirmation pending",
+    "status": "human confirmed; 2026-09-28",
     "rationale": "固定独立チェックと付属の正常/異常/巨大整数の検証例が通過。ASCII・順序・型・全体一致を検証。",
     "response": "duration-PR5.md",
-    "comparison_eligibility": "eligible under recorded controls"
+    "comparison_eligibility": "eligible under recorded controls",
+    "human_confirmation": "User replied \"ok\" to the explicit question asking agreement with both duration replies passing content/evidence/format after the parser contract, implementation summary and links to both full responses and fixed-check logs were provided, with a request to check them. This records user-reported grading agreement, not a new test run or other cases."
   },
   {
     "case": "sql",
